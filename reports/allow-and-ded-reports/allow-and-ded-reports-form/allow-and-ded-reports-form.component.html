@@ -1,0 +1,446 @@
+<div *ngIf="stopReport" class="container-fluid p-2">
+<div class="row">
+
+ <div class="col-md-6">
+    <fieldset>
+        <form>
+         <div class="form-group border p-2 w-100" panelContent>
+     
+  <div class="row">
+   <div class="col-md-6">
+    <div class="form-group">
+
+    <label class="form-label font-weight-bold h5" for="radio-group-1">Report Selection</label>
+    <div class="input-group">
+     <label for="customRadio2"></label>
+      <div class="input-group-text">
+       <div class="custom-control custom-radio">
+        <input  type="radio" id="flexRadioDefault1" (change)="handleSpecialAllowance($event)" name="flexRadioDefault" class="custom-control-input" checked>
+         <label class="custom-control-label" for="flexRadioDefault1">Special Allowance</label>
+          </div>
+           </div>
+            </div>
+   </div>
+
+   </div>
+  </div>
+
+  <div class="row mt-3">
+   <div class="col-md-6">
+    <div class="input-group">
+     <label for="customRadio2"></label>
+      <div class="input-group-text">
+       <div class="custom-control custom-radio">
+        <input  type="radio" id="flexRadioDefault2" (change)="handleMealAllowance($event)" name="flexRadioDefault" class="custom-control-input">
+         <label class="custom-control-label" for="flexRadioDefault2">Meal Allowance</label>
+          </div>
+           </div>
+            </div>
+   </div>
+  </div>
+
+  
+  <div class="row mt-3">
+   <div class="col-md-6">
+    <div class="input-group">
+     <label for="customRadio2"></label>
+      <div class="input-group-text">
+       <div class="custom-control custom-radio">
+        <input  type="radio" id="flexRadioDefault3" (change)="handleTravelAllowance($event)"  name="flexRadioDefault" class="custom-control-input">
+         <label class="custom-control-label" for="flexRadioDefault3">Travel Allowance</label>
+          </div>
+           </div>
+            </div>
+   </div>
+  </div>
+
+  <div class="row mt-3">
+   <div class="col-md-6">
+    <div class="input-group">
+     <label for="customRadio2"></label>
+      <div class="input-group-text">
+       <div class="custom-control custom-radio">
+        <input  type="radio" id="flexRadioDefault4" (change)="handleEducationAllowance($event)" name="flexRadioDefault" class="custom-control-input">
+         <label class="custom-control-label" for="flexRadioDefault4">Education Allowance</label>
+          </div>
+           </div>
+            </div>
+   </div>
+  </div>
+
+  <div class="row mt-3">
+   <div class="col-md-6">
+    <div class="input-group">
+     <label for="customRadio2"></label>
+      <div class="input-group-text">
+       <div class="custom-control custom-radio">
+        <input  type="radio" id="flexRadioDefault5" (change)="handleAccomodationAllowance($event)"  name="flexRadioDefault" class="custom-control-input">
+         <label class="custom-control-label" for="flexRadioDefault5">Accomodation Allowance</label>
+          </div>
+           </div>
+            </div>
+   </div>
+  </div>
+
+  <div class="row mt-3">
+   <div class="col-md-6">
+    <div class="input-group">
+     <label for="customRadio2"></label>
+      <div class="input-group-text">
+       <div class="custom-control custom-radio">
+        <input  type="radio" id="flexRadioDefault6" (change)="handleTaxDeduction($event)" name="flexRadioDefault" class="custom-control-input">
+         <label class="custom-control-label" for="flexRadioDefault6">Tex Deduction</label>
+          </div>
+           </div>
+            </div>
+   </div>
+  </div>
+
+  <div class="row mt-3">
+   <div class="col-md-6">
+    <div class="input-group">
+     <label for="customRadio2"></label>
+      <div class="input-group-text">
+       <div class="custom-control custom-radio">
+        <input  type="radio" id="flexRadioDefault7" (change)="handleRentDeduction($event)" name="flexRadioDefault" class="custom-control-input">
+         <label class="custom-control-label" for="flexRadioDefault7">Rent Deduction</label>
+          </div>
+           </div>
+            </div>
+   </div>
+  </div>
+
+  <div class="row mt-3">
+   <div class="col-md-6">
+    <div class="input-group">
+     <label for="customRadio2"></label>
+      <div class="input-group-text">
+       <div class="custom-control custom-radio">
+        <input  type="radio" id="flexRadioDefault8" (change)="handleCanteenDeduction($event)" name="flexRadioDefault" class="custom-control-input">
+         <label class="custom-control-label" for="flexRadioDefault8">Canteen Deduction</label>
+          </div>
+           </div>
+            </div>
+   </div>
+  </div>
+
+  <div class="row mt-3">
+   <div class="col-md-6">
+    <div class="input-group">
+     <label for="customRadio2"></label>
+      <div class="input-group-text">
+       <div class="custom-control custom-radio">
+        <input  type="radio" id="flexRadioDefault9" (change)="handleUnionFund($event)"  name="flexRadioDefault" class="custom-control-input">
+         <label class="custom-control-label" for="flexRadioDefault9">Union Fund</label>
+          </div>
+           </div>
+            </div>
+   </div>
+  </div>
+ 
+</div>
+</form>
+</fieldset>
+
+<fieldset>
+    <form>
+     <div class="form-group border mt-3 w-100 p-2" panelContent>
+         <div class="row">
+             <div class="col-md-12">
+                <label class="form-label font-weight-bold h5" for="radio-group-1">Option Selection</label>
+             </div>
+         </div>
+         <div class="row mt-2">
+             <div class="col-md-12">
+                 <div class="input-group">
+                     <label for="customRadio2"></label>
+                     <div class="input-group-text">
+                         <div class="custom-control custom-radio">
+                             <input  type="radio" id="flexRadioDefault14" (change)="handleAllOS($event)" name="flexRadioDefault" class="custom-control-input" checked>
+                             <label class="custom-control-label" for="flexRadioDefault14">All</label>
+                        </div>
+                    </div>
+                </div>
+             </div>
+         </div>
+         <div class="row mt-2">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <label for="customRadio2"></label>
+                    <div class="input-group-text">
+                        <div class="custom-control custom-radio">
+                            <input  type="radio" id="flexRadioDefault15" (change)="handleByCardRangeOS($event)" name="flexRadioDefault" class="custom-control-input">
+                            <label class="custom-control-label" for="flexRadioDefault15">By Card Range</label>
+                       </div>
+                   </div>
+               </div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <label for="customRadio2"></label>
+                    <div class="input-group-text">
+                        <div class="custom-control custom-radio">
+                            <input  type="radio" id="flexRadioDefault16" (change)="handleByBranchOS($event)" name="flexRadioDefault" class="custom-control-input">
+                            <label class="custom-control-label" for="flexRadioDefault16">By Branch</label>
+                       </div>
+                   </div>
+               </div>
+            </div>
+        </div>
+     </div>
+    </form>
+</fieldset>
+ </div>
+
+
+
+ <div class="col-md-6">
+  <div class="row">
+   <div class="col-md-6">
+    <div class="row">
+     <div class="col-md-12">
+      <label class="form-label font-weight-bold h5" for="radio-group-1">Option Selection</label>
+     </div>
+    </div>
+    <div class="input-group">
+     <div class="input-group-prepend">
+         <span class="input-group-text">Form Card</span>
+     </div>
+     <input type="number" id="fromCard" [disabled]="(specialAllowance==true && AllOS==true) || (specialAllowance==true && ByBranchOS==true) || (MealAllowance==true && AllOS==true) || (MealAllowance==true && ByBranchOS==true) || (travelAllowance==true && AllOS==true) || (travelAllowance==true && ByBranchOS==true) || (educationAllowance==true && AllOS==true) || (educationAllowance==true && ByBranchOS==true) || (accomodationAllowance==true && AllOS==true) || (accomodationAllowance==true && ByBranchOS==true) || (taxDeduction==true && AllOS==true) || (taxDeduction==true && ByBranchOS==true) || (rentDeduction==true && AllOS==true) || (rentDeduction==true && ByBranchOS==true) || (canteenDeduction==true && AllOS==true) || (canteenDeduction==true && ByBranchOS==true) || (unionFund==true && AllOS==true) || (unionFund==true && ByBranchOS==true)" [(ngModel)]='cardStartValue' name="fromCard" #fromCard class="form-control" placeholder="card no." aria-label="fromCard" aria-describedby="basic-addon1">
+ </div>
+   </div>
+
+   <div class="col-md-6 mt-1">
+    <label class="form-label" for="radio-group-1"></label>
+    <div class="input-group">
+     <div class="input-group-prepend">
+         <span class="input-group-text">To Card</span>
+     </div>
+     <input type="number" [(ngModel)]='cardEndValue' [disabled]="(specialAllowance==true && AllOS==true) || (specialAllowance==true && ByBranchOS==true) || (MealAllowance==true && ByBranchOS==true) || (MealAllowance==true && AllOS==true) || (travelAllowance==true && ByBranchOS==true) || (travelAllowance==true && AllOS==true) || (educationAllowance==true && AllOS==true) || (educationAllowance==true && ByBranchOS==true) || (accomodationAllowance==true && AllOS==true) || (accomodationAllowance==true && ByBranchOS==true) || (taxDeduction==true && AllOS==true) || (taxDeduction==true && ByBranchOS==true) || (rentDeduction==true && AllOS==true) || (rentDeduction==true && ByBranchOS==true) || (canteenDeduction==true && AllOS==true) || (canteenDeduction==true && ByBranchOS==true) || (unionFund==true && AllOS==true) || (unionFund==true && ByBranchOS==true)" name="ToCard"  id="toCard" #toCard class="form-control" placeholder="card no." aria-label="to card" aria-describedby="toCard">
+ </div>
+   </div>
+
+  </div>
+
+  <div class="row mt-3">
+      <div class="col-md-12">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Branch:</span>
+
+                   <select [disabled]="(specialAllowance==true && AllOS==true) || (specialAllowance==true && ByCardRangeOS==true) || (MealAllowance==true && AllOS==true) || (MealAllowance==true && ByCardRangeOS==true) || (travelAllowance==true && AllOS==true) || (travelAllowance==true && ByCardRangeOS==true) || (educationAllowance==true && AllOS==true) || (educationAllowance==true && ByCardRangeOS==true) || (accomodationAllowance==true && AllOS==true) || (accomodationAllowance==true && ByCardRangeOS==true) || (taxDeduction==true && AllOS==true) || (taxDeduction==true && ByCardRangeOS==true) || (rentDeduction==true && AllOS==true) || (rentDeduction==true && ByCardRangeOS==true) || (canteenDeduction==true && AllOS==true) || (canteenDeduction==true && ByCardRangeOS==true) || (unionFund==true && AllOS==true) || (unionFund==true && ByCardRangeOS==true)" class="form-control">
+                       <option></option>
+                      
+                   </select>
+                
+            </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="row mt-3">
+   <div class="col-md-6">
+    <div class="form-group">
+     <div class="row">
+         <div class="col-md-6">
+             <label class="form-label bg-info text-center text-white" style="padding:5px; width:350px" for="radio-group-1">Select Appropriate Option</label>
+         </div>
+     </div>
+     <div class="row mt-2"> 
+      <div class="col-md-6">
+       <div class="input-group">
+        <div class="input-group-prepend">
+           <span class="input-group-text">Department:</span>
+           <select [disabled]="AllSAP==true || DesignSAP==true || SectionSAP==true" class="form-control">
+               <option></option>
+           </select>
+          
+        </div>
+        </div> 
+      </div>
+     </div>
+
+ <div class="row mt-2">
+  <div class="col-md-6">
+   <div class="input-group">
+    <div class="input-group-prepend">
+     <span class="input-group-text">Section:</span>
+     <select [disabled]="AllSAP==true || DeptSAP==true || DesignSAP==true" class="form-control">
+         <option></option>
+     </select>
+    
+    </div>
+    </div> 
+  </div>
+ </div>
+
+<div class="row mt-2">
+ <div class="col-md-6">
+  <div class="input-group">
+   <div class="input-group-prepend">
+    <span class="input-group-text">Designation:</span>
+    <select [disabled]="AllSAP==true || DeptSAP==true  || SectionSAP==true" class="form-control">
+        <option></option>
+    </select>
+   
+   </div>
+   </div> 
+ </div>
+</div>
+
+<div class="row mt-2">
+<div class="col-md-6 mt-3">
+    <div class="input-group">
+        <div class="input-group-text">
+            <div class="custom-control custom-radio">
+                <input  type="radio" id="flexRadioDefault10" (change)="handleAllSAP($event)" name="flexRadioDefault" class="custom-control-input" checked>
+                <label class="custom-control-label" for="flexRadioDefault10">All</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-6 mt-3">
+    <div class="input-group">
+        <div class="input-group-text">
+            <div class="custom-control custom-radio">
+                <input type="radio" id="flexRadioDefault11" (change)="handleDeptSAP($event)" name="flexRadioDefault" class="custom-control-input" >
+                <label class="custom-control-label" for="flexRadioDefault11">Department</label>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div class="row mt-2">
+ <div class="col-md-6">
+     <div class="input-group">
+         <div class="input-group-text">
+             <div class="custom-control custom-radio">
+                 <input  type="radio" id="flexRadioDefault12" (change)="handleDesignSAP($event)"  name="flexRadioDefault" class="custom-control-input">
+                 <label class="custom-control-label" for="flexRadioDefault12">Designation</label>
+             </div>
+         </div>
+     </div>
+ </div>
+ 
+ <div class="col-md-6">
+     <div class="input-group">
+         <div class="input-group-text">
+             <div class="custom-control custom-radio">
+                 <input type="radio" id="flexRadioDefault13" (change)="handleSectionSAP($event)" name="flexRadioDefault" class="custom-control-input">
+                 <label class="custom-control-label" for="flexRadioDefault13">Section</label>
+             </div>
+         </div>
+     </div>
+ </div>
+ </div>
+
+
+
+<div class="row mt-5">
+ <div class="col-md-5 d-flex justify-content-center text-center">
+  <div class="frame-wrap">
+   <div class="demo" style="display: grid">
+       <button style="padding:15px" type="button" (click)="showReport()" class="btn btn-info">Show Report</button>
+   </div>
+</div>
+ </div>
+</div>
+
+</div>
+   </div>
+  </div>
+
+
+ 
+ </div>
+</div>
+</div>
+
+
+
+<div *ngIf="showReportt" class="row">
+    <div class="col-md-12">
+        
+        <div *ngIf="specialAllowance" class="row">
+            <div class="col-md-12">
+                <smart-special-allow-allow-and-ded></smart-special-allow-allow-and-ded>
+            </div>
+        </div>
+
+        <div *ngIf="MealAllowance" class="row">
+            <div class="col-md-12">
+                <smart-meal-allow-allow-and-ded></smart-meal-allow-allow-and-ded>
+            </div>
+        </div>
+
+        <div *ngIf="travelAllowance" class="row">
+            <div class="col-md-12">
+                <smart-travel-allow-allow-and-ded></smart-travel-allow-allow-and-ded>
+            </div>
+        </div>
+
+        <div *ngIf="educationAllowance" class="row">
+            <div class="col-md-12">
+                <smart-edu-allow-allow-and-ded></smart-edu-allow-allow-and-ded>
+            </div>
+        </div>
+
+        <div *ngIf="accomodationAllowance" class="row">
+            <div class="col-md-12">
+                <smart-accom-allow-allow-and-ded></smart-accom-allow-allow-and-ded>
+            </div>
+        </div>
+
+        <div *ngIf="taxDeduction" class="row">
+            <div class="col-md-12">
+                <smart-tax-deduction-allow-and-ded></smart-tax-deduction-allow-and-ded>
+            </div>
+        </div>
+
+        <div *ngIf="rentDeduction" class="row">
+            <div class="col-md-12">
+                <smart-rent-deduction-allow-and-ded></smart-rent-deduction-allow-and-ded>
+            </div>
+        </div>
+
+        <div *ngIf="canteenDeduction" class="row">
+            <div class="col-md-12">
+                <smart-canteen-deduction-allow-and-ded></smart-canteen-deduction-allow-and-ded>
+            </div>
+        </div>
+
+        <div *ngIf="unionFund" class="row">
+            <div class="col-md-12">
+                <smart-union-fund-allow-and-deda></smart-union-fund-allow-and-deda>
+            </div>
+        </div>
+
+
+    <div class="row mt-3">
+        
+        <div class='col-md-6'>
+            <div class="row">
+                <div class="col-md-6">
+                    <button class="btn btn-danger" (click)="EmpRecord()" style="background-color: maroon;" > <i class="fal fa-arrow-left"></i>  Click Here to Go Back to Employee Record</button>
+                </div>
+            </div>
+        </div>
+       
+        <div class="col-md-6 d-flex justify-content-end text-end">
+            <div class="row mt-3">
+                <div class="col-md-12">
+                    <button  panelToolbar (click)="makePDF()" class="btn btn-primary font-weight-bold"> <i class="fal fa-print"></i>   Make PDF</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</div>

@@ -1,0 +1,96 @@
+<body id="htmlData">
+  <div class="mySlides">  
+    <div  class="container col-md-10 align-items-center h-25 w-100 mt-5 p-50"  style="border: 1px solid lightgray"> 
+      <div class="row">
+        <div class="col-md-3 mt-3">
+          <div>
+            <img src="https://upload.wikimedia.org/wikipedia/en/0/01/This_is_the_Forward_Sport_brand_logo.jpg" width="100px"/>
+            </div>
+        </div>
+        <div class="col-md-6 mt-3">
+          <div><span class="font-weight-bold d-block">Forward Sports (Pvt) Ltd.</span>
+            <span>Wazirabad Road,Adha Sahowala, Sialkot</span>
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="row">
+       <div class="col-md-12 mt-5 align-items-center bg-primary">
+         <p class="h2 align-items-center text-center color-white">Disable Person Report</p>
+       </div>
+      </div>
+      
+      <div *ngFor="let e of compInfo; index as i">
+        
+      <div class="row mt-2" style="border-bottom:1px solid">
+        <div class="col-md-1">
+         <span><b>Card No.</b></span>
+        </div>
+       
+        <div class="col-md-2">
+         <span><b>Name</b></span>
+        </div>
+       
+        <div class="col-md-2">
+         <span><b>Father Name</b></span>
+        </div>
+       
+        <div class="col-md-2">
+         <span><b>Section</b></span>
+        </div>
+       
+        <div class="col-md-2">
+         <span><b>Designation</b></span>
+        </div>
+       
+        <div class="col-md-2">
+         <span><b>Disability Description</b></span>
+        </div>
+        
+       </div>
+       
+       <div class="row">
+        <div class="col-md-12">
+         <span><b>Department:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i style="color:blue; font-weight:none">AMB Production</i></b></span>
+        </div>
+       </div>
+       
+        <div class="row" style="border-bottom:1px solid ">
+         <div class="col-md-1">
+          <span>{{e.Employee.EmpCardNo.name}}</span>
+         </div>
+        
+         <div class="col-md-2">
+          <span>{{e.Employee.name}}</span>
+        
+         </div>
+        
+         <div class="col-md-2">
+          <span>{{e.Employee.FatherName}}</span>
+         </div>
+        
+         <div class="col-md-2">
+          <span>{{e.Section.name}}</span>
+         </div>
+        
+         <div class="col-md-2">
+          <span>{{e.Designation.name}}</span>
+         </div>
+        
+         <div class="col-md-2">
+          <span>{{e.Department.HODName.Disability}}</span>
+         </div>
+        </div>
+       
+        <div class="row">
+         <div class="col-md-12">
+          <span><b>No.Of Emp.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{e.Employee.id}}</b></span>
+     </div>
+   
+    </div>
+      </div>
+   </div>
+   </div>
+  
+</body>

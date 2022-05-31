@@ -1,0 +1,46 @@
+<body id="htmlData">
+ <div *ngFor="let e of compInfo;index as i" class="mySlides">
+
+  <div class="container col-md-10 align-items-center h-50 w-100 mt-3 p-50"  style="border: 1px solid lightgray" > 
+ 
+  <div class="row mt-5">
+   <div class="col-md-12 bg-primary">
+    <h2 class="h2 text-center font-weight-bold text-white" style="text-decoration:underline"><i>Service Certificate</i></h2>
+   </div>
+  </div>
+ 
+  <div class="row mt-5">
+   <div class="col-md-12">
+    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It is certified that Mr/Mrs <strong>{{e.Employee.name}}</strong> S/O,D/O,W/O <strong>{{e.Employee.FatherName}}</strong>
+     (CNIC# <strong>{{e.Employee.CNICNO}}</strong>) is working in our establishment w.e.f 01/10/2004 to. His job nature is <strong>{{e.JobType.name}}</strong>
+     and his/her present desgnation is <strong>Head of Department.</strong>which falls under the definition of worker/workman as per Punjab Industrial
+     Relations Act(PIRA) 2010 Social Security/EOBI Card No. of the worker is  .
+    </span>
+   </div>
+  </div>
+  <div class="row mt-5">
+   <div class="col-md-12">
+    <span class="d-flex justify-content-end text-end">Signature:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="text-decoration:underline;border-bottom:1px soild">fghfg</span></span>
+   </div>
+  </div>
+  <div class="row  mt-2">
+   <div class="col-md-12">
+    <span class="d-flex justify-content-end text-end">Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="text-decoration:underline;border-bottom:1px soild">Waqas Nazeer</span></span>
+   </div>
+  </div>
+  <div class="row  mt-2">
+   <div class="col-md-12">
+    <span class="d-flex justify-content-end text-end">Designation:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="text-decoration:underline;border-bottom:1px soild">Assistant Manager HR</span></span>
+   </div>
+  </div>
+  <div class="row  mt-2">
+   <div class="col-md-12">
+    <span class="d-flex justify-content-end text-end">Stemp:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="text-decoration:underline;border-bottom:1px soild">dfgd</span></span>
+   </div>
+  </div>
+ 
+ </div>
+ </div>
+ 
+</body>
+

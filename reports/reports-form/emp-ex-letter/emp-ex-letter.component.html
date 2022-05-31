@@ -1,0 +1,56 @@
+<body id="htmlData" >
+ <div *ngFor="let e of compInfo; index as i" class="mySlides">
+  <div class="container col-md-10 align-items-center h-25 w-100 mt-3 p-50" style="border:1px solid black" > 
+
+  <div class="row mt-5">
+ <div class="col-md-12">
+  <span class="text-end d-flex justify-content-end">IMS-HR-301</span>
+ </div>
+</div>
+<div class="row mt-1">
+ <div class="col-md-12">
+  <span class="text-center d-flex justify-content-center"><b><i>TO WHOM IT MAY CONCERN</i></b></span>
+ </div>
+</div>
+
+<div class="row mt-2">
+ <div class="col-md-12">
+  <span class="text-end d-flex justify-content-end"><b>Date: {{date}}</b></span>
+ </div>
+</div>
+
+<div class="row mt-5">
+ <div class="col-md-12">
+  <span>This is to Certify that <b>{{e.Employee.name}}</b> , having <b>CNIC {{e.Employee.CNICNO}}</b> worked in our
+  organization as {{e.Department.name}} in our <b>{{e.Section.name}}</b> Department from
+ <b>{{e.Employee.CreationDate}}</b> to <b>{{e.Employee.LastUpdateDate}}.</b>
+ <br>
+ <br>
+ We found him/her sincere, hardworking, technically sound and result oriented during
+ his her tenure. Further he/she has a friendly, outgoing peronality, a good sense of
+ humour and works well as part of a team. We take this opportunity to thank him/her for his/her contribution and wish him/her success in his/her for
+ <br>
+ his/her for contribution and wish him/her success in his/her future endeavors.
+</span>
+ </div>
+</div>
+
+<div class="row mt-5">
+ <div class="col-md-12">
+  <span>With best wished,</span>
+ </div>
+</div>
+
+
+<div class="row mt-5 mb-5">
+ <div class="col-md-12">
+  <span class="font-weight-bolder"><strong>Human Resource Department Forward Sports (Pvt) Ltd.</strong></span>
+ </div>
+</div>
+
+</div>
+ </div>
+
+
+</body>
+ 

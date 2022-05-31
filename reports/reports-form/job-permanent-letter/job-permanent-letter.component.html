@@ -1,0 +1,66 @@
+
+<body id="htmlData">
+
+  <div *ngFor="let e of compInfo; index as i" class="mySlides">
+    <div class="container col-md-10 align-items-center h-25 w-100 mt-5 p-50 border"  > 
+
+ <div class="row mt-5">
+  <div class="col-md-12 bg-primary">
+   <h2 class="h4 font-weight-bold d-flex justify-content-center text-white">Permanent Job Confirmed Letter</h2>
+  </div>
+ </div>
+
+ <div class="row">
+  <div class="col-md-12">
+   <table class="table table-stripped">
+    <tbody>
+      <tr>
+        <th scope="col">Name</th>
+        <td>{{e.Employee.name}}</td>
+      </tr>
+      <tr>
+       <th scope="col">Card No.:</th>
+       <td scope="row">{{e.Employee.EmpCardNo.name}}</td>
+     </tr>
+     <tr>
+      <th scope="col">Department:</th>
+      <td scope="row">{{e.Department.name}}</td>
+    </tr>
+    <tr>
+     <th scope="col">D.O.J:</th>
+     <td scope="row">{{e.DateOfJoning}}</td>
+   </tr>
+    </tbody>
+
+  </table>
+  </div>
+ </div>
+
+ <div class="row mt-5">
+  <div class="col-md-12">
+   <span>
+    Respected Employee,<br>
+    We hereby confirmed that company has appointed you. on permanent basis and your job
+    is confirmed from date of joining. You are entitled all legal benefits with effect from date of joining.
+    <br><br>
+    Company always cares for the prosperity and growth of employees; our T&D departments is playing an effective role of communication on wages and benefits.
+    <br> 
+    <br>
+    Kind regards,
+   </span>
+  </div>
+ </div>
+
+ <div class="row">
+  <div class="col-md-12">
+   <span>Saeed Maher<br>Manager HR</span>
+  </div>
+ </div>
+
+  </div>
+</div>
+
+  
+</body>
+
+  

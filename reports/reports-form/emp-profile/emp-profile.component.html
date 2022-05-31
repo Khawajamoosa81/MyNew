@@ -1,0 +1,26 @@
+
+<div *ngFor="let e of emp; let i = index">
+  <body  id="htmlData">
+    <div class="mySlides">
+      <div class="container col-md-10 align-items-center border h-25 w-100 mt-5 p-50" > 
+  
+        <h2>Khawaja Moosa {{i + 1}}</h2>
+  
+      </div>
+    </div>
+  </body>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="row mt-2">
+        <div class="col-md-12 d-flex justify-content-end text-end">
+            <button  panelToolbar class="btn btn-primary font-weight-bold" (click)="makePDF()"> <i class="fal fa-print"></i>   Make PDF</button>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+

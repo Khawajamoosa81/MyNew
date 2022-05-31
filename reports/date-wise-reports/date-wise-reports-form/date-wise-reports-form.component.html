@@ -1,0 +1,736 @@
+<div *ngIf="stopReport" class="container-fluid p-2">
+<div class="row">
+ <div class="col-md-6">
+    <fieldset>
+        <form>
+         <div class="form-group p-2 border w-100" panelContent>
+  <div class="row">
+   <div class="col-md-6">
+    <label class="form-label font-weight-bold h5" for="radio-group-1">Report Selector</label>
+   </div>
+  </div>
+<div class="row mt-3">
+ <div class="col-md-6">
+  <div class="input-group">
+   <label for="customRadio2"></label>
+    <div class="input-group-text">
+     <div class="custom-control custom-radio">
+      <input  type="radio" id="flexRadioDefault1" (change)="empTurnOver($event)" name="flexRadioDefault" class="custom-control-input" checked>
+       <label class="custom-control-label" for="flexRadioDefault1">Employee Turn Over</label>
+        </div>
+         </div>
+          </div>
+ </div>
+
+</div>
+
+<div class="row mt-2">
+ <div class="col-md-6">
+  <div class="input-group">
+   <label for="customRadio2"></label>
+    <div class="input-group-text">
+     <div class="custom-control custom-radio">
+      <input  type="radio" (change)="handleNewJoining($event)" id="flexRadioDefault2" name="flexRadioDefault" class="custom-control-input">
+       <label class="custom-control-label" for="flexRadioDefault2">New Joining</label>
+        </div>
+         </div>
+          </div>
+ </div>
+
+</div>
+
+<div class="row mt-2">
+ <div class="col-md-6">
+  <div class="input-group">
+   <label for="customRadio2"></label>
+    <div class="input-group-text">
+     <div class="custom-control custom-radio">
+      <input  type="radio" (change)="handleCardExpiry($event)" id="flexRadioDefault3" name="flexRadioDefault" class="custom-control-input" >
+       <label class="custom-control-label" for="flexRadioDefault3">Card Expiry</label>
+        </div>
+         </div>
+          </div>
+ </div>
+
+</div>
+
+<div class="row mt-2">
+ <div class="col-md-6">
+  <div class="input-group">
+   <label for="customRadio2"></label>
+    <div class="input-group-text">
+     <div class="custom-control custom-radio">
+      <input  type="radio" (change)="handleNotices($event)" id="flexRadioDefault4" name="flexRadioDefault" class="custom-control-input">
+       <label class="custom-control-label" for="flexRadioDefault4">Notices</label>
+        </div>
+         </div>
+          </div>
+ </div>
+
+</div>
+
+<div class="row mt-2">
+ <div class="col-md-6">
+  <div class="input-group">
+   <label for="customRadio2"></label>
+    <div class="input-group-text">
+     <div class="custom-control custom-radio">
+      <input  type="radio" (change)="handleListOfLeftEmp($event)" id="flexRadioDefault5" name="flexRadioDefault" class="custom-control-input">
+       <label class="custom-control-label" for="flexRadioDefault5">List of left Employees</label>
+        </div>
+         </div>
+          </div>
+ </div>
+
+</div>
+
+<div class="row mt-2">
+ <div class="col-md-6">
+  <div class="input-group">
+   <label for="customRadio2"></label>
+    <div class="input-group-text">
+     <div class="custom-control custom-radio">
+      <input  type="radio" (change)="handleProbationEnd($event)" id="flexRadioDefault6" name="flexRadioDefault" class="custom-control-input">
+       <label class="custom-control-label" for="flexRadioDefault6">Probabation End</label>
+        </div>
+         </div>
+          </div>
+ </div>
+
+</div>
+
+<div class="row mt-2">
+ <div class="col-md-6">
+  <div class="input-group">
+   <label for="customRadio2"></label>
+    <div class="input-group-text">
+     <div class="custom-control custom-radio">
+      <input  type="radio" (change)="handlePendingSalaryStatus($event)" id="flexRadioDefault7" name="flexRadioDefault" class="custom-control-input">
+       <label class="custom-control-label" for="flexRadioDefault7">Pending Salary Status</label>
+        </div>
+         </div>
+          </div>
+ </div>
+
+</div>
+
+
+<div class="row mt-2">
+ <div class="col-md-6">
+  <div class="input-group">
+   <label for="customRadio2"></label>
+    <div class="input-group-text">
+     <div class="custom-control custom-radio">
+      <input  type="radio" (change)="handleLeftEmpLetter($event)" id="flexRadioDefault8" name="flexRadioDefault" class="custom-control-input">
+       <label class="custom-control-label" for="flexRadioDefault8">Left Employees Letter</label>
+        </div>
+         </div>
+          </div>
+ </div>
+
+</div>
+
+
+<div class="row mt-2">
+ <div class="col-md-6">
+  <div class="input-group">
+   <label for="customRadio2"></label>
+    <div class="input-group-text">
+     <div class="custom-control custom-radio">
+      <input  type="radio" (change)="handleOverPreCalSummary($event)" id="flexRadioDefault9" name="flexRadioDefault" class="custom-control-input">
+       <label class="custom-control-label" for="flexRadioDefault9">Over Time Pre Calculation Summary</label>
+        </div>
+         </div>
+          </div>
+ </div>
+
+</div>
+
+<div class="row mt-2">
+ <div class="col-md-6">
+  <div class="input-group">
+   <label for="customRadio2"></label>
+    <div class="input-group-text">
+     <div class="custom-control custom-radio">
+      <input  type="radio" (change)="handleOverTimePreCal($event)" id="flexRadioDefault10" name="flexRadioDefault" class="custom-control-input">
+       <label class="custom-control-label" for="flexRadioDefault10">Over Time Pre Calculation</label>
+        </div>
+         </div>
+          </div>
+ </div>
+
+</div>
+
+<div class="row mt-2">
+ <div class="col-md-6">
+  <div class="input-group">
+   <label for="customRadio2"></label>
+    <div class="input-group-text">
+     <div class="custom-control custom-radio">
+      <input  type="radio" (change)="handleDailyListOfWorks($event)" id="flexRadioDefault11" name="flexRadioDefault" class="custom-control-input">
+       <label class="custom-control-label" for="flexRadioDefault11">Daily List of Workers Who Left after 8 hours</label>
+        </div>
+         </div>
+          </div>
+ </div>
+
+</div>
+
+<div class="row mt-2">
+ <div class="col-md-6">
+  <div class="input-group">
+   <label for="customRadio2"></label>
+    <div class="input-group-text">
+     <div class="custom-control custom-radio">
+      <input  type="radio" (change)="handleInActiveEOBIList($event)" id="flexRadioDefault12" name="flexRadioDefault" class="custom-control-input">
+       <label class="custom-control-label" for="flexRadioDefault12">In Active EOBI List</label>
+        </div>
+         </div>
+          </div>
+ </div>
+
+</div>
+
+<div class="row mt-2">
+ <div class="col-md-6">
+  <div class="input-group">
+   <label for="customRadio2"></label>
+    <div class="input-group-text">
+     <div class="custom-control custom-radio">
+      <input  type="radio" id="flexRadioDefault13" (change)="handleSalaryAnalysisReport($event)" name="flexRadioDefault" class="custom-control-input">
+       <label class="custom-control-label" for="flexRadioDefault13">Salary Analysis Report</label>
+        </div>
+         </div>
+          </div>
+ </div>
+
+</div>
+
+<div class="row mt-2">
+ <div class="col-md-6">
+  <div class="input-group">
+   <label for="customRadio2"></label>
+    <div class="input-group-text">
+     <div class="custom-control custom-radio">
+      <input  type="radio" id="flexRadioDefault14" (change)="handleEmpMonthlyReport($event)"  name="flexRadioDefault" class="custom-control-input">
+       <label class="custom-control-label" for="flexRadioDefault14">Employee Monthly Report</label>
+        </div>
+         </div>
+          </div>
+ </div>
+
+</div>
+
+</div>
+</form>
+</fieldset>
+
+<fieldset>
+    <form>
+     <div class="form-group p-2 mt-3 border w-100" panelContent>
+
+        <div class="row">
+            <div class="col-md-12">
+                <label class="form-label font-weight-bold h5" for="radio-group-1">Option Selector</label>
+            </div>
+        </div>
+
+         <div class="row mt-3">
+             <div class="col-md-12">
+                <div class="input-group">
+                    <label for="customRadio2"></label>
+                     <div class="input-group-text">
+                      <div class="custom-control custom-radio">
+                       <input  type="radio" (change)="handleAllOS($event)" id="flexRadioDefault19" name="flexRadioDefault" class="custom-control-input" checked>
+                        <label class="custom-control-label" for="flexRadioDefault19">All</label>
+                         </div>
+                          </div>
+                           </div>
+             </div>
+         </div>
+
+           
+         <div class="row mt-2">
+            <div class="col-md-12">
+               <div class="input-group">
+                   <label for="customRadio2"></label>
+                    <div class="input-group-text">
+                     <div class="custom-control custom-radio">
+                      <input (change)="handleByBranchOS($event)" [disabled]="employeeTurnOver==true || InActiveEOBIList==true || InActiveEOBIList==true || LeftEmpLetter==true || SalaryAnalysisReport==true"  type="radio" id="flexRadioDefault20" name="flexRadioDefault" class="custom-control-input">
+                       <label class="custom-control-label" for="flexRadioDefault20">By Branch</label>
+                        </div>
+                         </div>
+                          </div>
+            </div>
+        </div>
+        
+
+          
+        <div class="row mt-2">
+            <div class="col-md-12">
+               <div class="input-group">
+                   <label for="customRadio2"></label>
+                    <div class="input-group-text">
+                     <div class="custom-control custom-radio">
+                      <input [disabled]="OverPreCalSummary==true" (change)="handleByGradeOS($event)" [disabled]="employeeTurnOver==true || OverPreCalSummary==true || OverTimePreCal==true || DailyListOfWorks==true || InActiveEOBIList==true || pendingSalaryStatus==true || LeftEmpLetter==true || OverPreCalSummary==true "  type="radio" id="flexRadioDefault21" name="flexRadioDefault" class="custom-control-input">
+                       <label class="custom-control-label" for="flexRadioDefault21">By Grade</label>
+                        </div>
+                         </div>
+                          </div>
+            </div>
+        </div>
+
+          
+        <div class="row mt-2">
+            <div class="col-md-12">
+               <div class="input-group">
+                   <label for="customRadio2"></label>
+                    <div class="input-group-text">
+                     <div class="custom-control custom-radio">
+                      <input [disabled]="employeeTurnOver==true || OverPreCalSummary==true || OverTimePreCal==true || DailyListOfWorks==true || InActiveEOBIList==true || pendingSalaryStatus==true || LeftEmpLetter==true || OverPreCalSummary==true || OverTimePreCal==true" (change)="handleJobTypeOS($event)"  type="radio" id="flexRadioDefault22" name="flexRadioDefault" class="custom-control-input">
+                       <label class="custom-control-label" for="flexRadioDefault22">By Job Type</label>
+                        </div>
+                         </div>
+                          </div>
+            </div>
+        </div>
+
+          
+        <div class="row mt-2">
+            <div class="col-md-12">
+               <div class="input-group">
+                   <label for="customRadio2"></label>
+                    <div class="input-group-text">
+                     <div class="custom-control custom-radio">
+                      <input (change)="handleByShiftOS($event)" [disabled]="employeeTurnOver==true || OverPreCalSummary==true || OverTimePreCal==true || DailyListOfWorks==true || InActiveEOBIList==true || pendingSalaryStatus==true || LeftEmpLetter==true || OverPreCalSummary==true || OverTimePreCal==true"  type="radio" id="flexRadioDefault23" name="flexRadioDefault" class="custom-control-input">
+                       <label class="custom-control-label" for="flexRadioDefault23">By Shift</label>
+                        </div>
+                         </div>
+                          </div>
+            </div>
+        </div>
+
+          
+        <div class="row mt-2">
+            <div class="col-md-12">
+               <div class="input-group">
+                   <label for="customRadio2"></label>
+                    <div class="input-group-text">
+                     <div class="custom-control custom-radio">
+                      <input (change)="handleHiringCriteriaOS($event)" [disabled]="employeeTurnOver==true || OverPreCalSummary==true || OverTimePreCal==true || DailyListOfWorks==true || InActiveEOBIList==true || cardExpiry==true || Notices==true || ListOfLeftEmp==true || probationEnd==true || pendingSalaryStatus==true || LeftEmpLetter==true || OverPreCalSummary==true || OverTimePreCal==true"   type="radio" id="flexRadioDefault24" name="flexRadioDefault" class="custom-control-input">
+                       <label class="custom-control-label" for="flexRadioDefault24">Hiring Criteria</label>
+                        </div>
+                         </div>
+                          </div>
+            </div>
+        </div>
+
+          
+        <div class="row mt-2">
+            <div class="col-md-12">
+               <div class="input-group">
+                   <label for="customRadio2"></label>
+                    <div class="input-group-text">
+                     <div class="custom-control custom-radio">
+                      <input type="radio" (change)="handleByReasonOS($event)" id="flexRadioDefault25" name="flexRadioDefault" [disabled]="OverPreCalSummary==true || DailyListOfWorks==true || InActiveEOBIList==true || newJoining==true || employeeTurnOver==true || cardExpiry==true || probationEnd==true || pendingSalaryStatus==true || LeftEmpLetter==true || OverPreCalSummary==true" class="custom-control-input">
+                       <label class="custom-control-label" for="flexRadioDefault25">By Reason</label>
+                        </div>
+                         </div>
+                          </div>
+            </div>
+        </div>
+
+     </div>
+    </form>
+</fieldset>
+
+ </div>
+
+
+ <div class="col-md-6">
+
+    <fieldset>
+        <form>
+         <div class="form-group p-2 border w-100" panelContent>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <label class="form-label font-weight-bold h5" for="radio-group-1">Date Selector</label>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-5">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Form Card</span>
+                </div>
+                <input type="date" id="fromCard" [(ngModel)]='cardStartValue' name="fromCard"  #fromCard class="form-control" placeholder="card no." aria-label="fromCard" aria-describedby="basic-addon1">
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Form Card</span>
+                </div>
+                <input type="date" id="fromCard" [(ngModel)]='cardStartValue' name="fromCard"  #fromCard class="form-control" placeholder="card no." aria-label="fromCard" aria-describedby="basic-addon1">
+            </div>
+        </div>
+    </div>
+
+</div>
+</form>
+</fieldset>
+
+
+<fieldset>
+    <form>
+     <div class="form-group p-2 mt-3 border w-100" panelContent>
+
+  <div class="row">
+   <div class="col-md-12">
+    <label class="form-label font-weight-bold h5" for="radio-group-1">Option Selector</label>
+
+
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Branch:</span>
+           
+                       <select [disabled]="(employeeTurnOver==true && AllOS==true) || (employeeTurnOver==true && ByReasonOS==true) || (newJoining==true && AllOS==true) || (newJoining==true && ByReasonOS==true) || (newJoining==true && ByGradeOS==true) || (newJoining==true && ByJobTypeOS==true) || (newJoining==true && ByShiftOS==true) || (newJoining==true && HiringCriteriaOS==true) || (cardExpiry==true && AllOS==true) || (cardExpiry==true && ByReasonOS==true) || (cardExpiry==true && ByGradeOS==true) || (cardExpiry==true && ByJobTypeOS==true) || (cardExpiry==true && ByShiftOS==true) || (cardExpiry && HiringCriteriaOS==true) || (Notices==true && AllOS==true) || (Notices==true && ByReasonOS==true) || (Notices==true && ByGradeOS==true) || (Notices==true && ByJobTypeOS==true) || (Notices==true && ByShiftOS==true) || (Notices==true && HiringCriteriaOS==true) || (ListOfLeftEmp==true && AllOS==true) || (ListOfLeftEmp==true && ByGradeOS==true) || (ListOfLeftEmp==true && ByJobTypeOS==true) || (ListOfLeftEmp==true && ByShiftOS==true) || (ListOfLeftEmp==true && HiringCriteriaOS==true) || (ListOfLeftEmp==true && ByReasonOS==true) || (probationEnd==true && AllOS==true) || (probationEnd==true && ByGradeOS==true) || (probationEnd==true && ByJobTypeOS==true) || (probationEnd==true && ByShiftOS==true) || (probationEnd==true && HiringCriteriaOS==true) || (probationEnd==true && ByReasonOS==true) || (pendingSalaryStatus==true && AllOS==true) || (pendingSalaryStatus==true && ByGradeOS==true) || (pendingSalaryStatus==true && ByJobTypeOS==true) || (pendingSalaryStatus==true && ByShiftOS==true) || (pendingSalaryStatus==true && HiringCriteriaOS==true) || (pendingSalaryStatus==true && ByReasonOS==true) || (LeftEmpLetter==true && AllOS==true) || (LeftEmpLetter==true && ByGradeOS==true) || (LeftEmpLetter==true && ByJobTypeOS==true) || (LeftEmpLetter==true && ByShiftOS==true) || (LeftEmpLetter==true && HiringCriteriaOS==true) || (LeftEmpLetter==true && ByReasonOS==true) || (OverPreCalSummary==true && AllOS==true) || (OverTimePreCal==true && AllOS==true) || (OverTimePreCal==true && ByReasonOS==true)|| (DailyListOfWorks==true && AllOS==true) || (SalaryAnalysisReport==true && AllOS==true) || (SalaryAnalysisReport==true && ByGradeOS==true) || (SalaryAnalysisReport==true && ByJobTypeOS==true) || (SalaryAnalysisReport==true && ByShiftOS==true) || (SalaryAnalysisReport==true && HiringCriteriaOS==true) || (SalaryAnalysisReport==true && ByReasonOS==true) || (EmpMonthlyReport==true && AllOS==true) || (EmpMonthlyReport==true && ByGradeOS==true) || (EmpMonthlyReport==true && ByJobTypeOS==true) || (EmpMonthlyReport==true && ByShiftOS==true) || (EmpMonthlyReport==true && HiringCriteriaOS==true) || (EmpMonthlyReport==true && ByReasonOS==true) || (InActiveEOBIList==true || AllOS==true)" class="form-control">
+                           <option>Khawaja Moosa</option>
+                           <option>Ali</option>               
+                       </select>
+                    
+                </div>
+            </div>
+           
+        </div>
+    </div>
+   
+   </div>
+  </div>
+
+  <div class="row mt-2">
+   <div class="col-md-12">
+    <div class="input-group">
+     <div class="input-group-prepend">
+         <span class="input-group-text">Grade:</span>
+
+            <select [disabled]="(employeeTurnOver==true && AllOS==true) || (employeeTurnOver==true && ByReasonOS==true) || (newJoining==true && AllOS==true) || (newJoining==true && ByReasonOS==true) || (newJoining==true  && ByBranchOS==true) || (newJoining==true && ByJobTypeOS==true) || (newJoining==true && ByShiftOS==true) || (newJoining==true && HiringCriteriaOS==true) || (cardExpiry==true && AllOS==true) || (cardExpiry==true && ByReasonOS==true) || (cardExpiry==true && ByBranchOS==true) || (cardExpiry==true && ByJobTypeOS==true) || (cardExpiry==true && ByShiftOS==true) || (cardExpiry && HiringCriteriaOS==true) || (Notices==true && AllOS==true) || (Notices==true && ByReasonOS==true) || (Notices==true && ByBranchOS==true) || (Notices==true && ByJobTypeOS==true) || (Notices==true && ByShiftOS==true) || (Notices==true && HiringCriteriaOS==true) || (ListOfLeftEmp==true && AllOS) || (ListOfLeftEmp==true && ByBranchOS==true) || (ListOfLeftEmp==true && ByJobTypeOS==true) || (ListOfLeftEmp==true && ByShiftOS==true) || (ListOfLeftEmp==true && HiringCriteriaOS==true) || (ListOfLeftEmp==true && ByReasonOS==true) || (probationEnd==true && AllOS==true) || (probationEnd==true && ByBranchOS==true) || (probationEnd==true && ByJobTypeOS==true) || (probationEnd==true && ByShiftOS==true) || (probationEnd==true && HiringCriteriaOS==true) || (probationEnd==true && ByReasonOS==true) || (pendingSalaryStatus==true && AllOS==true) || (pendingSalaryStatus==true && ByBranchOS==true) || (pendingSalaryStatus==true && ByJobTypeOS==true) || (pendingSalaryStatus==true && ByShiftOS==true) || (pendingSalaryStatus==true && HiringCriteriaOS==true) || (pendingSalaryStatus==true && ByReasonOS==true) || (LeftEmpLetter==true && AllOS==true) || (LeftEmpLetter==true && ByBranchOS==true) || (LeftEmpLetter==true && ByJobTypeOS==true) || (LeftEmpLetter==true && ByShiftOS==true) || (LeftEmpLetter==true && HiringCriteriaOS==true) || (LeftEmpLetter==true && ByReasonOS==true) || (OverPreCalSummary==true && AllOS==true) || (OverPreCalSummary==true && ByBranchOS==true) || (OverTimePreCal==true && AllOS==true) || (OverTimePreCal==true && ByBranchOS==true) || (OverTimePreCal==true && ByReasonOS==true) || (DailyListOfWorks==true && AllOS==true) || (DailyListOfWorks==true && ByBranchOS==true) || (SalaryAnalysisReport==true && AllOS==true) || (SalaryAnalysisReport==true && ByBranchOS==true) || (SalaryAnalysisReport==true && ByBranchOS==true) || (SalaryAnalysisReport==true && ByJobTypeOS==true) || (SalaryAnalysisReport==true && ByShiftOS==true) || (SalaryAnalysisReport==true && HiringCriteriaOS==true) || (SalaryAnalysisReport==true && ByReasonOS==true) || (EmpMonthlyReport==true && AllOS==true) || (EmpMonthlyReport==true && ByBranchOS==true) || (EmpMonthlyReport==true && ByJobTypeOS==true) || (EmpMonthlyReport==true && ByShiftOS==true) || (EmpMonthlyReport==true && HiringCriteriaOS==true) || (EmpMonthlyReport==true && ByReasonOS==true) || (InActiveEOBIList==true || AllOS==true)" class="form-control">
+                <option>A</option>
+                <option>B</option>               
+            </select>
+         
+     </div>
+ </div>
+   </div>
+  </div>
+
+  <div class="row mt-2">
+   <div class="col-md-12">
+    <div class="input-group">
+     <div class="input-group-prepend">
+         <span class="input-group-text">Job Type:</span>
+
+            <select [disabled]="(employeeTurnOver==true && AllOS==true) || (employeeTurnOver==true && ByReasonOS==true) || (newJoining==true && AllOS==true) || (newJoining==true && ByReasonOS==true) || (newJoining==true  && ByBranchOS==true) || (newJoining==true && ByGradeOS==true) || (newJoining==true && ByShiftOS==true) || (newJoining==true && HiringCriteriaOS==true) || (cardExpiry==true && AllOS==true) || (cardExpiry==true && ByReasonOS==true) || (cardExpiry==true && ByBranchOS==true) || (cardExpiry==true && ByGradeOS==true) || (cardExpiry==true && ByShiftOS==true) || (cardExpiry && HiringCriteriaOS==true) || (Notices==true && AllOS==true) || (Notices==true && ByReasonOS==true) || (Notices==true && ByBranchOS==true) || (Notices==true && ByGradeOS==true) || (Notices==true && ByShiftOS==true) || (Notices==true && HiringCriteriaOS==true) || (ListOfLeftEmp==true && AllOS) || (ListOfLeftEmp==true && ByBranchOS==true) || (ListOfLeftEmp==true && ByGradeOS==true) || (ListOfLeftEmp==true && ByShiftOS==true) || (ListOfLeftEmp==true && HiringCriteriaOS==true) || (ListOfLeftEmp==true && ByReasonOS==true) || (probationEnd==true && AllOS==true) || (probationEnd==true && ByBranchOS==true) || (probationEnd==true && ByGradeOS==true) || (probationEnd==true && ByShiftOS==true) || (probationEnd==true && HiringCriteriaOS==true) || (probationEnd==true && ByReasonOS==true) || (pendingSalaryStatus==true && AllOS==true) || (pendingSalaryStatus==true && ByBranchOS==true) || (pendingSalaryStatus==true && ByGradeOS==true) || (pendingSalaryStatus==true && ByShiftOS==true) || (pendingSalaryStatus==true && HiringCriteriaOS==true) || (pendingSalaryStatus==true && ByReasonOS==true) || (LeftEmpLetter==true && AllOS==true) || (LeftEmpLetter==true && ByBranchOS==true) || (LeftEmpLetter==true && ByGradeOS==true) || (LeftEmpLetter==true && ByShiftOS==true) || (LeftEmpLetter==true && HiringCriteriaOS==true) || (LeftEmpLetter==true && ByReasonOS==true) || (OverPreCalSummary==true && AllOS==true) || (OverPreCalSummary==true && ByBranchOS==true) || (OverTimePreCal==true && AllOS==true) || (OverTimePreCal==true && ByBranchOS==true)|| (OverTimePreCal==true && ByReasonOS==true) || (DailyListOfWorks==true && AllOS==true) || (DailyListOfWorks==true && ByBranchOS==true) || (SalaryAnalysisReport==true && AllOS==true) || (SalaryAnalysisReport==true && ByBranchOS==true) || (SalaryAnalysisReport==true && ByGradeOS==true) || (SalaryAnalysisReport==true && ByShiftOS==true) || (SalaryAnalysisReport==true && HiringCriteriaOS==true) || (SalaryAnalysisReport==true && ByReasonOS==true) || (EmpMonthlyReport==true && AllOS==true) || (EmpMonthlyReport==true && ByBranchOS==true) || (EmpMonthlyReport==true && ByGradeOS==true)|| (EmpMonthlyReport==true && ByShiftOS==true) || (EmpMonthlyReport==true && HiringCriteriaOS==true) || (EmpMonthlyReport==true && ByReasonOS==true) || (InActiveEOBIList==true || AllOS==true)" class="form-control">
+                <option>Appliance</option>
+                <option>System Development</option>               
+            </select>
+         
+     </div>
+ </div>
+   </div>
+  </div>
+
+
+  <div class="row mt-2">
+   <div class="col-md-12">
+    <div class="input-group">
+     <div class="input-group-prepend">
+         <span class="input-group-text">Shift:</span>
+
+            <select [disabled]="(employeeTurnOver==true && AllOS==true) || (employeeTurnOver==true && ByReasonOS==true) || (newJoining==true && AllOS==true) || (newJoining==true && ByReasonOS==true) || (newJoining==true  && ByBranchOS==true) || (newJoining==true && ByGradeOS==true) || (newJoining==true && ByJobTypeOS==true) || (newJoining==true && HiringCriteriaOS==true) || (cardExpiry==true && AllOS==true) || (cardExpiry==true && ByReasonOS==true) || (cardExpiry==true && ByBranchOS==true) || (cardExpiry==true && ByGradeOS==true) || (cardExpiry==true && ByJobTypeOS==true) || (cardExpiry && HiringCriteriaOS==true) || (Notices==true && AllOS==true) || (Notices==true && ByReasonOS==true) || (Notices==true && ByBranchOS==true) || (Notices==true && ByGradeOS==true) || (Notices==true && ByJobTypeOS==true) || (Notices==true && HiringCriteriaOS==true) || (ListOfLeftEmp==true && AllOS) || (ListOfLeftEmp==true && ByBranchOS==true) || (ListOfLeftEmp==true && ByGradeOS==true) || (ListOfLeftEmp==true && ByJobTypeOS==true) || (ListOfLeftEmp==true && HiringCriteriaOS==true) || (ListOfLeftEmp==true && ByReasonOS==true) || (probationEnd==true && AllOS==true) || (probationEnd==true && ByBranchOS==true) || (probationEnd==true && ByGradeOS==true) || (probationEnd==true && ByJobTypeOS==true) || (probationEnd==true && HiringCriteriaOS==true) || (probationEnd==true && ByReasonOS==true) || (pendingSalaryStatus==true && AllOS==true) || (pendingSalaryStatus==true && ByBranchOS==true) || (pendingSalaryStatus==true && ByGradeOS==true) || (pendingSalaryStatus==true && ByJobTypeOS==true) || (pendingSalaryStatus==true && HiringCriteriaOS==true) || (pendingSalaryStatus==true && ByReasonOS==true) || (LeftEmpLetter==true && AllOS==true) || (LeftEmpLetter==true && ByBranchOS==true) || (LeftEmpLetter==true && ByGradeOS==true) || (LeftEmpLetter==true && ByJobTypeOS==true) || (LeftEmpLetter==true && HiringCriteriaOS==true) || (LeftEmpLetter==true && ByReasonOS==true) || (OverPreCalSummary==true && AllOS==true) || (OverPreCalSummary==true && ByBranchOS==true) || (OverTimePreCal==true && AllOS==true) || (OverTimePreCal==true && ByBranchOS==true) || (OverTimePreCal==true && ByReasonOS==true) || (DailyListOfWorks==true && AllOS==true) || (DailyListOfWorks==true && ByBranchOS==true) || (SalaryAnalysisReport==true && AllOS==true) || (SalaryAnalysisReport==true && ByBranchOS==true) || (SalaryAnalysisReport==true && ByGradeOS==true) || (SalaryAnalysisReport==true && ByJobTypeOS==true) || (SalaryAnalysisReport==true && HiringCriteriaOS==true) || (SalaryAnalysisReport==true && ByReasonOS==true) || (EmpMonthlyReport==true && AllOS==true) || (EmpMonthlyReport==true && ByBranchOS==true) || (EmpMonthlyReport==true && ByGradeOS==true) || (EmpMonthlyReport==true && ByJobTypeOS==true) || (EmpMonthlyReport==true && HiringCriteriaOS==true) || (EmpMonthlyReport==true && ByReasonOS==true) || (InActiveEOBIList==true || AllOS==true)"  class="form-control">
+                <option>Day</option>
+                <option>Night</option>               
+            </select>
+         
+     </div>
+ </div>
+   </div>
+  </div>
+  
+  <div class="row mt-2">
+   <div class="col-md-12">
+    <div class="input-group">
+     <div class="input-group-prepend">
+         <span class="input-group-text">Hiring Criteria:</span>
+
+            <select [disabled]="(employeeTurnOver==true && AllOS==true) || (employeeTurnOver==true && ByReasonOS==true) || (newJoining==true && AllOS==true) || (newJoining==true && ByReasonOS==true) || (newJoining==true  && ByBranchOS==true) || (newJoining==true && ByGradeOS==true) || (newJoining==true && ByJobTypeOS==true) || (newJoining==true && ByShiftOS==true) || (cardExpiry==true && AllOS==true) || (cardExpiry==true && ByReasonOS==true) || (cardExpiry==true && ByBranchOS==true) || (cardExpiry==true && ByGradeOS==true) || (cardExpiry==true && ByJobTypeOS==true) || (cardExpiry==true && ByShiftOS==true) || (Notices==true && AllOS==true) || (Notices==true && ByReasonOS==true) || (Notices==true && ByBranchOS==true) || (Notices==true && ByGradeOS==true) || (Notices==true && ByJobTypeOS==true) || (Notices==true && ByShiftOS==true) || (ListOfLeftEmp==true && AllOS) || (ListOfLeftEmp==true && ByBranchOS==true) || (ListOfLeftEmp==true && ByGradeOS==true) || (ListOfLeftEmp==true && ByJobTypeOS==true) || (ListOfLeftEmp==true && ByShiftOS==true) || (ListOfLeftEmp==true && ByReasonOS==true) || (probationEnd==true && AllOS==true) || (probationEnd==true && ByBranchOS==true) || (probationEnd==true && ByGradeOS==true) || (probationEnd==true && ByJobTypeOS==true) || (probationEnd==true && ByShiftOS==true) || (probationEnd==true && ByReasonOS==true) || (pendingSalaryStatus==true && AllOS==true) || (pendingSalaryStatus==true && ByBranchOS==true) || (pendingSalaryStatus==true && ByGradeOS==true) || (pendingSalaryStatus==true && ByJobTypeOS==true) || (pendingSalaryStatus==true && ByShiftOS==true) || (pendingSalaryStatus==true && ByReasonOS==true) || (LeftEmpLetter==true && AllOS==true) || (LeftEmpLetter==true && ByBranchOS==true) || (LeftEmpLetter==true && ByGradeOS==true) || (LeftEmpLetter==true && ByJobTypeOS==true) || (LeftEmpLetter==true && ByShiftOS==true) || (LeftEmpLetter==true && ByReasonOS==true) || (OverPreCalSummary==true && AllOS==true) || (OverPreCalSummary==true && ByBranchOS==true) || (OverTimePreCal==true && AllOS==true) || (OverTimePreCal==true && ByBranchOS==true)|| (OverTimePreCal==true && ByReasonOS==true) || (DailyListOfWorks==true && AllOS==true) || (DailyListOfWorks==true && ByBranchOS==true) || (SalaryAnalysisReport==true && AllOS==true) || (SalaryAnalysisReport==true && ByBranchOS==true) || (SalaryAnalysisReport==true && ByGradeOS==true) || (SalaryAnalysisReport==true && ByJobTypeOS==true) || (SalaryAnalysisReport==true && ByShiftOS==true) || (SalaryAnalysisReport==true && ByReasonOS==true) || (EmpMonthlyReport==true && AllOS==true) || (EmpMonthlyReport==true && ByBranchOS==true) || (EmpMonthlyReport==true && ByGradeOS==true)|| (EmpMonthlyReport==true && ByJobTypeOS==true) || (EmpMonthlyReport==true && ByShiftOS==true) || (EmpMonthlyReport==true && ByReasonOS==true) || (InActiveEOBIList==true || AllOS==true)" class="form-control">
+                <option>Day</option>
+                <option>Night</option>               
+            </select>
+         
+     </div>
+ </div>
+   </div>
+  </div>
+
+
+  <div class="row mt-2">
+   <div class="col-md-12">
+    <div class="input-group">
+     <div class="input-group-prepend">
+         <span class="input-group-text">Reason:</span>
+
+            <select [disabled]="(employeeTurnOver==true && AllOS==true) || (newJoining==true && AllOS==true) || (newJoining==true  && ByBranchOS==true) || (newJoining==true && ByGradeOS==true) || (newJoining==true && ByJobTypeOS==true) || (newJoining==true && ByShiftOS==true) || (newJoining==true && HiringCriteriaOS==true) || (cardExpiry==true && AllOS==true) || (cardExpiry==true && ByBranchOS==true) || (cardExpiry==true && ByGradeOS==true) || (cardExpiry==true && ByJobTypeOS==true) || (cardExpiry==true && ByShiftOS==true) || (cardExpiry && HiringCriteriaOS==true) || (Notices==true && AllOS==true) || (Notices==true && ByBranchOS==true) || (Notices==true && ByGradeOS==true) || (Notices==true && ByJobTypeOS==true) || (Notices==true && ByShiftOS==true) || (Notices==true && HiringCriteriaOS==true) || (ListOfLeftEmp==true && AllOS) || (ListOfLeftEmp==true && ByBranchOS==true) || (ListOfLeftEmp==true && ByGradeOS==true) || (ListOfLeftEmp==true && ByJobTypeOS==true) || (ListOfLeftEmp==true && ByShiftOS==true) || (ListOfLeftEmp==true && HiringCriteriaOS==true) || (probationEnd==true && AllOS==true) || (probationEnd==true && ByBranchOS==true) || (probationEnd==true && ByGradeOS==true) || (probationEnd==true && ByJobTypeOS==true) || (probationEnd==true && ByShiftOS==true) || (probationEnd==true && HiringCriteriaOS==true) || (pendingSalaryStatus==true && AllOS==true) || (pendingSalaryStatus==true && ByBranchOS==true) || (pendingSalaryStatus==true && ByGradeOS==true) || (pendingSalaryStatus==true && ByJobTypeOS==true) || (pendingSalaryStatus==true && ByShiftOS==true) || (pendingSalaryStatus==true && HiringCriteriaOS==true) || (LeftEmpLetter==true && AllOS==true) || (LeftEmpLetter==true && ByBranchOS==true) || (LeftEmpLetter==true && ByGradeOS==true) || (LeftEmpLetter==true && ByJobTypeOS==true) || (LeftEmpLetter==true && ByShiftOS==true) || (LeftEmpLetter==true && HiringCriteriaOS==true) || (OverPreCalSummary==true && AllOS==true) || (OverPreCalSummary==true && ByBranchOS==true) || (OverTimePreCal==true && AllOS==true) || (OverTimePreCal==true && ByBranchOS==true) || (DailyListOfWorks==true && AllOS==true) || (DailyListOfWorks==true && ByBranchOS==true) || (SalaryAnalysisReport==true && AllOS==true) || (SalaryAnalysisReport==true && ByBranchOS==true) || (SalaryAnalysisReport==true && ByGradeOS==true) || (SalaryAnalysisReport==true && ByJobTypeOS==true) || (SalaryAnalysisReport==true && ByShiftOS==true) || (SalaryAnalysisReport==true && HiringCriteriaOS==true) || (EmpMonthlyReport==true && AllOS==true) || (EmpMonthlyReport==true && ByBranchOS==true) || (EmpMonthlyReport==true && ByGradeOS==true) || (EmpMonthlyReport==true && ByJobTypeOS==true) || (EmpMonthlyReport==true && ByShiftOS==true) || (EmpMonthlyReport==true && HiringCriteriaOS==true) || (InActiveEOBIList==true || AllOS==true)" class="form-control">
+                <option>Urgent</option>
+                <option>Work at home</option>               
+            </select>
+         
+     </div>
+ </div>
+   </div>
+  </div>
+
+  <div class="row mt-3">
+   <div class="col-md-12">
+
+    <div class="row">
+        <div class="col-md-12">
+            <label class="form-label bg-info text-center w-75 text-white p-1 font-weight-bold h5" for="radio-group-1">Select Appropriate Option</label>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Department:</span>
+                  <select [disabled]="AllSAP==true || DesignSAP==true || SectionSAP==true" class="form-control">
+                      <option></option>
+                  </select>
+                 
+                </div>
+                </div> 
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        <div class="col-md-12">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Section:</span>
+                    <select [disabled]="AllSAP==true || DeptSAP==true || DesignSAP==true" class="form-control">
+                        <option></option>
+    </select>
+    
+    </div>
+    </div> 
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        <div class="col-md-12">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                <span class="input-group-text">Designation:</span>
+                <select [disabled]="AllSAP==true || DeptSAP==true || SectionSAP==true" class="form-control">
+                    <option></option>
+                </select>
+                
+                </div>
+                </div> 
+        </div>
+    </div>
+
+
+<div class="row mt-3">
+<div class="col-md-6">
+   <div class="input-group">
+       <div class="input-group-text">
+           <div class="custom-control custom-radio">
+               <input  type="radio" (change)="handleAllSAP($event)" id="flexRadioDefault15" name="flexRadioDefault" class="custom-control-input" checked>
+               <label class="custom-control-label" for="flexRadioDefault15">All</label>
+           </div>
+       </div>
+   </div>
+</div>
+
+<div class="col-md-6">
+   <div class="input-group">
+       <div class="input-group-text">
+           <div class="custom-control custom-radio">
+               <input type="radio" (change)="handleDeptSAP($event)" id="flexRadioDefault16" name="flexRadioDefault" class="custom-control-input">
+               <label class="custom-control-label" for="flexRadioDefault16">Department</label>
+           </div>
+       </div>
+   </div>
+</div>
+</div>
+
+<div class="row mt-3">
+<div class="col-md-6">
+   <div class="input-group">
+       <div class="input-group-text">
+           <div class="custom-control custom-radio">
+               <input type="radio" (change)="handleDesignSAP($event)" id="flexRadioDefault17" name="flexRadioDefault" class="custom-control-input">
+               <label class="custom-control-label" for="flexRadioDefault17">Designation</label>
+           </div>
+       </div>
+   </div>
+</div>
+<div class="col-md-6">
+   <div class="input-group">
+       <div class="input-group-text">
+           <div class="custom-control custom-radio">
+               <input  type="radio" (change)="handleSecionSAP($event)" id="flexRadioDefault18" name="flexRadioDefault" class="custom-control-input">
+               <label class="custom-control-label" for="flexRadioDefault18">Section</label>
+           </div>
+       </div>
+   </div>
+</div>
+</div>
+
+   </div>
+
+  </div>
+
+</div>
+</form>
+</fieldset>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="frame-wrap">
+            <div class="demo" style="display: grid">
+                <button style="padding:15px" type="button" (click)="showReport()" class="btn btn-info">Show Report</button>
+            </div>
+        </div>
+    </div>
+ </div>
+ 
+
+ </div>
+
+
+</div>
+</div>
+
+
+
+<div *ngIf="showReportt" class="row">
+    <div class="col-md-12">
+        
+        <div *ngIf="employeeTurnOver" class="row">
+            <div class="col-md-12">
+                <smart-emp-turn-over-date-wise></smart-emp-turn-over-date-wise>
+            </div>
+        </div>
+
+        <div *ngIf="newJoining" class="row">
+            <div class="col-md-12">
+                <smart-new-joining-date-wise></smart-new-joining-date-wise>
+            </div>
+        </div>
+
+           <div *ngIf="cardExpiry" class="row">
+            <div class="col-md-12">
+                <smart-card-expiry-date-wise></smart-card-expiry-date-wise>
+            </div>
+        </div>
+
+          <div *ngIf="Notices" class="row">
+            <div class="col-md-12">
+                <smart-notices-date-wise></smart-notices-date-wise>
+            </div>
+        </div>
+
+        <div *ngIf="ListOfLeftEmp" class="row">
+            <div class="col-md-12">
+                <smart-list-of-left-emp-date-wise></smart-list-of-left-emp-date-wise>
+            </div>
+        </div>
+
+        <div *ngIf="probationEnd" class="row">
+            <div class="col-md-12">
+                <smart-probation-end-date-wise></smart-probation-end-date-wise>
+            </div>
+        </div>
+
+        <div *ngIf="pendingSalaryStatus" class="row">
+            <div class="col-md-12">
+                <smart-pending-salary-status-date-wise></smart-pending-salary-status-date-wise>
+            </div>
+        </div>
+
+        <div *ngIf="LeftEmpLetter" class="row">
+            <div class="col-md-12">
+                <smart-left-emp-letter-date-wise></smart-left-emp-letter-date-wise>
+            </div>
+        </div>
+
+        <div *ngIf="OverPreCalSummary" class="row">
+            <div class="col-md-12">
+                <smart-over-time-pre-calc-summary-date-wise></smart-over-time-pre-calc-summary-date-wise>
+            </div>
+        </div>
+
+        <div *ngIf="OverTimePreCal" class="row">
+            <div class="col-md-12">
+                <smart-over-time-pre-cal-date-wise></smart-over-time-pre-cal-date-wise>
+            </div>
+        </div>
+
+        <div *ngIf="DailyListOfWorks" class="row">
+            <div class="col-md-12">
+                <smart-daily-list-of-works-wwork8-h-date-wise></smart-daily-list-of-works-wwork8-h-date-wise>
+            </div>
+        </div>
+
+        <div *ngIf="InActiveEOBIList" class="row">
+            <div class="col-md-12">
+                <smart-in-active-eobilist-date-wise></smart-in-active-eobilist-date-wise>
+            </div>
+        </div>
+
+        <div *ngIf="SalaryAnalysisReport" class="row">
+            <div class="col-md-12">
+                <smart-salary-analysis-report-date-wise></smart-salary-analysis-report-date-wise>
+            </div>
+        </div>
+
+        <div *ngIf="EmpMonthlyReport" class="row">
+            <div class="col-md-12">
+                <smart-emp-monthly-report-date-wise></smart-emp-monthly-report-date-wise>
+            </div>
+        </div>
+
+
+    <div class="row mt-3">
+        
+        <div class='col-md-6'>
+            <div class="row">
+                <div class="col-md-6">
+                    <button class="btn btn-danger" (click)="EmpRecord()" style="background-color: maroon;" > <i class="fal fa-arrow-left"></i>  Click Here to Go Back to Employee Record</button>
+                </div>
+            </div>
+        </div>
+       
+        <div class="col-md-6 d-flex justify-content-end text-end">
+            <div class="row mt-3">
+                <div class="col-md-12">
+                    <button  panelToolbar (click)="makePDF()" class="btn btn-primary font-weight-bold"> <i class="fal fa-print"></i>   Make PDF</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+
+
+

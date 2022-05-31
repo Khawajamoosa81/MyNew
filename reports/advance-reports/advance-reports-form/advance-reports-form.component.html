@@ -1,0 +1,783 @@
+<div *ngIf="stopReport" class="container-fluid p-2">
+ <div class="row">
+  <div class="col-md-6">
+ 
+   <fieldset>
+    <form>
+        <div class="form-group p-2 border w-100" panelContent>
+
+     <div class="row">
+      <div class="col-md-12">
+       <label class="form-label font-weight-bold h5" for="radio-group-1">Active/Non Active Employees</label>
+      </div>
+     </div>
+ 
+     <div class="row">
+      <div class="col-md-2">
+          <div class="row">
+              <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" (change)="handleActive(event)" id="active" name="flexRadioDefault" class="custom-control-input" checked>
+                            <label class="custom-control-label" for="active">Active</label>
+                        </div>
+                        
+                    </div>
+                </div>
+              </div>
+          </div>
+      </div>
+ 
+      <div class="col-md-3">
+          <div class="row">
+              <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="nonActive" (change)="handleNonActive(event)" name="flexRadioDefault" class="custom-control-input">
+                            <label class="custom-control-label" for="nonActive">Non Active</label>
+                        </div>
+                        
+                    </div>
+                </div>
+              </div>
+          </div>
+      </div>
+ 
+      <div class="col-md-3">
+          <div class="row">
+              <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="all"  name="flexRadioDefault" (change)="handleActiveAll(event)" class="custom-control-input">
+                            <label class="custom-control-label" for="all">All</label>
+                        </div>
+                        
+                    </div>
+                </div>
+              </div>
+          </div>
+      </div>
+     </div>
+
+     </div>
+    </form>
+   </fieldset>
+
+   <fieldset>
+    <form>
+        <div class="form-group p-2 border mt-3 w-100" panelContent>
+
+     <div class="row mt-3">
+      <div class="col-md-12">
+       <label class="form-label font-weight-bold h5" for="radio-group-1">Report Selection</label>
+      </div>
+     </div>
+ 
+     <div class="row mt-3">
+      <div class=col-md-6>
+       <div class="input-group">
+        <div class="input-group-prepend">
+        <div class="input-group-text">
+            <div class="custom-control custom-radio">
+                <input type="radio" (change)="handleTAdvPaid($event)" id="flexRadioDefault1" name="flexRadioDefault" class="custom-control-input" checked>
+                <label class="custom-control-label" for="flexRadioDefault1">T Adv. Paid</label>
+            </div>
+        </div>
+    </div>
+ </div>
+      </div>
+    
+     </div>
+ 
+     <div class="row mt-3">
+      <div class=col-md-6>
+       <div class="input-group">
+        <div class="input-group-prepend">
+        <div class="input-group-text">
+            <div class="custom-control custom-radio">
+                <input type="radio" (change)="handleTAdvPaidReceAgainSal($event)"  id="flexRadioDefault2" name="flexRadioDefault" class="custom-control-input" >
+                <label class="custom-control-label" for="flexRadioDefault2">T Adv. Received Against Salary</label>
+            </div>
+        </div>
+    </div>
+ </div>
+      </div>
+    
+     </div>
+ 
+     
+     <div class="row mt-3">
+      <div class=col-md-6>
+       <div class="input-group">
+        <div class="input-group-prepend">
+        <div class="input-group-text">
+            <div class="custom-control custom-radio">
+                <input type="radio" (change)="handleTAdvSlips($event)" id="flexRadioDefault3" #empProfile  name="flexRadioDefault" class="custom-control-input" >
+                <label class="custom-control-label" for="flexRadioDefault3">T Adv. Slips</label>
+            </div>
+        </div>
+    </div>
+ </div>
+      </div>
+    
+     </div>
+ 
+     <div class="row mt-3">
+      <div class=col-md-6>
+       <div class="input-group">
+        <div class="input-group-prepend">
+        <div class="input-group-text">
+            <div class="custom-control custom-radio">
+                <input type="radio" (change)="handleTAdvReceList($event)"  id="flexRadioDefault4"   name="flexRadioDefault" class="custom-control-input" >
+                <label class="custom-control-label" for="flexRadioDefault4">T Adv. Received List</label>
+            </div>
+        </div>
+    </div>
+ </div>
+      </div>
+    
+     </div>
+ 
+     <div class="row mt-3">
+      <div class=col-md-6>
+       <div class="input-group">
+        <div class="input-group-prepend">
+        <div class="input-group-text">
+            <div class="custom-control custom-radio">
+                <input type="radio" (change)="handlePPaidAdv($event)" id="flexRadioDefault5" #empProfile  name="flexRadioDefault" class="custom-control-input" >
+                <label class="custom-control-label" for="flexRadioDefault5">P.Advance Paid</label>
+            </div>
+        </div>
+    </div>
+ </div>
+      </div>
+    
+     </div>
+ 
+     <div class="row mt-3">
+      <div class=col-md-6>
+       <div class="input-group">
+        <div class="input-group-prepend">
+        <div class="input-group-text">
+            <div class="custom-control custom-radio">
+                <input type="radio" (change)="handlePPaidAdvAgainstAnn($event)"  id="flexRadioDefault6" #empProfile  name="flexRadioDefault" class="custom-control-input" >
+                <label class="custom-control-label" for="flexRadioDefault6">P.Advance Paid against Annual leaves</label>
+            </div>
+        </div>
+    </div>
+ </div>
+      </div>
+    
+     </div>
+ 
+     <div class="row mt-3">
+      <div class=col-md-6>
+       <div class="input-group">
+        <div class="input-group-prepend">
+        <div class="input-group-text">
+            <div class="custom-control custom-radio">
+                <input type="radio" (change)="handleAdvanceRece($event)" id="flexRadioDefault7" #empProfile  name="flexRadioDefault" class="custom-control-input" >
+                <label class="custom-control-label" for="flexRadioDefault7">P.Advance Received</label>
+            </div>
+        </div>
+    </div>
+ </div>
+      </div>
+    
+     </div>
+ 
+     <div class="row mt-3">
+      <div class=col-md-6>
+       <div class="input-group">
+        <div class="input-group-prepend">
+        <div class="input-group-text">
+            <div class="custom-control custom-radio">
+                <input type="radio" (change)="handleAdvanceBal($event)" id="flexRadioDefault8"  name="flexRadioDefault" class="custom-control-input" >
+                <label class="custom-control-label" for="flexRadioDefault8">P.Advance Balance</label>
+            </div>
+        </div>
+    </div>
+ </div>
+      </div>
+    
+     </div>
+ 
+     
+     <div class="row mt-3">
+      <div class=col-md-6>
+       <div class="input-group">
+        <div class="input-group-prepend">
+        <div class="input-group-text">
+            <div class="custom-control custom-radio">
+                <input type="radio" (change)="handleLegder($event)" id="flexRadioDefault9" #empProfile  name="flexRadioDefault" class="custom-control-input" >
+                <label class="custom-control-label" for="flexRadioDefault9">Ledger</label>
+            </div>
+        </div>
+    </div>
+ </div>
+      </div>
+    
+     </div>
+ 
+     <div class="row mt-3">
+      <div class=col-md-6>
+       <div class="input-group">
+        <div class="input-group-prepend">
+        <div class="input-group-text">
+            <div class="custom-control custom-radio">
+                <input type="radio" (change)="handlePAdvDedAgainAL($event)" id="flexRadioDefault10" #empProfile  name="flexRadioDefault" class="custom-control-input" >
+                <label class="custom-control-label" for="flexRadioDefault10">P Adv Deducted Against Annual Leaves</label>
+            </div>
+        </div>
+    </div>
+ </div>
+      </div>
+    
+     </div>
+ 
+     <div class="row mt-3">
+      <div class=col-md-6>
+       <div class="input-group">
+        <div class="input-group-prepend">
+        <div class="input-group-text">
+            <div class="custom-control custom-radio">
+                <input type="radio" (change)="handlePAdvExpectedReturn($event)" id="flexRadioDefault11" name="flexRadioDefault" class="custom-control-input" >
+                <label class="custom-control-label" for="flexRadioDefault11">P Adv. Expected Return</label>
+            </div>
+        </div>
+    </div>
+ </div>
+      </div>
+    
+     </div>
+ 
+     <div class="row mt-3">
+      <div class=col-md-6>
+       <div class="input-group">
+        <div class="input-group-prepend">
+        <div class="input-group-text">
+            <div class="custom-control custom-radio">
+                <input type="radio" (change)="handlePAdvEmpWithZero($event)" id="flexRadioDefault12" name="flexRadioDefault" class="custom-control-input" >
+                <label class="custom-control-label" for="flexRadioDefault12">P Adv. Employees With Zero Deduction</label>
+            </div>
+        </div>
+    </div>
+ </div>
+      </div>
+    
+     </div>
+ 
+     <div class="row mt-3">
+      <div class=col-md-6>
+       <div class="input-group">
+        <div class="input-group-prepend">
+        <div class="input-group-text">
+            <div class="custom-control custom-radio">
+                <input type="radio" (change)="handlePAdvanceAgainBonus($event)" id="flexRadioDefault13" name="flexRadioDefault" class="custom-control-input" >
+                <label class="custom-control-label" for="flexRadioDefault13">P. Advance Paid against Bonus</label>
+            </div>
+        </div>
+    </div>
+ </div>
+      </div>
+    
+     </div>
+ 
+     
+     <div class="row mt-3">
+      <div class=col-md-6>
+       <div class="input-group">
+        <div class="input-group-prepend">
+        <div class="input-group-text">
+            <div class="custom-control custom-radio">
+                <input type="radio" (change)="handleRFDAdv($event)"  id="flexRadioDefault14" #empProfile  name="flexRadioDefault" class="custom-control-input" >
+                <label class="custom-control-label" for="flexRadioDefault14">RFD Advance</label>
+            </div>
+        </div>
+    </div>
+ </div>
+      </div>
+    
+     </div>
+ 
+     <div class="row mt-3">
+      <div class=col-md-6>
+       <div class="input-group">
+        <div class="input-group-prepend">
+        <div class="input-group-text">
+            <div class="custom-control custom-radio">
+                <input type="radio" (change)="handleTAdvReceList2($event)" id="flexRadioDefault15"  name="flexRadioDefault" class="custom-control-input" >
+                <label class="custom-control-label" for="flexRadioDefault15">T Adv Receiving list</label>
+            </div>
+        </div>
+    </div>
+ </div>
+      </div>
+    
+     </div>
+ 
+     <div class="row mt-3">
+      <div class=col-md-6>
+       <div class="input-group">
+        <div class="input-group-prepend">
+        <div class="input-group-text">
+            <div class="custom-control custom-radio">
+                <input type="radio" (change)="handleTAdvTransferLetter($event)" id="flexRadioDefault16" name="flexRadioDefault" class="custom-control-input" >
+                <label class="custom-control-label" for="flexRadioDefault16">T Adv Transfer letter</label>
+            </div>
+        </div>
+    </div>
+ </div>
+      </div>
+    
+     </div>
+
+     </div>
+    </form>
+   </fieldset>
+
+
+  </div>
+  
+ 
+  <div class="col-md-6">
+
+    <fieldset>
+        <form>
+            <div class="form-group p-2 border w-100" panelContent>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label class="form-label font-weight-bold h5" for="radio-group-1">Option Selection</label>
+                    </div>
+                </div>
+    
+                <div class="row mt-3">
+                    <div class=col-md-6>
+                     <div class="input-group">
+                      <div class="input-group-prepend">
+                      <div class="input-group-text">
+                          <div class="custom-control custom-radio">
+                              <input type="radio" id="flexRadioDefault17" (change)="handleAllOS($event)" name="flexRadioDefault" class="custom-control-input" checked>
+                              <label class="custom-control-label" for="flexRadioDefault17">All</label>
+                          </div>
+                      </div>
+                  </div>
+               </div>
+                    </div>
+                  
+                   </div>
+    
+                   <div class="row mt-3">
+                    <div class=col-md-6>
+                     <div class="input-group">
+                      <div class="input-group-prepend">
+                      <div class="input-group-text">
+                          <div class="custom-control custom-radio">
+                              <input type="radio" id="flexRadioDefault18" (change)="handleByCardRangeOS($event)" name="flexRadioDefault" class="custom-control-input" >
+                              <label class="custom-control-label" for="flexRadioDefault18">By Card Range</label>
+                          </div>
+                      </div>
+                  </div>
+               </div>
+                    </div>
+                  
+                   </div>
+    
+                   <div class="row mt-3">
+                    <div class=col-md-6>
+                     <div class="input-group">
+                      <div class="input-group-prepend">
+                      <div class="input-group-text">
+                          <div class="custom-control custom-radio">
+                              <input type="radio" id="flexRadioDefault19" (change)="handleByBranchOS($event)" name="flexRadioDefault" class="custom-control-input" >
+                              <label class="custom-control-label" for="flexRadioDefault19">By Branch</label>
+                          </div>
+                      </div>
+                  </div>
+               </div>
+                    </div>
+                  
+                   </div>
+    
+    
+            </div>
+        </form>
+       </fieldset>
+
+   <fieldset>
+    <form>
+        <div class="form-group p-2 mt-3 border w-100" panelContent>
+
+     <div class="row">
+      <div class="col-md-12">
+       <label class="form-label font-weight-bold h5" for="radio-group-1">Option Selection</label>
+      </div>
+     </div>
+
+     <div class="row mt-3">
+      <div class="col-md-12">
+       <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Select Month:</span>
+
+               <select class="form-control">
+                   <option>Khawaja Moosa</option>
+                   <option>ALi</option>                  
+               </select>
+            
+        </div>
+    </div>
+      </div>
+     </div>
+
+     <div class="row mt-3">
+      <div class="col-md-12">
+
+       <div class="row">
+
+        <div class="col-md-4 col-sm-6">
+         <div class="input-group">
+          <div class="input-group-prepend">
+              <span class="input-group-text">Form Card</span>
+          </div>
+          <input type="number" id="fromCard" [disabled]="(TAdvPaid==true && allOS==true) || (TAdvPaid==true && ByBranchOS==true) || (tAdvPaidReceAgainSal==true && allOS==true) || (tAdvPaidReceAgainSal==true && ByBranchOS==true) || (TAdvSlips==true && allOS==true) || (TAdvSlips==true && ByBranchOS==true) || (TAdvReceList==true && allOS==true) || (TAdvReceList==true && ByBranchOS==true) || (PPaidAdv==true && allOS==true) || (PPaidAdv==true && ByBranchOS==true) || (PPaidAdvAgainstAnn==true && allOS==true) || (PPaidAdvAgainstAnn==true && ByBranchOS==true) || (AdvanceRece==true && allOS==true) || (Ledger==true && allOS==true) || (Ledger==true && ByBranchOS==true) || (PAdvDedAgainAL==true && allOS==true) || (PAdvDedAgainAL==true && ByBranchOS==true) || (PAdvExpectedReturn==true && allOS==true) || (PAdvExpectedReturn==true && ByBranchOS==true) || (PAdvEmpWithZero==true && allOS==true) || (PAdvEmpWithZero==true && ByBranchOS==true) || (PAdvanceAgainBonus==true && allOS==true) || (PAdvanceAgainBonus==true && ByBranchOS==true) || (RFDAdv==true && allOS==true) || (RFDAdv==true && ByBranchOS==true) || (TAdvReceList2==true && allOS==true) || (TAdvReceList2==true && ByBranchOS==true) || (TAdvTransferLetter==true && allOS==true) || (TAdvTransferLetter==true && ByBranchOS==true) || (AdvanceBal==true && allOS==true) || (AdvanceBal==true && ByBranchOS==true)" [(ngModel)]='cardStartValue' name="fromCard" class="form-control" placeholder="card no." aria-label="fromCard" aria-describedby="basic-addon1">
+      </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+         <div class="input-group">
+          <div class="input-group-prepend">
+              <span class="input-group-text">To Card</span>
+          </div>
+          <input type="number" [(ngModel)]='cardEndValue' [disabled]="(TAdvPaid==true && allOS==true) || (TAdvPaid==true && ByBranchOS==true) || (tAdvPaidReceAgainSal==true && allOS==true) || (tAdvPaidReceAgainSal==true && ByBranchOS==true) || (TAdvSlips==true && allOS==true) || (TAdvSlips==true && ByBranchOS==true) || (TAdvReceList==true && allOS==true) || (TAdvReceList==true && ByBranchOS==true) || (PPaidAdv==true && allOS==true) || (PPaidAdv==true && ByBranchOS==true) || (PPaidAdvAgainstAnn==true && allOS==true) || (PPaidAdvAgainstAnn==true && ByBranchOS==true) || (AdvanceRece==true && allOS==true) || (Ledger==true && allOS==true) || (Ledger==true && ByBranchOS==true) || (PAdvDedAgainAL==true && allOS==true) || (PAdvDedAgainAL==true && ByBranchOS==true) || (PAdvExpectedReturn==true && allOS==true) || (PAdvExpectedReturn==true && ByBranchOS==true) || (PAdvEmpWithZero==true && allOS==true) || (PAdvEmpWithZero==true && ByBranchOS==true) || (PAdvanceAgainBonus==true && allOS==true) || (PAdvanceAgainBonus==true && ByBranchOS==true) || (RFDAdv==true && allOS==true) || (RFDAdv==true && ByBranchOS==true) || (TAdvReceList2==true && allOS==true) || (TAdvReceList2==true && ByBranchOS==true) || (TAdvTransferLetter==true && allOS==true) || (TAdvTransferLetter==true && ByBranchOS==true) || (AdvanceBal==true && allOS==true) || (AdvanceBal==true && ByBranchOS==true)"   name="ToCard"  id="toCard" class="form-control" placeholder="card no." aria-label="to card" aria-describedby="toCard">
+      </div>
+        </div>
+        
+       </div>
+
+      </div>
+     </div>
+
+     <div class="row mt-3">
+      <div class="col-md-12">
+       <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Balance:</span>
+
+               <select [disabled]="(TAdvPaid==true && allOS==true) || (TAdvPaid==true && ByCardRangeOS==true) || (TAdvPaid==true && ByBranchOS==true) || (tAdvPaidReceAgainSal==true && allOS==true) || (tAdvPaidReceAgainSal==true && ByCardRangeOS==true) || (tAdvPaidReceAgainSal==true && ByBranchOS==true) || (TAdvSlips==true && allOS==true) || (TAdvSlips==true && ByCardRangeOS==true) || (TAdvSlips==true && ByBranchOS==true) || (TAdvReceList==true && allOS==true) || (TAdvReceList==true && ByCardRangeOS==true) || (TAdvReceList==true && ByBranchOS==true) || (PPaidAdv==true && allOS==true) || (PPaidAdv==true && ByCardRangeOS==true) || (PPaidAdv==true && ByBranchOS==true)|| (PPaidAdvAgainstAnn==true && allOS==true) || (PPaidAdvAgainstAnn==true && ByCardRangeOS==true)  || (PPaidAdvAgainstAnn==true && ByBranchOS==true) || (AdvanceRece==true && allOS==true) || (Ledger==true && allOS==true) || (Ledger==true && ByCardRangeOS==true) || (Ledger==true && ByBranchOS==true) || (PAdvDedAgainAL==true && allOS==true) || (PAdvDedAgainAL==true && ByCardRangeOS==true) || (PAdvDedAgainAL==true && ByBranchOS==true) || (PAdvExpectedReturn==true && allOS==true) || (PAdvExpectedReturn==true && ByCardRangeOS==true) || (PAdvExpectedReturn==true && ByBranchOS==true) || (PAdvEmpWithZero==true && allOS==true) || (PAdvEmpWithZero==true && ByCardRangeOS==true) || (PAdvEmpWithZero==true && ByBranchOS==true) || (PAdvanceAgainBonus==true && allOS==true) || (PAdvanceAgainBonus==true && ByCardRangeOS==true) || (PAdvanceAgainBonus==true && ByBranchOS==true) || (RFDAdv==true && allOS==true) || (RFDAdv==true && ByCardRangeOS==true) || (RFDAdv==true && ByBranchOS==true) || (TAdvReceList2==true && allOS==true) || (TAdvReceList2==true && ByCardRangeOS==true) || (TAdvReceList2==true && ByBranchOS==true) || (TAdvTransferLetter==true && allOS==true) || (TAdvTransferLetter==true && ByCardRangeOS==true) || (TAdvTransferLetter==true && ByBranchOS==true) || (AdvanceBal==true && allOS==true) || (AdvanceBal==true && ByCardRangeOS==true) || (AdvanceBal==true && ByBranchOS==true)"  class="form-control">
+                   <option>Khawaja Moosa</option>
+                   <option>ALi</option>                  
+               </select>
+            
+        </div>
+    </div>
+      </div>
+     </div>
+
+     <div class="row mt-3">
+      <div class="col-md-12">
+       <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Branch:</span>
+
+               <select [disabled]="(TAdvPaid==true && allOS==true)  || (TAdvPaid==true && ByCardRangeOS==true) || (tAdvPaidReceAgainSal==true && allOS==true) || (tAdvPaidReceAgainSal==true && ByCardRangeOS==true) || (tAdvPaidReceAgainSal==true && ByBranchOS==true) || (TAdvSlips==true && allOS==true) || (TAdvSlips==true && ByCardRangeOS==true) || (TAdvReceList==true && allOS==true) || (TAdvReceList==true && ByCardRangeOS==true) || (PPaidAdv==true && allOS==true) || (PPaidAdv==true && ByCardRangeOS==true) || (PPaidAdvAgainstAnn==true && allOS==true) || (PPaidAdvAgainstAnn==true && ByCardRangeOS==true) || (AdvanceRece==true && allOS==true) || (Ledger==true && allOS==true) || (Ledger==true && ByCardRangeOS==true) || (PAdvDedAgainAL==true && allOS==true) || (PAdvDedAgainAL==true && ByCardRangeOS==true) || (PAdvExpectedReturn==true && allOS==true) || (PAdvExpectedReturn==true && ByCardRangeOS==true) || (PAdvEmpWithZero==true && allOS==true) || (PAdvEmpWithZero==true && ByCardRangeOS==true) || (PAdvanceAgainBonus==true && allOS==true) || (PAdvanceAgainBonus==true && ByCardRangeOS==true) || (RFDAdv==true && allOS==true) || (RFDAdv==true && ByCardRangeOS==true) || (TAdvReceList2==true && allOS==true) || (TAdvReceList2==true && ByCardRangeOS==true) || (TAdvTransferLetter==true && allOS==true) || (TAdvTransferLetter==true && ByCardRangeOS==true) || (AdvanceBal==true && allOS==true) || (AdvanceBal==true && ByCardRangeOS==true)"  class="form-control">
+                   <option>Khawaja Moosa</option>
+                   <option>ALi</option>                  
+               </select>
+            
+        </div>
+    </div>
+      </div>
+     </div>
+
+     <div class="row mt-3">
+      <div class="col-md-12">
+       <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Bank Name:</span>
+
+               <select [disabled]="(TAdvPaid==true && allOS==true)  || (TAdvPaid==true && ByCardRangeOS==true) || (TAdvPaid==true && ByBranchOS==true) || (tAdvPaidReceAgainSal==true && allOS==true) || (tAdvPaidReceAgainSal==true && ByCardRangeOS==true) || (TAdvSlips==true && allOS==true) || (TAdvSlips==true && ByCardRangeOS==true) || (TAdvSlips==true && ByBranchOS==true) || (TAdvReceList==true && allOS==true) || (TAdvReceList==true && ByCardRangeOS==true) || (TAdvReceList==true && ByBranchOS==true) || (PPaidAdv==true && allOS==true) || (PPaidAdv==true && ByCardRangeOS==true) || (PPaidAdv==true && ByBranchOS==true) || (PPaidAdvAgainstAnn==true && allOS==true) || (PPaidAdvAgainstAnn==true && ByCardRangeOS==true)  || (PPaidAdvAgainstAnn==true && ByBranchOS==true) || (AdvanceRece==true && allOS==true) || (Ledger==true && allOS==true) || (Ledger==true && ByCardRangeOS==true) || (Ledger==true && ByBranchOS==true) || (PAdvDedAgainAL==true && allOS==true) || (PAdvDedAgainAL==true && ByCardRangeOS==true) || (PAdvDedAgainAL==true && ByBranchOS==true) || (PAdvExpectedReturn==true && allOS==true) || (PAdvExpectedReturn==true && ByCardRangeOS==true) || (PAdvExpectedReturn==true && ByBranchOS==true) || (PAdvEmpWithZero==true && allOS==true) || (PAdvEmpWithZero==true && ByCardRangeOS==true) || (PAdvEmpWithZero==true && ByBranchOS==true) || (PAdvanceAgainBonus==true && allOS==true) || (PAdvanceAgainBonus==true && ByCardRangeOS==true) || (PAdvanceAgainBonus==true && ByBranchOS==true) || (RFDAdv==true && allOS==true) || (RFDAdv==true && ByCardRangeOS==true) || (RFDAdv==true && ByBranchOS==true) || (TAdvReceList2==true && allOS==true) || (TAdvReceList2==true && ByCardRangeOS==true) || (TAdvReceList2==true && ByBranchOS==true) || (TAdvTransferLetter==true && allOS==true) || (TAdvTransferLetter==true && ByCardRangeOS==true) || (TAdvTransferLetter==true && ByBranchOS==true) || (AdvanceBal==true && allOS==true) || (AdvanceBal==true && ByCardRangeOS==true) || (AdvanceBal==true && ByBranchOS==true)"  class="form-control">
+                   <option>Khawaja Moosa</option>
+                   <option>ALi</option>                  
+               </select>
+            
+        </div>
+    </div>
+      </div>
+     </div>
+
+    </div>
+    </form>
+   </fieldset>
+
+   <fieldset>
+    <form>
+        <div class="form-group p-2 mt-3 border w-100" panelContent>
+
+     <div class="row mt-3">
+      <div class="col-md-8">
+       <div class="form-group">
+
+           <label class="form-label bg-info text-center text-white font-weight-bold h5 w-100 p-1" for="radio-group-1">Select Appropriate Option</label> 
+           <div class="row">
+               <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Department:</span>
+                        <select [disabled]="allSAO==true || designSAO==true || sectionSAO==true" class="form-control">
+                            <option>Khawaja Moosa</option>
+                            <option>Ali</option>
+                        </select>
+                       
+                    </div>
+                </div>
+               </div>
+           </div>
+
+           <div class="row mt-2">
+               <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Section:</span>
+                        <select [disabled]="allSAO==true || deptSAO==true || designSAO==true" class="form-control">
+                            <option>Khawaja Moosa</option>
+                            <option>Ali</option>                      
+                        </select>
+                      
+                    </div>
+                </div>
+               </div>
+           </div>
+        
+           <div class="row mt-2">
+               <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Designation:</span>
+                        <select [disabled]="allSAO==true || deptSAO==true || sectionSAO==true" class="form-control">
+                            <option>Khawaja Moosa</option>
+                            <option>Ali</option>                      
+                        </select>
+                       
+                    </div>
+                </div>
+               </div>
+           </div>
+
+       </div>
+       
+      </div>
+  </div>
+  
+  <div class="row mt-3">
+   <div class="col-md-12">
+    <div class="form-group">
+     <div class="row">
+         <div class="col-md-4">
+             <div class="input-group">
+                 <div class="input-group-text">
+                     <div class="custom-control custom-radio">
+                         <input type="radio" id="flexRadioDefault20" (change)="handleAllSAO($event)"  name="flexRadioDefault" class="custom-control-input" checked>
+                         <label class="custom-control-label" for="flexRadioDefault20">All</label>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div class="col-md-2">
+             <div class="row mt-2">
+                 <div class="col-md-12">
+                    <div class="input-group">
+                        <div class="input-group-text">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="flexRadioDefault21" (change)="handleDeptSAO($event)" name="flexRadioDefault" class="custom-control-input">
+                                <label class="custom-control-label" for="flexRadioDefault21">Department</label>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <div class="row">
+         <div class="col-md-4">
+             <div class="row mt-2">
+                 <div class="col-md-12">
+                    <div class="input-group">
+                        <div class="input-group-text">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="flexRadioDefault22" (change)="handleDesignSAO($event)" name="flexRadioDefault"  class="custom-control-input">
+                                <label class="custom-control-label" for="flexRadioDefault22">Designation</label>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+             </div>
+         </div>
+         <div class="col-md-2">
+             <div class="row mt-2">
+                 <div class="col-md-12">
+                    <div class="input-group">
+                        <div class="input-group-text">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="flexRadioDefault23" (change)="handleSectionSAO($event)" name="flexRadioDefault"  class="custom-control-input">
+                                <label class="custom-control-label" for="flexRadioDefault23">Section</label>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+                                            
+ </div>
+   </div>
+  </div>
+
+</div>
+    </form>
+   </fieldset>
+
+   <div class="row mt-3">
+    <div class="col-md-4">
+         <div class="demo" style="display: grid">
+             <button type="button" (click)="showReport()" class="btn btn-info">Show Report</button>
+         </div>
+    </div>
+</div>
+
+  </div>
+
+ </div>
+</div>
+
+
+<div *ngIf="showReportt" class="row">
+    <div class="col-md-12">
+
+    <div *ngIf="TAdvPaid" class="row">
+        <div class="col-md-12">
+            <smart-tadv-paid-advance-reports></smart-tadv-paid-advance-reports>
+        </div>
+    </div>
+
+
+    <div *ngIf="tAdvPaidReceAgainSal" class="row">
+        <div class="col-md-12">
+            <smart-tadv-paid-rece-again-sal-advance-reports></smart-tadv-paid-rece-again-sal-advance-reports>
+        </div>
+    </div> 
+
+    <div *ngIf="TAdvSlips" class="row">
+        <div class="col-md-12">
+            <smart-tadv-slips-advance-reports></smart-tadv-slips-advance-reports>
+        </div>
+    </div>
+
+    <div *ngIf="TAdvReceList" class="row">
+        <div class="col-md-12">
+            <smart-tadv-rece-list-advance-reports></smart-tadv-rece-list-advance-reports>
+        </div>
+    </div>
+
+    <div *ngIf="PPaidAdv" class="row">
+        <div class="col-md-12">
+            <smart-ppaid-advance-advance-reports></smart-ppaid-advance-advance-reports>
+        </div>
+    </div>
+
+    <div *ngIf="PPaidAdvAgainstAnn" class="row">
+        <div class="col-md-12">
+            <smart-ppaid-advance-against-ann-l-advance-reports></smart-ppaid-advance-against-ann-l-advance-reports>
+        </div>
+    </div>
+
+    <div *ngIf="AdvanceRece" class="row">
+        <div class="col-md-12">
+            <smart-padvance-rece-advance-reports></smart-padvance-rece-advance-reports>
+        </div>
+    </div>
+
+    <div *ngIf="AdvanceBal" class="row">
+        <div class="col-md-12">
+            <smart-padvance-bal-advance-reports></smart-padvance-bal-advance-reports>
+        </div>
+    </div>
+
+    <div *ngIf="Ledger" class="row">
+        <div class="col-md-12">
+            <smart-ledger-advance-reports></smart-ledger-advance-reports>
+        </div>
+    </div>
+
+    <div *ngIf="PAdvDedAgainAL" class="row">
+        <div class="col-md-12">
+            <smart-padv-ded-again-annual-l-advance-reports></smart-padv-ded-again-annual-l-advance-reports>
+        </div>
+    </div>
+
+    <div *ngIf="PAdvExpectedReturn" class="row">
+        <div class="col-md-12">
+            <smart-padv-expected-return-advance-reports></smart-padv-expected-return-advance-reports>
+        </div>
+    </div>
+
+    <div *ngIf="PAdvEmpWithZero" class="row">
+        <div class="col-md-12">
+            <smart-padv-emp-with-zero-ded-advance-reports></smart-padv-emp-with-zero-ded-advance-reports>
+        </div>
+    </div>
+
+    <div *ngIf="PAdvanceAgainBonus" class="row">
+        <div class="col-md-12">
+            <smart-padv-paid-again-bonus-advance-reports></smart-padv-paid-again-bonus-advance-reports>
+        </div>
+    </div>
+
+    <div *ngIf="RFDAdv" class="row">
+        <div class="col-md-12">
+            <smart-rfdadv-advance-reports></smart-rfdadv-advance-reports>
+        </div>
+    </div>
+
+    <div *ngIf="TAdvReceList2" class="row">
+        <div class="col-md-12">
+            <smart-tadv-rece-list2-advance-reports></smart-tadv-rece-list2-advance-reports>
+        </div>
+    </div>
+
+    <div *ngIf="TAdvTransferLetter" class="row">
+        <div class="col-md-12">
+            <smart-tadv-ad-letter-advance-reports></smart-tadv-ad-letter-advance-reports>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="row mt-5">
+        
+        <div class='col-md-6'>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <button class="btn btn-danger" (click)="EmpRecord()" style="background-color: maroon;" > <i class="fal fa-arrow-left"></i>  Click Here to Go Back to Employee Record</button>
+                </div>
+            </div>
+        </div>
+       
+        <div class="col-md-6 d-flex justify-content-end text-end">
+            <div class="row mt-3">
+                <div class="col-md-12">
+                    <button  panelToolbar (click)="makePDF()" class="btn btn-primary font-weight-bold"> <i class="fal fa-print"></i>   Make PDF</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</div>
+

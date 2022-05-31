@@ -1,0 +1,1370 @@
+<div *ngIf="reportStatus">
+    <div class="row" >
+        <div class="col-md-6">
+            <div> 
+                <fieldset>
+                    <form>
+                    <div class="form-group p-2 border w-100" panelContent>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="row mt-2">
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-group-text">
+                                                <div class="custom-control custom-radio">
+                                                    <input [disabled]="deathGrantCase==true || empAppoint==true || cardPrinting==true || empLAllInfo==true || terminationLetter==true || notices==true || disbaleEmpList==true || scertificate==true || jobPermanentLetter==true || marriageGrantCase==true || servicesCertificate==true" [checked]="flexRadioDefault" type="radio" (change)="handleAll($event)" id="all" name="flexRadioDefault" class="custom-control-input"  checked>
+                                                    <label class="custom-control-label" for="all">All</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                            </div>
+                            <div class="col-md-2">
+                                <div class="row mt-2">
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-group-text">
+                                                <div class="custom-control custom-radio"> 
+                                                    <input type="radio" [disabled]="deathGrantCase==true || empAppoint==true || cardPrinting==true || empLAllInfo==true || terminationLetter==true || notices==true || disbaleEmpList==true || scertificate==true || jobPermanentLetter==true || marriageGrantCase==true || servicesCertificate==true" [checked]="flexRadioDefault" (change)="handleActive($event)" id="active" name="flexRadioDefault" class="custom-control-input">
+                                                    <label class="custom-control-label" for="active">Active</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                           <div class="row mt-2">
+                               <div class="col-md-12">
+                                <div class="input-group" >
+                                    <div class="input-group-text">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio"  [disabled]="deathGrantCase==true || empAppoint==true || cardPrinting==true || empLAllInfo==true || terminationLetter==true || notices==true || disbaleEmpList==true  || scertificate==true || jobPermanentLetter==true || marriageGrantCase==true || servicesCertificate==true" (change)="handleNonActive($event)" [checked]="flexRadioDefault"  id="nactive" name="flexRadioDefault" class="custom-control-input">
+                                            <label class="custom-control-label" for="nactive">Non Active</label>
+                                        </div>
+                                    </div>
+                                </div>
+                               </div>
+                           </div>     
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                </fieldset>
+                
+                <fieldset>
+                    <form>
+                    <div class="form-group p-2 mt-3 border w-100" panelContent>
+                        <div style="padding:10px;margin: 1px; width:700px;">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="row mt-2">
+                                        <div class="col-md-12">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" (change)="handleEmpProfile($event)"  id="flexRadioDefault1"  name="flexRadioDefault" class="custom-control-input" checked>
+                                                        <label class="custom-control-label" for="flexRadioDefault1">Employee Profile</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        </div>
+                                    </div>  
+                                </div>
+
+                                <div class="col-md-1">
+                                    <div class="row mt-2">
+                                        <div class="col-md-12">
+                                            <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="flexRadioDefault2" (change)="handleEmpSal($event)" name="flexRadioDefault" class="custom-control-input">
+                                                        <label class="custom-control-label" for="flexRadioDefault2">Employee Salary Log</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-group-text">
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" id="flexRadioDefault3" (change)="handleEmpTracking($event)" name="flexRadioDefault" class="custom-control-input">
+                                                    <label class="custom-control-label" for="flexRadioDefault3">Employee Tracking</label>
+                                                </div>
+                                            </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="row mt-2">
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-group-text">
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" id="flexRadioDefault4" (change)="handleEmpGLog($event)" name="flexRadioDefault" class="custom-control-input">
+                                                    <label class="custom-control-label" for="flexRadioDefault4">Employee Graduity Log</label>
+                                                </div>
+                                            </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                       <div class="row">
+                           <div class="col-md-4">
+                               <div class="row">
+                                   <div class="col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-group-text">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="flexRadioDefault5" (change)="handleEmployeeAppointment($event)" name="flexRadioDefault" class="custom-control-input">
+                                                <label class="custom-control-label" for="flexRadioDefault5">Employee Appointment</label>
+                                            </div>
+                                        </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-md-6">
+                               <div class="row mt-2">
+                                   <div class="col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-group-text">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="flexRadioDefault6" (change)="handleEmpCardCopy($event)" name="flexRadioDefault" class="custom-control-input">
+                                                <label class="custom-control-label" for="flexRadioDefault6">Employee Card Copy Log</label>
+                                            </div>
+                                        </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <br>          
+                      
+                       <div class="row">
+                           <div class="col-md-4">
+                               <div class="row">
+                                   <div class="col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-group-text">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="flexRadioDefault7" (change)="handleCardPrinting($event)" name="flexRadioDefault" class="custom-control-input">
+                                                <label class="custom-control-label" for="flexRadioDefault7">Employee Card Printing</label>
+                                            </div>
+                                        </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-md-6">
+                               <div class="row mt-2">
+                                   <div class="col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-group-text">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="flexRadioDefault8" (change)="handleEmpCCertificate($event)" name="flexRadioDefault" class="custom-control-input">
+                                                <label class="custom-control-label" for="flexRadioDefault8">Character Certificate</label>
+                                            </div>
+                                        </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <br>
+                       <div class="row">
+                           <div class="col-md-4">
+                               <div class="row">
+                                   <div class="col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-group-text">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="flexRadioDefault9" (change)="handleEmpDepLog($event)" name="flexRadioDefault" class="custom-control-input">
+                                                <label class="custom-control-label" for="flexRadioDefault9">Employee Department Log</label>
+                                            </div>
+                                        </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-md-6">
+                               <div class="row mt-2">
+                                   <div class="col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-group-text">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="flexRadioDefault10" (change)="handleExLetter($event)" name="flexRadioDefault" class="custom-control-input">
+                                                <label class="custom-control-label" for="flexRadioDefault10">Experience Letter</label>
+                                            </div>
+                                        </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <br>
+                       <div class="row">
+                           <div class="col-md-4">
+                               <div class="row">
+                                   <div class="col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-group-text">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="flexRadioDefault11" (change)="handleGradeLog($event)" name="flexRadioDefault" class="custom-control-input">
+                                                <label class="custom-control-label" for="flexRadioDefault11">Employee Grade Log</label>
+                                            </div>
+                                        </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-md-4">
+                               <div class="row mt-2">
+                                   <div class="col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-group-text">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio"id="flexRadioDefault12" (change)="handleEmpList($event)" name="flexRadioDefault" class="custom-control-input">
+                                                <label class="custom-control-label" for="flexRadioDefault12">Employee List</label>
+                                            </div>
+                                        </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <br>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-group-text">
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" id="flexRadioDefault13" (change)="handleEmpShiftLog($event)" name="flexRadioDefault" class="custom-control-input">
+                                                    <label class="custom-control-label" for="flexRadioDefault13">Employee Shift Log</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row mt-2">
+                                    <div class="col-md-12 col-sm-4">
+                                        <div class="input group">
+                                            <div class="input-group-text">
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" id="flexRadioDefault14" (change)="handleEmpLAllInfo($event)"  name="flexRadioDefault" class="custom-control-input">
+                                                    <label class="custom-control-label" for="flexRadioDefault14">Employee List with All info.</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-group-text">
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" id="flexRadioDefault15" (change)="handleEmpJobtypeLog($event)" name="flexRadioDefault" class="custom-control-input">
+                                                    <label class="custom-control-label" for="flexRadioDefault15">Employee Job Type Log</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row mt-2">
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-group-text">
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" id="flexRadioDefault16" (change)="handleSecWiseEmpCount($event)" name="flexRadioDefault" class="custom-control-input">
+                                                    <label class="custom-control-label" for="flexRadioDefault16">Section Wise Employee Count List</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                       <div class="row">
+                           <div class="col-md-4">
+                               <div class="row">
+                                   <div class="col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-group-text">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="flexRadioDefault17" (change)="handleEmpBranchLog($event)" name="flexRadioDefault" class="custom-control-input">
+                                                <label class="custom-control-label" for="flexRadioDefault17">Employee Branch Log</label>
+                                            </div>
+                                        </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-md-6">
+                               <div class="row mt-2">
+                                   <div class="col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-group-text">
+                                            <div class="custom-control custom-radio">
+                                                <input  type="radio" id="flexRadioDefault18" (change)="handleTerminationLetter($event)" name="flexRadioDefault" class="custom-control-input">
+                                                <label class="custom-control-label" for="flexRadioDefault18">Termination Letter</label>
+                                            </div>
+                                        </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <br>
+                       <div class="row">
+                           <div class="col-md-4">
+                               <div class="row">
+                                   <div class="col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-group-text">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="flexRadioDefault19" (change)="handleNotices($event)" name="flexRadioDefault" class="custom-control-input">
+                                                <label class="custom-control-label" for="flexRadioDefault19">Notices</label>
+                                            </div>
+                                        </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-md-6">
+                               <div class="row mt-2">
+                                   <div class="col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-group-text">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="flexRadioDefault20" (change)="handleDisableEmpList($event)" name="flexRadioDefault" class="custom-control-input">
+                                                <label class="custom-control-label" for="flexRadioDefault20">Disable Employee List</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   </div>
+                               </div>
+                        </div>
+                       </div>
+                       <br>
+                      <div class="row">
+                          <div class="col-md-4">
+                              <div class="row">
+                                  <div class="col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-group-text">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="flexRadioDefault21" (change)="handleSCertificate($event)" name="flexRadioDefault" class="custom-control-input">
+                                                <label class="custom-control-label" for="flexRadioDefault21">Service Certificate</label>
+                                            </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="row mt-2">
+                                  <div class="col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-group-text">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="flexRadioDefault22" (change)="jobPermanantLetter($event)" name="flexRadioDefault" class="custom-control-input">
+                                                <label class="custom-control-label" for="flexRadioDefault22">Job Permanent Letter</label>
+                                            </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <br>     
+                      <div class="row">
+                          <div class="col-md-4">
+                              <div class="row">
+                                  <div class="col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-group-text">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="flexRadioDefault23" (change)="handleMarriageGrantCase($event)" name="flexRadioDefault" class="custom-control-input">
+                                                <label class="custom-control-label" for="flexRadioDefault23">Marriage Grant Case</label>
+                                            </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="row mt-2">
+                                  <div class="col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-group-text">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="flexRadioDefault24" (change)="handleDeathGrantCase($event)" name="flexRadioDefault" class="custom-control-input">
+                                                <label class="custom-control-label" for="flexRadioDefault24">Death Grant Case</label>
+                                            </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                     <br>
+                     <div class="row">
+                         <div class="col-md-5">
+                             <div class="row">
+                                 <div class="col-md-12">
+                                    <div class="input-group">
+                                        <div class="input-group-text">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="flexRadioDefault25"
+                                                (change)="handleServicesCertificate($event)"
+                                                #serviceCertificateG name="flexRadioDefault" class="custom-control-input">
+                                                <label class="custom-control-label" for="flexRadioDefault25">Service Certificate  (Death Grant)</label>
+                                            </div>
+                                        </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div *ngIf="selectDate" class="col-md-4">
+                             <div class="row">
+                                 <div class="col-md-3">
+                                    <label class="form-label">Select Date: </label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input
+                                  (change)="handleDateChange($event)"
+                                  class="form-control"
+                                  type="date"
+                                />
+                                </div>
+                             </div>
+                          </div>
+                     </div>
+
+                        </div>
+                    </div>
+                </form>
+                </fieldset>
+                <fieldset>
+                    <form>
+                    <div class="col-md-6">
+                        <div class="form-group p-2 mt-3 border w-100">
+                            <div class="row mt-5">
+                                <div class="col-md-12">
+                                    <label class="form-label font-weight-bold h5" for="radio-group-1">Option Selector</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class='row'>
+                                        <div class="col-md-12">
+                                            <div class="input-group">
+                                                <label for="customRadio2"></label>
+                                                <div class="input-group-text">
+                                                    <div class="custom-control custom-radio">
+                                                        <input [disabled]="terminationLetter==true || disbaleEmpList==true" type="radio" id="flexRadioDefault26" (click)="handleOSAll($event)" name="flexRadioDefault" class="custom-control-input" checked>
+                                                        <label class="custom-control-label" for="flexRadioDefault26">All</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 
+                                </div>
+                            </div>
+                         
+                            <div class="row mt-2">
+                                <div class="col-md-4">
+                                    <div class="input-group">
+                                        <label for="customRadio2"></label>
+                                        <div class="input-group-text">
+                                            <div class="custom-control custom-radio">
+                                                <input [disabled]="disbaleEmpList==true" type="radio" id="flexRadioDefault27" (click)="handleOSCardByRange($event)" name="flexRadioDefault" class="custom-control-input">
+                                                <label class="custom-control-label" for="flexRadioDefault27">By Card Range</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <label for="customRadio2"></label>
+                                        <div class="input-group-text">
+                                            <div class="custom-control custom-radio">
+                                                <input [disabled]="empTracking==true || disbaleEmpList==true || employeeProfile==true || empDepLog==true || empGdLog==true || empShLog==true || empJobTypeLog==true || notices==true || empSalLog==true || empGLog==true || empcardcopy==true || empCCertificate==true || empExLetter==true || emp_list==true || empLAllInfo==true || secWiseEmpCount==true"  type="radio" id="flexRadioDefault28" (click)="handleOSSpecialCardFilter($event)" name="flexRadioDefault" class="custom-control-input">
+                                                <label class="custom-control-label" for="flexRadioDefault28">Special Card Filter</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="row mt-2">
+                                <div class="col-md-12">
+                                    <div class="input-group">
+                                        <label for="customRadio2"></label>
+                                        <div class="input-group-text">
+                                            <div class="custom-control custom-radio">
+                                                <input [disabled]="empTracking==true || disbaleEmpList==true || jobPermanentLetter==true || scertificate==true || servicesCertificate==true || employeeProfile==true || empAppoint==true || empDepLog==true || empGdLog==true || empShLog==true || empJobTypeLog==true || empSalLog==true || empGLog==true || empcardcopy==true || empCCertificate==true || empExLetter==true || emp_list==true || empLAllInfo==true || secWiseEmpCount==true || jobPermanentLetter==true || deathGrantCase==true ||marriageGrantCase==true " type="radio" id="flexRadioDefault29" (change)="handleOSSpecialGradeFilter($event)" name="flexRadioDefault" class="custom-control-input">
+                                                <label class="custom-control-label" for="flexRadioDefault29">Special Grade Filter</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            
+                            <div class="input-group" style="margin:10px 0">
+                                <label for="customRadio2"></label>
+                                <div class="input-group-text">
+                                    <div class="custom-control custom-radio">
+                                        <input [disabled]="disbaleEmpList==true || jobPermanentLetter==true" type="radio" id="flexRadioDefault30" (change)="handleByBranch($event)" name="flexRadioDefault" class="custom-control-input">
+                                        <label class="custom-control-label" for="flexRadioDefault30">By Branch</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                </fieldset>
+            </div>
+        </div>
+        <div class="col-md-6">
+                <form>
+                <fieldset>
+                    <div class="form-group p-2 border w-100" panelContent>
+                        <label class="form-label" for="radio-group-1">Option Selector</label>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Form Card</span>
+                                    </div>
+                                    <input type="number" id="fromCard" [(ngModel)]='cardStartValue' name="fromCard" [disabled]="disbaleEmpList==true || opetionSelectorAll==true || specialCardFilter==true || (employeeProfile==true && byBranch==true) ||  (opetionSelectorAll && empAppoint==true) || (empTracking==true && specialCardFilter==true) || (empAppoint==true && byBranch==true) || (cardPrinting==true && opetionSelectorAll==true) || (cardPrinting==true &&  specialCardFilter==true) || (empDepLog==true && opetionSelectorAll==true) || (empDepLog==true && byBranch==true) || (empShLog==true && opetionSelectorAll==true) || (empShLog==true && byBranch==true) || (empJobTypeLog==true && opetionSelectorAll==true) || (empSalLog==true && opetionSelectorAll==true) || (empSalLog==true && byBranch==true) || (empGLog==true && opetionSelectorAll==true) || (empGLog==true && byBranch==true) || (empcardcopy==true && opetionSelectorAll==true) || (empcardcopy==true && byBranch==true) || (empCCertificate==true && opetionSelectorAll==true) || (empCCertificate==true && byBranch==true==true) || (empExLetter==true && opetionSelectorAll==true) || (empExLetter==true && byBranch==true) || (emp_list==true && opetionSelectorAll==true) || (emp_list==true && byBranch==true) || (secWiseEmpCount==true && opetionSelectorAll==true) || (secWiseEmpCount==true && byBranch==true) || (deathGrantCase==true && specialCardFilter==true) || (cardPrinting==true && byBranch==true) || (empGdLog==true && byBranch==true) || (empLAllInfo==true && byBranch==true) || (marriageGrantCase==true && byBranch==true) || (deathGrantCase==true && byBranch==true) || (servicesCertificate==true && byBranch==true) || (scertificate==true && byBranch==true)"  #fromCard class="form-control" placeholder="card no." aria-label="fromCard" aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">To Card</span>
+                                    </div>
+                                    <input type="number" [(ngModel)]='cardEndValue' name="ToCard"  id="toCard" [disabled]="disbaleEmpList==true || opetionSelectorAll==true || specialCardFilter==true || (employeeProfile==true && byBranch==true) || (opetionSelectorAll && empAppoint==true) || (empTracking==true && specialCardFilter==true) || (empAppoint==true && byBranch==true) || (cardPrinting==true && opetionSelectorAll==true) || (cardPrinting==true && specialCardFilter==true) || (empDepLog==true && byBranch==true) || (empShLog==true && opetionSelectorAll==true) || (empShLog==true &&  byBranch==true) || (empJobTypeLog==true && opetionSelectorAll==true) || (empSalLog==true && opetionSelectorAll==true) || (empSalLog==true && byBranch==true) || (empGLog==true && opetionSelectorAll==true) || (empGLog==true && byBranch==true) || (empcardcopy==true && opetionSelectorAll==true) || (empcardcopy==true && byBranch==true) || (empCCertificate==true && opetionSelectorAll==true) || (empCCertificate==true && byBranch==true==true) || (empExLetter==true && opetionSelectorAll==true) || (empExLetter==true && byBranch==true) || (emp_list==true && opetionSelectorAll==true) || (emp_list==true && byBranch==true) || (secWiseEmpCount==true && opetionSelectorAll==true) || (secWiseEmpCount==true && byBranch==true) || (deathGrantCase==true && specialCardFilter==true) || (cardPrinting==true && byBranch==true) || (empGdLog==true && byBranch==true) || (empLAllInfo==true && byBranch==true) || (marriageGrantCase==true && byBranch==true) || (deathGrantCase==true && byBranch==true) || (scertificate==true && byBranch==true)"  #toCard class="form-control" placeholder="card no." aria-label="to card" aria-describedby="toCard">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Branch:</span>
+    
+                                           <select [disabled]="disbaleEmpList==true || jobPermanentLetter==true || specialCardFilter==true || (employeeProfile==true && opetionSelectorAll==true) || (employeeProfile==true && operationSelectorByCard==true) || (empTracking==true && opetionSelectorAll==true) || (opetionSelectorAll==true && empAppoint==true) || (operationSelectorByCard==true && empAppoint==true) || (empTracking==true && specialCardFilter==true) || (cardPrinting==true && opetionSelectorAll==true) || (cardPrinting==true && operationSelectorByCard==true) || (cardPrinting==true && specialCardFilter==true) || (empDepLog==true && opetionSelectorAll==true) || (empDepLog==true && operationSelectorByCard==true) || (empGdLog==true && operationSelectorByCard==true) || (empShLog==true && opetionSelectorAll==true) || (empShLog==true && operationSelectorByCard==true) || (empJobTypeLog==true && opetionSelectorAll==true) || (empJobTypeLog==true && operationSelectorByCard==true) || (empSalLog==true && opetionSelectorAll==true) || (empSalLog==true && operationSelectorByCard==true) || (empGLog==true && opetionSelectorAll==true) || (empGLog==true && operationSelectorByCard==true) || (empcardcopy==true && opetionSelectorAll==true) || (empcardcopy==true && operationSelectorByCard==true) || (empCCertificate==true && opetionSelectorAll==true) || (empCCertificate==true && operationSelectorByCard==true) || (empExLetter==true && opetionSelectorAll==true) || (empExLetter==true && operationSelectorByCard==true) || (emp_list==true && opetionSelectorAll==true) || (emp_list==true && operationSelectorByCard==true) || (secWiseEmpCount==true && opetionSelectorAll==true) || (secWiseEmpCount==true && operationSelectorByCard==true)  || (deathGrantCase==true && opetionSelectorAll==true) || (deathGrantCase==true && operationSelectorByCard==true) || (empGdLog==true && opetionSelectorAll==true) || (empLAllInfo==true && opetionSelectorAll==true) || (empLAllInfo==true && operationSelectorByCard==true) || (empBranchLog==true && opetionSelectorAll==true) || (empBranchLog==true && operationSelectorByCard==true) || (empBranchLog==true && byBranch==true) || (marriageGrantCase==true && opetionSelectorAll==true) || (marriageGrantCase==true && operationSelectorByCard==true) || (servicesCertificate==true && opetionSelectorAll==true) || (scertificate==true && operationSelectorByCard==true) || (scertificate==true && opetionSelectorAll==true)"  class="form-control">
+                                               <option *ngFor="let b of branches">{{b.company.name}}</option>
+                                              
+                                           </select>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <fieldset>
+                        <div class="form-group p-2 mt-3 border w-100">
+                            <label class="form-label" for="radio-group-1">Special Filter</label> &nbsp; &nbsp;
+                            <div class="input-group">
+                                <span class="input-group-text">Select Grade#</span>
+                                <div class="input-group-prepend">
+                                    <input type="number" [disabled]="specialCardFilter==false && empLAllInfo==true ||  (empTracking==true && opetionSelectorAll==true) || disbaleEmpList==true || (jobPermanentLetter==true && specialCardFilter==false)
+                                    || (employeeProfile==true && opetionSelectorAll==true) || (employeeProfile==true && operationSelectorByCard==true) || (employeeProfile==true && byBranch==true) || (opetionSelectorAll==true && empAppoint==true) || (operationSelectorByCard==true && empAppoint==true) || (empAppoint==true && byBranch==true) || (cardPrinting==true && opetionSelectorAll==true)  || (cardPrinting==true && operationSelectorByCard==true) || (empDepLog==true && opetionSelectorAll==true) || (empDepLog==true && operationSelectorByCard==true) || (empDepLog==true && byBranch==true) || (empGdLog==true && operationSelectorByCard==true) || (empGdLog==true && byBranch==true) || (empShLog==true && opetionSelectorAll==true) || (empShLog==true && operationSelectorByCard==true) || (empShLog==true &&  byBranch==true) || (empJobTypeLog==true && opetionSelectorAll==true) || (empJobTypeLog==true && operationSelectorByCard==true) || (empSalLog==true && opetionSelectorAll==true) || (empSalLog==true && operationSelectorByCard==true) || (empSalLog==true && byBranch==true) || (empGLog==true && opetionSelectorAll==true) || (empGLog==true && operationSelectorByCard==true) || (empGLog==true && byBranch==true) || (empcardcopy==true && opetionSelectorAll==true) || (empcardcopy==true && operationSelectorByCard==true) || (empcardcopy==true && byBranch==true) || (empCCertificate==true && opetionSelectorAll==true) || (empCCertificate==true && operationSelectorByCard==true) || (empCCertificate==true && byBranch==true==true) || (empExLetter==true && opetionSelectorAll==true) || (empExLetter==true && operationSelectorByCard==true) || (empExLetter==true && byBranch==true) || (emp_list==true && opetionSelectorAll==true) || (emp_list==true && operationSelectorByCard==true) || (emp_list==true && byBranch==true) || (secWiseEmpCount==true && opetionSelectorAll==true) || (secWiseEmpCount==true && operationSelectorByCard==true) || (secWiseEmpCount==true && byBranch==true) || (deathGrantCase==true && opetionSelectorAll==true) || (deathGrantCase==true && operationSelectorByCard==true) || (cardPrinting==true && byBranch==true) || (empGdLog==true && opetionSelectorAll==true) || (marriageGrantCase==true && opetionSelectorAll==true) || (marriageGrantCase==true && operationSelectorByCard==true) || (marriageGrantCase==true && byBranch==true) || (deathGrantCase==true && byBranch==true) || (servicesCertificate==true && opetionSelectorAll==true) || (servicesCertificate==true && byBranch==true) || (scertificate==true && opetionSelectorAll==true) || (scertificate==true && opetionSelectorAll==true) || (scertificate==true && operationSelectorByCard==true) || (scertificate==true && byBranch==true)" id="selectCard#" aria-label="selectCard#" class="form-control" placeholder="1">
+                                </div>
+                            </div>
+                            <div class="input-group" style="margin-top:10px">
+                                <div class="input-group-prepend" style="height:60px">
+                                    <span class="input-group-text">Grade List</span>
+                                    <textarea style="height:90px" [disabled]="(cardPrinting==true && specialGradeFilter==true) || specialCardFilter==false && empLAllInfo==true ||  (empTracking==true && opetionSelectorAll==true) || disbaleEmpList==true || (jobPermanentLetter==true && specialCardFilter==false) || (employeeProfile==true && opetionSelectorAll==true) || (employeeProfile==true && operationSelectorByCard==true) || (employeeProfile==true && byBranch==true) || (opetionSelectorAll==true && empAppoint==true) || (operationSelectorByCard==true && empAppoint==true) || (empAppoint==true && byBranch==true) || (cardPrinting==true && opetionSelectorAll==true) || (cardPrinting==true && operationSelectorByCard==true) || (empDepLog==true && opetionSelectorAll==true) || (empDepLog==true && operationSelectorByCard==true) || (empDepLog==true && byBranch==true) || (empGdLog==true && operationSelectorByCard==true) || (empGdLog==true && byBranch==true) || (empShLog==true && opetionSelectorAll==true) || (empShLog==true && operationSelectorByCard==true) || (empShLog==true && byBranch==true) || (empJobTypeLog==true && opetionSelectorAll==true) || (empJobTypeLog==true && operationSelectorByCard==true) || (empSalLog==true && opetionSelectorAll==true) || (empSalLog==true && operationSelectorByCard==true) || (empSalLog==true && byBranch==true) || (empGLog==true && opetionSelectorAll==true) || (empGLog==true && operationSelectorByCard==true) || (empGLog==true && byBranch==true) || (empcardcopy==true && opetionSelectorAll==true) || (empcardcopy==true && operationSelectorByCard==true) || (empcardcopy==true && byBranch==true) || (empCCertificate==true && opetionSelectorAll==true) || (empCCertificate==true && operationSelectorByCard==true) || (empCCertificate==true && byBranch==true==true) || (empExLetter==true &&opetionSelectorAll==true) || (empExLetter==true && operationSelectorByCard==true) || (empExLetter==true && byBranch==true) || (emp_list==true && opetionSelectorAll==true) || (emp_list==true && operationSelectorByCard==true) || (emp_list==true && byBranch==true) || (secWiseEmpCount==true && opetionSelectorAll==true) || (secWiseEmpCount==true && operationSelectorByCard==true) || (secWiseEmpCount==true && byBranch==true) || (deathGrantCase==true && opetionSelectorAll==true) || (deathGrantCase==true && operationSelectorByCard==true) || (cardPrinting==true && byBranch==true) || (empGdLog==true && opetionSelectorAll==true) || (empGdLog==true && operationSelectorByCard==true) || (empGdLog==true && byBranch==true) || (marriageGrantCase==true && opetionSelectorAll==true) || (marriageGrantCase==true && operationSelectorByCard==true) || (marriageGrantCase==true && byBranch==true) || (deathGrantCase==true && byBranch==true) || (servicesCertificate==true && opetionSelectorAll==true) || (servicesCertificate==true && byBranch==true) || (scertificate==true && opetionSelectorAll==true) || (scertificate==true && operationSelectorByCard==true) || (scertificate==true && byBranch==true)" name="cardList" id="cardList" class="form-control" aria-label="With textarea"></textarea>
+                                </div>
+
+                                <div class="demo" style="display: grid; margin-left:10px">
+                                    <button [disabled]="(cardPrinting==true && operationSelectorByCard==true) ||  (empTracking==true && opetionSelectorAll==true) || (employeeProfile==true && opetionSelectorAll==true) || (employeeProfile==true && operationSelectorByCard==true) || (employeeProfile==true && byBranch==true) || (empSalLog==true && opetionSelectorAll==true) || (empSalLog==true && operationSelectorByCard==true) || (empSalLog==true && byBranch==true) || (empGLog==true && opetionSelectorAll==true) || (empGLog==true && operationSelectorByCard==true) || (empGLog==true && byBranch==true) || (empAppoint==true && opetionSelectorAll==true) || (empAppoint==true && operationSelectorByCard==true) || (empAppoint==true && byBranch==true) || (empcardcopy==true && opetionSelectorAll==true) || (empcardcopy==true && operationSelectorByCard==true) || (empcardcopy==true && byBranch==true) || (cardPrinting==true && opetionSelectorAll==true) || (cardPrinting==true && operationSelectorByCard==true) || (cardPrinting==true && byBranch==true) || (empCCertificate==true && opetionSelectorAll==true) || (empCCertificate==true && operationSelectorByCard==true) || (empCCertificate==true && byBranch==true) || (empDepLog==true && opetionSelectorAll==true) || (empDepLog==true && operationSelectorByCard==true) || (empDepLog==true && byBranch==true) || (empExLetter==true && opetionSelectorAll==true) || (empExLetter==true && operationSelectorByCard==true) || (empExLetter==true && byBranch==true) || (empGdLog==true && opetionSelectorAll==true) || (empGdLog==true && byBranch==true) || (empGdLog==true && operationSelectorByCard==true) || (emp_list==true && opetionSelectorAll==true) || (emp_list==true && operationSelectorByCard==true) || (emp_list==true && byBranch==true) || (empLAllInfo==true && opetionSelectorAll==true) || (empLAllInfo==true && operationSelectorByCard==true) || (empLAllInfo==true && byBranch==true) || (empJobTypeLog==true && opetionSelectorAll==true) || (empJobTypeLog==true && operationSelectorByCard==true) || (empJobTypeLog==true && byBranch==true) || (secWiseEmpCount==true && opetionSelectorAll==true) || (secWiseEmpCount==true && operationSelectorByCard==true) || (secWiseEmpCount==true && byBranch==true) || (empBranchLog==true && opetionSelectorAll==true) || (empBranchLog==true && operationSelectorByCard==true) || (empBranchLog==true && byBranch==true) || (marriageGrantCase==true && opetionSelectorAll==true) || (marriageGrantCase==true && operationSelectorByCard==true) || (marriageGrantCase==true && specialCardFilter==true) || (marriageGrantCase==true && byBranch==true) || (deathGrantCase==true && opetionSelectorAll==true) || (deathGrantCase==true && operationSelectorByCard==true) || (deathGrantCase==true && byBranch==true) || (servicesCertificate==true && opetionSelectorAll==true) || (servicesCertificate==true && byBranch==true) || (scertificate==true && opetionSelectorAll==true)|| (scertificate==true && operationSelectorByCard==true) || (scertificate==true && byBranch==true)"  type="button" class="btn btn-primary">Add</button>
+
+
+                                    <button [disabled]="specialCardFilter==false || disbaleEmpList==true ||  (empTracking==true && opetionSelectorAll==true)  || (jobPermanentLetter==true && specialCardFilter==false) || (employeeProfile==true && opetionSelectorAll==true) || (employeeProfile==true && operationSelectorByCard==true) || (employeeProfile==true && byBranch==true) || (opetionSelectorAll==true && empAppoint==true) || (operationSelectorByCard==true && empAppoint==true) || (empAppoint==true && byBranch==true)  || (empDepLog==true && opetionSelectorAll==true) || (empDepLog==true && operationSelectorByCard==true) || (empDepLog==true && byBranch==true) || (empGdLog==true && operationSelectorByCard==true) || (empGdLog==true && byBranch==true) || (empShLog==true && opetionSelectorAll==true) || (empShLog==true && operationSelectorByCard==true) || (empShLog==true &&  byBranch==true) || (empJobTypeLog==true && opetionSelectorAll==true) || (empJobTypeLog==true && operationSelectorByCard==true) || (empSalLog==true && opetionSelectorAll==true) || (empSalLog==true && operationSelectorByCard==true) || (empSalLog==true && byBranch==true) || (empGLog==true && opetionSelectorAll==true) || (empGLog==true && operationSelectorByCard==true) || (empGLog==true && byBranch==true) || (empcardcopy==true && opetionSelectorAll==true) || (empcardcopy==true && operationSelectorByCard==true) || (empcardcopy==true && byBranch==true) || (empCCertificate==true && opetionSelectorAll==true) || (empCCertificate==true && operationSelectorByCard==true) || (empCCertificate==true && byBranch==true==true) || (empExLetter==true && opetionSelectorAll==true) || (empExLetter==true && operationSelectorByCard==true) || (empExLetter==true && byBranch==true) || (emp_list==true && opetionSelectorAll==true) || (emp_list==true && operationSelectorByCard==true) || (emp_list==true && byBranch==true) || (secWiseEmpCount==true && opetionSelectorAll==true) || (secWiseEmpCount==true && operationSelectorByCard==true) || (secWiseEmpCount==true && byBranch==true) || (deathGrantCase==true && opetionSelectorAll==true) || (deathGrantCase==true && operationSelectorByCard==true) || (cardPrinting==true && byBranch==true) || (empCCertificate==true && opetionSelectorAll==true) || (empCCertificate==true && operationSelectorByCard==true) || (empCCertificate==true && byBranch==true) || (empGdLog==true && opetionSelectorAll==true) || (empGdLog==true && byBranch==true) || (empGdLog==true && operationSelectorByCard==true) || (marriageGrantCase==true && opetionSelectorAll==true) || (marriageGrantCase==true && operationSelectorByCard==true) || (marriageGrantCase==true && specialCardFilter==true) || (marriageGrantCase==true && byBranch==true) || (deathGrantCase==true && opetionSelectorAll==true)  || (deathGrantCase==true && operationSelectorByCard==true) || (deathGrantCase==true && byBranch==true) || (servicesCertificate==true && opetionSelectorAll==true) || (servicesCertificate==true && byBranch==true) || (scertificate==true && opetionSelectorAll==true) || (scertificate==true && operationSelectorByCard==true) || (scertificate==true && byBranch==true)"  type="button" class="btn btn-danger">Remove</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <form>
+                        <div class="form-group p-2 mt-3 border w-100">
+                            <label class="form-label" for="radio-group-1">Card Printing Side</label> &nbsp; &nbsp;
+                            <div class="input-group-prepend">
+                                <div class="input-group-text h-100">
+                                    <div class="custom-control custom-radio">
+                                        <input [disabled]="disbaleEmpList==true || jobPermanentLetter==true || opetionSelectorAll==true || specialCardFilter==true || (employeeProfile==true && opetionSelectorAll==true) || (employeeProfile==true && operationSelectorByCard==true) || (employeeProfile==true && byBranch==true) || (opetionSelectorAll==true && empAppoint==true) || (operationSelectorByCard==true && empAppoint==true) || (empTracking==true && specialCardFilter==true) || (empAppoint==true && byBranch==true) || (empDepLog==true && operationSelectorByCard==true) || (empDepLog==true && byBranch==true) || (empGdLog==true && operationSelectorByCard==true) || (empGdLog==true && byBranch==true) || (empShLog==true && opetionSelectorAll==true) || (empShLog==true && operationSelectorByCard==true) || (empShLog==true &&  byBranch==true) || (empJobTypeLog==true && opetionSelectorAll==true) || (empJobTypeLog==true && operationSelectorByCard==true) || (empSalLog==true && opetionSelectorAll==true) || (empSalLog==true && operationSelectorByCard==true) || (empSalLog==true && byBranch==true) || (empSalLog==true && byBranch==true) || (empGLog==true && opetionSelectorAll==true) || (empGLog==true && operationSelectorByCard==true) || (empGLog==true && byBranch==true) || (empcardcopy==true && opetionSelectorAll==true) || (empcardcopy==true && operationSelectorByCard==true) || (empcardcopy==true && byBranch==true) || (empCCertificate==true && opetionSelectorAll==true) || (empCCertificate==true && operationSelectorByCard==true) || (empCCertificate==true && byBranch==true==true) || (empCCertificate==true && byBranch==true==true) || (empExLetter==true && opetionSelectorAll==true) || (empExLetter==true && operationSelectorByCard==true) || (empExLetter==true && byBranch==true) || (emp_list==true && opetionSelectorAll==true) || (emp_list==true && operationSelectorByCard==true) || (emp_list==true && byBranch==true) || (secWiseEmpCount==true && opetionSelectorAll==true) || (secWiseEmpCount==true && operationSelectorByCard==true) || (secWiseEmpCount==true && byBranch==true) || (deathGrantCase==true && opetionSelectorAll==true) || (deathGrantCase==true && operationSelectorByCard==true) || (deathGrantCase==true && specialCardFilter==true) || (cardPrinting==true && byBranch==true) || (empLAllInfo==true && opetionSelectorAll==true) || (empLAllInfo==true && operationSelectorByCard==true) || (marriageGrantCase==true && opetionSelectorAll==true) || (marriageGrantCase==true && operationSelectorByCard==true) || (marriageGrantCase==true && byBranch==true) || (deathGrantCase==true && byBranch==true) || (servicesCertificate==true && opetionSelectorAll==true) || (servicesCertificate==true && byBranch==true) || (scertificate==true && opetionSelectorAll==true) || (scertificate==true && operationSelectorByCard==true) || (scertificate==true && byBranch==true)" type="radio" id="flexRadioDefault31" (change)="handleFrontSide($event)" name="flexRadioDefault" class="custom-control-input" checked>
+                                        <label class="custom-control-label" for="flexRadioDefault31">Front Side</label>
+                                    </div>
+                                </div>
+                                &nbsp; &nbsp;
+                                <div class="input-group-text h-100">
+                                    <div class="custom-control custom-radio">
+                                        <input [disabled]="disbaleEmpList==true || jobPermanentLette==true || opetionSelectorAll==true || specialCardFilter==true || (employeeProfile==true && opetionSelectorAll==true) || (employeeProfile==true && operationSelectorByCard==true) || (employeeProfile==true && byBranch==true) || (opetionSelectorAll==true && empAppoint==true) || (cardPrinting==true && operationSelectorByCard==true) || (operationSelectorByCard==true && empAppoint==true) || (empTracking==true && specialCardFilter==true) || (empAppoint==true && byBranch==true) || (empDepLog==true && operationSelectorByCard==true) || (empDepLog==true && byBranch==true) || (empGdLog==true && operationSelectorByCard==true) || (empGdLog==true && byBranch==true) || (empShLog==true && opetionSelectorAll==true) || (empShLog==true && operationSelectorByCard==true) || (empShLog==true &&  byBranch==true) || (empJobTypeLog==true && opetionSelectorAll==true) || (empJobTypeLog==true && operationSelectorByCard==true) || (empSalLog==true && opetionSelectorAll==true) || (empSalLog==true && operationSelectorByCard==true) || (empSalLog==true && byBranch==true) || (empSalLog==true && byBranch==true) || (empGLog==true && opetionSelectorAll==true) || (empGLog==true && operationSelectorByCard==true) || (empGLog==true && byBranch==true) || (empcardcopy==true && opetionSelectorAll==true) || (empcardcopy==true && operationSelectorByCard==true) || (empcardcopy==true && byBranch==true) || (empCCertificate==true && opetionSelectorAll==true) || (empCCertificate==true && operationSelectorByCard==true) || (empCCertificate==true && byBranch==true==true) || (empCCertificate==true && byBranch==true==true) || (empExLetter==true && opetionSelectorAll==true) || (empExLetter==true && operationSelectorByCard==true) || (empExLetter==true && byBranch==true) || (emp_list==true && opetionSelectorAll==true) || (emp_list==true && operationSelectorByCard==true) || (emp_list==true && byBranch==true) || (secWiseEmpCount==true && opetionSelectorAll==true) || (secWiseEmpCount==true && operationSelectorByCard==true) || (secWiseEmpCount==true && byBranch==true) || (deathGrantCase==true && opetionSelectorAll==true) || (deathGrantCase==true && operationSelectorByCard==true) || (deathGrantCase==true && specialCardFilter==true) || (cardPrinting==true && byBranch==true) || (empLAllInfo==true && opetionSelectorAll==true) || (empLAllInfo==true && operationSelectorByCard==true) || (marriageGrantCase==true && opetionSelectorAll==true) || (marriageGrantCase==true && operationSelectorByCard==true) || (marriageGrantCase==true && byBranch==true) || (deathGrantCase==true && byBranch==true) || (servicesCertificate==true && opetionSelectorAll==true) || (servicesCertificate==true && byBranch==true) || (scertificate==true && opetionSelectorAll==true) || (scertificate==true && operationSelectorByCard==true) || (scertificate==true && byBranch==true)" type="radio" id="flexRadioDefault32" (change)="handleBackSide($event)" name="flexRadioDefault" class="custom-control-input">
+                                        <label class="custom-control-label" for="flexRadioDefault32">Back Side</label>
+                                    </div>
+                                </div>
+                            
+                                        <div class="frame-wrap">
+                                            <div class="demo" style="display: grid; margin-left:10px font-weight-bold h5">
+                                                <button class="p-5" id="result" type="button" (click)="showCard(fromCard.value,toCard.value)" class="btn btn-info">Show Report</button>
+                                            </div>
+                                        </div>
+                                    
+                            </div>
+                        </div>
+                    </form>
+                    </fieldset>
+                </fieldset>
+                <fieldset>
+                    <div class="form-group p-2 mt-3 border w-100">
+                        <div class="row">
+                            <div></div>
+                        </div>
+                        <label class="form-label bg-info text-center font-weight-bold h5 text-white w-75 p-2"  for="radio-group-1">Select Appropriate Option</label> 
+                        <div class="input-group" style="margin-top:15px">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Department:</span>
+                                <select [disabled]="AllOA==true || designAO==true || sectionAO==true" class="form-control">
+                                    <option *ngFor="let d of dept">{{d.name}}</option>
+                                </select>
+                               
+                            </div>
+                        </div>
+                        <div class="input-group" style="margin-top:5px">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Section:</span>
+                                <select [disabled]="AllOA==true || departmentAO==true || designAO==true" class="form-control">
+                                    <option *ngFor="let s of secCode">{{s.SectionCode}}</option>
+                                   
+                                </select>
+                              
+                            </div>
+                        </div>
+                        <div class="input-group" style="margin-top:5px">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Designation:</span>
+                                <select [disabled]="AllOA==true || departmentAO==true || sectionAO==true" class="form-control">
+                                    <option *ngFor="let d of designations">{{d.name}}</option>
+                                   
+                                </select>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <fieldset>
+                        <form>
+                        <div class="form-group p-2">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="input-group">
+                                        <div class="input-group-text">
+                                            <div class="custom-control custom-radio">
+                                                <input [disabled]="disbaleEmpList==true || specialCardFilter==true || (empTracking==true && specialCardFilter==true) || (cardPrinting==true && specialCardFilter==true) || (cardPrinting==true && specialGradeFilter==true)" type="radio" id="flexRadioDefault33" (change)="handleAllAO($event)" name="flexRadioDefault" class="custom-control-input" checked>
+                                                <label class="custom-control-label" for="flexRadioDefault33">All</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="input-group">
+                                        <div class="input-group-text">
+                                            <div class="custom-control custom-radio">
+                                                <input [disabled]="disbaleEmpList==true || specialCardFilter==true || (empTracking==true && specialCardFilter==true) || (cardPrinting==true &&  specialCardFilter==true) || (cardPrinting==true && specialGradeFilter==true)" type="radio" id="flexRadioDefault34" (change)="handleDepartmentAO($event)" name="flexRadioDefault" class="custom-control-input">
+                                                <label class="custom-control-label" for="flexRadioDefault34">Department</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4" style="margin:10px 0">
+                                    <div class="input-group">
+                                        <div class="input-group-text">
+                                            <div class="custom-control custom-radio">
+                                                <input [disabled]="disbaleEmpList==true || specialCardFilter==true || (empTracking==true && specialCardFilter==true) || (cardPrinting==true &&  specialCardFilter==true) || (cardPrinting==true && specialGradeFilter==true)" type="radio" id="flexRadioDefault35" name="flexRadioDefault" (change)="handleDesignationAO($event)" class="custom-control-input">
+                                                <label class="custom-control-label" for="flexRadioDefault35">Designation</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="margin:10px 0">
+                                    <div class="input-group">
+                                        <div class="input-group-text">
+                                            <div class="custom-control custom-radio">
+                                                <input [disabled]="disbaleEmpList==true || specialCardFilter==true || (empTracking==true && specialCardFilter==true) || (cardPrinting==true &&  specialCardFilter==true) || (cardPrinting==true && specialGradeFilter==true)" type="radio" id="flexRadioDefault36" name="flexRadioDefault" (change)="handleSectionAO($event)" class="custom-control-input">
+                                                <label class="custom-control-label" for="flexRadioDefault36">Section</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                                   
+                        </div>
+                    </form>
+                    </fieldset>
+                </fieldset>
+            </form>
+          
+       
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+            <div class="col-md-12" *ngIf="cardStatus">
+    
+                <div class="row" >
+                    <div class="col-md-12 ">
+                        <div *ngIf="all">
+
+                        </div>
+                    
+                        <div *ngIf="active">
+                        </div>
+                    
+                        <div *ngIf="non_active">
+                        </div>
+                        
+                    
+                        <div *ngIf="scertificate">
+                            <smart-service-certificate [appointmentSelector]="opetionSelectorAll" [cardStart]="cardStartValue" [cardEnd]="cardEndValue"></smart-service-certificate> 
+                        </div>
+                    
+                        <div *ngIf="empSalLog==true">
+                            <smart-emp-sal-log [appointmentSelector]="opetionSelectorAll" [cardStart]="cardStartValue" [cardEnd]="cardEndValue"></smart-emp-sal-log>
+                        </div>
+
+                        <div *ngIf="empTracking">
+                            <smart-emp-tracking></smart-emp-tracking>
+                        </div>
+                    
+                        <div *ngIf="empGLog">
+                            <smart-emp-glog [appointmentSelector]="opetionSelectorAll" [cardStart]="cardStartValue" [cardEnd]="cardEndValue"></smart-emp-glog>
+                        </div>
+                    
+                        <div *ngIf="empAppoint">
+                            <smart-emp-appoint [appointmentSelector]="opetionSelectorAll" [cardStart]="cardStartValue" [cardEnd]="cardEndValue"></smart-emp-appoint>
+                        </div>
+                    
+                        <div *ngIf="empcardcopy">
+                            <smart-emp-card-copy [appointmentSelector]="opetionSelectorAll" [cardStart]="cardStartValue" [cardEnd]="cardEndValue"></smart-emp-card-copy>
+                        </div>
+                    
+                        <div *ngIf="cardPrinting">
+                            <smart-emp-cprinting [appointmentSelector]="opetionSelectorAll" [cardStart]="cardStartValue" [cardEnd]="cardEndValue"></smart-emp-cprinting>
+                        </div>
+                    
+                        <div *ngIf="empCCertificate">
+                            <smart-emp-ccertificate [appointmentSelector]="opetionSelectorAll" [cardStart]="cardStartValue" [cardEnd]="cardEndValue"></smart-emp-ccertificate>
+                        </div>
+                    
+                        <div *ngIf="empDepLog">
+                            <smart-emp-dep-log [appointmentSelector]="opetionSelectorAll" [cardStart]="cardStartValue" [cardEnd]="cardEndValue"></smart-emp-dep-log>
+                        </div>
+                        
+                        <div *ngIf="empGdLog">
+                            <smart-emp-gd-log [appointmentSelector]="opetionSelectorAll" [cardStart]="cardStartValue" [cardEnd]="cardEndValue"></smart-emp-gd-log>
+                        </div>
+                    
+                        <div *ngIf="empShLog">
+                            <smart-emp-shift-log [appointmentSelector]="opetionSelectorAll" [cardStart]="cardStartValue" [cardEnd]="cardEndValue"></smart-emp-shift-log>
+                        </div>
+                    
+                        <div *ngIf="empLAllInfo">
+                            <smart-emp-list-all-info [appointmentSelector]="opetionSelectorAll" [cardStart]="cardStartValue" [cardEnd]="cardEndValue" ></smart-emp-list-all-info>
+                        </div>
+                    
+                        <div *ngIf="empJobTypeLog">
+                            <smart-emp-job-type-log [appointmentSelector]="opetionSelectorAll" [cardStart]="cardStartValue" [cardEnd]="cardEndValue"></smart-emp-job-type-log>
+                        </div>
+                    
+                        <div *ngIf="secWiseEmpCount">
+                            <smart-section-wise-emp-count></smart-section-wise-emp-count>
+                        </div>
+                      
+                        <div *ngIf="empBranchLog">
+                           <smart-emp-branch-log [appointmentSelector]="opetionSelectorAll" [cardStart]="cardStartValue" [cardEnd]="cardEndValue"></smart-emp-branch-log> 
+                        </div>
+                    
+                        <div *ngIf="terminationLetter">
+                            <smart-termination-letter [appointmentSelector]="opetionSelectorAll" [cardStart]="cardStartValue" [cardEnd]="cardEndValue"></smart-termination-letter>
+                        </div>
+                    
+                        <div *ngIf="notices">
+                            <smart-notices></smart-notices>
+                        </div>
+                    
+                        <div *ngIf="disbaleEmpList">
+                            <smart-disable-emp-list [appointmentSelector]="opetionSelectorAll" [cardStart]="cardStartValue" [cardEnd]="cardEndValue"></smart-disable-emp-list>
+                        </div>
+                    
+                        <div *ngIf="jobPermanentLetter">
+                           <smart-job-permanent-letter  [appointmentSelector]="opetionSelectorAll" [cardStart]="cardStartValue" [cardEnd]="cardEndValue"></smart-job-permanent-letter> 
+                        </div>
+                    
+                        <div *ngIf="marriageGrantCase">
+                            <smart-marriage-grant-case></smart-marriage-grant-case>
+                        </div>
+                    
+                        <div *ngIf="deathGrantCase">
+                            <smart-death-grant-case [appointmentSelector]="opetionSelectorAll" [cardStart]="cardStartValue" [cardEnd]="cardEndValue"></smart-death-grant-case>
+                        </div>
+                    
+                        <div *ngIf="servicesCertificate">
+                            <smart-services-certificate [appointmentSelector]="opetionSelectorAll" [cardStart]="cardStartValue" [cardEnd]="cardEndValue"></smart-services-certificate>
+                        </div>
+                    
+                        <div *ngIf="emp_list">
+                            <smart-emp-list [appointmentSelector]="opetionSelectorAll" [cardStart]="cardStartValue" [cardEnd]="cardEndValue"></smart-emp-list>
+                        </div>
+
+                        <div *ngIf="empExLetter">
+                            <smart-emp-ex-letter [appointmentSelector]="opetionSelectorAll" [cardStart]="cardStartValue" [cardEnd]="cardEndValue"></smart-emp-ex-letter>
+                        </div>
+                    
+                        <div *ngIf="opetionSelectorAll">
+                      
+                        </div>
+                    
+                        <div *ngIf="operationSelectorByCard">
+
+                        </div>
+                    
+                        <div *ngIf="specialCardFilter">
+
+                        </div>
+                    
+                        <div *ngIf="specialGradeFilter">
+
+                        </div>
+                    
+                        <div *ngIf="byBranch">
+
+                        </div>
+                    
+                        <div *ngIf="frontSide">
+
+                        </div>
+                    
+                        <div *ngIf="backSide">
+
+                        </div>
+                    
+                        <div *ngIf="AllOA">
+
+                        </div>
+                    
+                        <div *ngIf="departmentAO">
+
+                        </div>
+
+                    
+                    
+                       
+                        <body *ngIf="employeeProfile" id="htmlData" class="row d-flex justify-content-center">
+                            <div class="col-md-10 border">
+
+                                <div *ngFor="let c of compInfo; index as i">
+               
+                                    <div class="container h-100 w-100 mt-3 p-50" class="mySlides"> 
+                                        
+                                        <div class="row">
+                    
+                                            <div class="col-md-3 mt-3 mb-3">
+                                                <img  src="https://upload.wikimedia.org/wikipedia/en/0/01/This_is_the_Forward_Sport_brand_logo.jpg" width="100px"/>
+                                               
+                                            </div>
+                                            <div class="col-md-6 mt-3">
+                                              <div><span class="font-weight-bold d-block">Forward Sports (Pvt) Ltd.</span>
+                                                <span>Wazirabad Road,Adha Sahowala, Sialkot</span>
+                                              </div>
+                                              
+                                            </div>
+                                          </div>
+                                          <div class="row d-flex">
+                                           <div class="col-md-12 mt-5 align-items-center bg-primary 100">
+                                             <p class="h2 align-items-center text-center color-white mt-2 font-weight-bold">Employee Profile</p>
+                                           </div>
+                                          </div>
+                    
+                                          <div class="row d-flex mt-2 justify-content-start ">
+                                              <div class="col-md-12 bg-primary text-white">
+                                                  <h4 class="text-white d-flex mx-2"><b>Personal Information:</b></h4>
+                                              </div>
+                                          </div>
+                    
+                                          <div class="row mt-2">
+                                              <div class="col-md-12 d-flex justify-content-center text-center">
+                                                  <img class="rounded-circle" src="http://127.0.0.1:8000{{c.Employee.EmpPic}}" height="100px" width="100px"/>
+                                              </div>
+                                          </div>
+                    
+                                          <div class="row mt-2">
+                                              <div class="col-md-3">
+                                                  <span><b>Card No:</b></span>
+                                              </div>
+                                              <div class="col-md-3">
+                                                  <span>{{c.Employee.EmpCardNo.name}}</span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span><b>Martial Status:</b></span>                            
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{c.Employee.MaritalStatus}}</span>
+                                            </div>
+                                          </div>
+                    
+                                          <div class="row mt-1">
+                                            <div class="col-md-3">
+                                                <span><b>Name:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{c.Employee.name}}</span>
+                                          </div>
+                                          <div class="col-md-3">
+                                              <span><b>Qualification:</b></span>                            
+                                          </div>
+                                          <div class="col-md-3">
+                                              <span>{{employeQual[i]?employeQual[i].QualificationTitle:0}}</span>
+                                          </div>
+                                        </div>
+                    
+                                        <div class="row mt-1">
+                                            <div class="col-md-3">
+                                                <span><b>Father/Husband Name:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{c.Employee.FatherName}}</span>
+                                          </div>
+                                          <div class="col-md-3">
+                                              <span><b>City:</b></span>                            
+                                          </div>
+                                          <div class="col-md-3">
+                                              <span>{{c.Employee.EmpCity.name}}</span>
+                                          </div>
+                                        </div>
+                    
+                                        <div class="row mt-1">
+                                            <div class="col-md-3">
+                                                <span><b>Gender:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{c.Employee.Gender}}</span>
+                                          </div>
+                                          <div class="col-md-3">
+                                              <span><b>Province:</b></span>                            
+                                          </div>
+                                          <div class="col-md-3">
+                                              <span>{{c.Employee.EmpProvince}}</span>
+                                          </div>
+                                        </div>
+                                        
+                                        <div class="row mt-1">
+                                            <div class="col-md-3">
+                                                <span><b>Religion:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{c.Employee.Religion}}</span>
+                                          </div>
+                                        </div>
+                    
+                                        <div class="row mt-1">
+                                            <div class="col-md-3">
+                                                <span><b>CNIC:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{c.Employee.CNICNO}}</span>
+                                          </div>
+                                          <div class="col-md-3">
+                                              <span><b>Permanent Address:</b></span>                            
+                                          </div>
+                                          <div class="col-md-3">
+                                              <span>{{c.Employee.EmpPermanentAddress}}</span>
+                                          </div>
+                                        </div>
+                    
+                                        <div class="row mt-1">
+                                            <div class="col-md-3">
+                                                <span><b>Blood Group:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{c.Employee.BloodGroup}}</span>
+                                          </div>
+                                          <div class="col-md-3">
+                                              <span><b>Current Address:</b></span>                            
+                                          </div>
+                                          <div class="col-md-3">
+                                              <span>{{c.Employee.EmpCurrentAddress}}</span>
+                                          </div>
+                                        </div>
+                    
+                                        <div class="row mt-1">
+                                            <div class="col-md-3">
+                                                <span><b>Date Of Birth:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{c.Employee.DateOfBirth}}</span>
+                                          </div>
+                                          <div class="col-md-3">
+                                              <span><b>Email Address:</b></span>                            
+                                          </div>
+                                          <div class="col-md-3">
+                                              <span>{{c.Employee.official_email_address}}</span>
+                                          </div>
+                                        </div>
+                    
+                    
+                                        <div class="row d-flex  mt-2 justify-content-start ">
+                                            <div class="col-md-12 bg-primary text-white">
+                                                <h4 class="text-white d-flex mx-2"><b>Official Information:</b></h4>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row mt-2">
+                                            <div class="col-md-3">
+                                                <span><b>Date Of Joining:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{c.DateOfJoning}}</span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span><b>SSC</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{c.SSCNO}}</span>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row mt-1">
+                                            <div class="col-md-3">
+                                                <span><b>Date Of Permanent:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{c.DateOfPermanent}}</span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span><b>NTN No:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{c.NTNNO}}</span>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row mt-1">
+                                            <div class="col-md-3">
+                                                <span><b>Graduity Date:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{c.GraduityDate}}</span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span><b>EOBI No:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{c.EOBINO}}</span>
+                                            </div>
+                                        </div>
+                    
+                                        
+                                        <div class="row mt-1">
+                                            <div class="col-md-3">
+                                                <span><b>Department:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{c.Department.name}}</span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span><b>Hiring Criteria:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{c.HiringCriteria}}</span>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row mt-1">
+                                            <div class="col-md-3">
+                                                <span><b>Section:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{c.Section.name}}</span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span><b>Experience:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span></span>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row mt-1">
+                                            <div class="col-md-3">
+                                                <span><b>Designation:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{c.Designation.name}}</span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span><b>Reference:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{c.Reference}}</span>
+                                            </div>
+                                        </div>
+                    
+                                        
+                                        <div class="row mt-1">
+                                            <div class="col-md-3">
+                                                <span><b>Grade:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{c.GradeID.name}}</span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span><b>Job Duration:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>00 Yrs 04 Mon</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row mt-1">
+                                            <div class="col-md-3">
+                                                <span><b>Job Type:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{c.JobType.name}}</span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span><b>Emp.Status:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{c.EmpStatus}}</span>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row mt-1">
+                                            <div class="col-md-3">
+                                                <span><b>Shift:</b></span>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <span>{{c.Shift.name}}</span>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row mt-1">
+                                            <div class="col-md-3">
+                                                <span><b>Branch:</b></span>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <span>{{c.Branch.BranchAddress}}</span>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row mt-1">
+                                            <div class="col-md-3">
+                                                <span><b>Employement:</b></span>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <span>{{c.EmploymentType.name}}</span>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row d-flex  mt-2 justify-content-start">
+                                            <div class="col-md-12 bg-primary text-white">
+                                                <h4 class="text-white d-flex mx-2"><b>Salary Information:</b></h4>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row mt-1">
+                                            <div class="col-md-3">
+                                                <span><b>Basic Salary:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{salaryCombined[i]?salaryCombined[i].BasicSalary:0}}</span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span><b>Tax Deduction:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{salaryCombined[i]?salaryCombined[i].TaxDeduction:0}}</span>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row mt-1">
+                                            <div class="col-md-3">
+                                                <span><b>Special Allowance:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{salaryCombined[i]?salaryCombined[i].SpecialAllowance:0}}</span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span><b>Rent Deduction:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{salaryCombined[i]?salaryCombined[i].RentDeduction:0}}</span>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row mt-1">
+                                            <div class="col-md-3">
+                                                <span><b>Meal Allowance:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{salaryCombined[i]?salaryCombined[i].MealAllowance:0}}</span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span><b>Canteen Deduction:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{salaryCombined[i]?salaryCombined[i].CanteenDeducts:0}}</span>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row mt-1">
+                                            <div class="col-md-3">
+                                                <span><b>Travel Allowance:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{salaryCombined[i]?salaryCombined[i].TravelAllowance:0}}</span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span><b>Union Fund:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{salaryCombined[i]?salaryCombined[i].UnionFund:0}}</span>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row mt-1">
+                                            <div class="col-md-3">
+                                                <span><b>Education Allowance:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{salaryCombined[i]?salaryCombined[i].EducationAllowance:0}}</span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span><b>EOBI:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{c.EOBINO}}</span>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row mt-1">
+                                            <div class="col-md-3">
+                                                <span><b>Financial Period:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>{{salaryCombined[i]?salaryCombined[i].FinancialPeriod:0}}</span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span><b>Activation Date:</b></span>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span></span>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row mt-5">
+                                            <div class="col-md-4">
+                                                <span style="border-top:1px solid"><b>Manager Human Resource</b></span>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <span style="border-top:1px solid"><b>General Manager</b></span>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <span style="border-top:1px solid"><b>Accounts Manager</b></span>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                    
+                                    </div>
+                                                <br>
+                                                
+                                           
+                                      
+                                         
+                                    </div>
+
+                            </div>
+
+                    </body>
+                    
+                </div>
+                </div>
+                </div>
+
+
+                <div *ngIf="arrows">
+                    <div *ngIf="buttons">
+                        <a class="prev" (click)="plusSlides(-1)">❮</a>
+                        <a class="next mr-3" (click)="plusSlides(1)">❯</a>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button class="btn btn-danger p-2 font-weight-bold ml-5" style="background-color: maroon;" (click)="EmpRecord()"> <i class="fal fa-arrow-left"></i>  Click Here to Go Back to Employee Record</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row mt-2">
+                                <div class="col-md-12 d-flex justify-content-end text-end">
+                                    <button  panelToolbar class="btn btn-primary font-weight-bold" (click)="makePDF()"> <i class="fal fa-print"></i>   Make PDF</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                
+

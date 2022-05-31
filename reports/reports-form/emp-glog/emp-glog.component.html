@@ -1,0 +1,99 @@
+<body id="htmlData" >
+  <div *ngFor="let e of compInfo;index as i" class="mySlides">
+    <div class="container align-items-center h-100 w-100 mt-5 p-50 border"> 
+
+    <div class="row">
+      <div class="col-md-2 mt-3">
+        <div>
+          <img src="https://upload.wikimedia.org/wikipedia/en/0/01/This_is_the_Forward_Sport_brand_logo.jpg" width="100px"/>
+          </div>
+      </div>
+      <div class="col-md-6 mt-3">
+        <div><span class="font-weight-bold d-block">Forward Sports (Pvt) Ltd.</span>
+          <span>Wazirabad Road,Adha Sahowala, Sialkot</span>
+        </div>
+        
+      </div>
+    </div>
+
+   
+    <div class="row">
+      <div class="col-md-12 mt-5 align-items-center bg-primary">
+        <p class="h2 align-items-center text-center color-white mt-2">Employee Graduity Log</p>
+      </div>
+    </div>
+   
+       <div  class="row mt-3 mx-1">
+         <div class="col-md-3">
+           <span class="font-weight-bold">Card No:</span>
+         </div>
+         <div class="col-md-3">
+           <span>{{e.Employee.EmpCardNo.name}}</span>
+         </div>
+         <div class="col-md-3">
+           <span class="font-weight-bold">Department:</span>
+         </div>
+         <div class="col-md-3">
+           <span>{{e.Department.name}}</span>
+         </div>
+       </div>
+       <div class="row mt-1 mx-1">
+        <div class="col-md-3">
+          <span class="font-weight-bold">Name:</span>
+        </div>
+        <div class="col-md-3">
+          <span>{{e.Employee.name}}</span>
+        </div>
+        <div class="col-md-3">
+          <span class="font-weight-bold">Section:</span>
+        </div>
+        <div class="col-md-3">
+          <span>{{e.Section.name}}</span>
+        </div>
+       </div>
+       <div class="row mt-1 mx-1">
+        <div class="col-md-3">
+          <span class="font-weight-bold">D.O.J:</span>
+        </div>
+        <div class="col-md-3">
+          <span>{{e.DateOfJoning}}</span>
+        </div>
+        <div class="col-md-3">
+          <span class="font-weight-bold">Designation:</span>
+        </div>
+        <div class="col-md-3">
+          <span>{{e.Designation.name}}</span>
+        </div>
+       </div>
+       <div class="row mt-1 mx-1">
+        <div class="col-md-3">
+          <span class="font-weight-bold">Job Duration:</span>
+        </div>
+        <div class="col-md-3">
+          <span>27 Yrs 11 Mon</span>
+        </div>
+        <div class="col-md-3">
+          <span class="font-weight-bold">Branch:</span>
+        </div>
+        <div class="col-md-3">
+          <span>{{e.Branch.BranchAddress}}</span>
+        </div>
+       </div>
+       <div class="row mt-1 mx-1">
+        <div class="col-md-3">
+          <span><b>Old Graduity</b><br><b>Date</b><br>08-01-2005</span>
+        </div>
+       
+        <div class="col-md-3">
+          <span><b>Current Graduity</b><br><b>Date:</b><br>08-01-1995</span>
+        </div>
+       </div>
+   
+    </div>
+  
+  </div>
+  
+
+
+</body>
+  

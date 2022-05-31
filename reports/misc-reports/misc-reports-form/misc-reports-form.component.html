@@ -1,0 +1,1023 @@
+<div *ngIf="stopReport" class="container-fluid p-2">
+ <div class="row">
+  <div class="col-md-7">
+    <fieldset>
+        <form>
+         <div class="form-group border w-100 p-2" panelContent>
+   <div class="row">
+    <div class="col-md-12">
+     <label class="form-label font-weight-bold h5"  for="radio-group-1">Active/Non Active Employees</label>
+    </div>
+   </div>
+
+   <div class="row">
+    <div class="col-md-2">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" [disabled]="activeEOBIList==true" id="flexRadioDefault1" name="flexRadioDefault" class="custom-control-input"  checked>
+                            <label class="custom-control-label" for="flexRadioDefault1">Active</label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-2">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" [disabled]="activeEOBIList==true" id="flexRadioDefault2" name="flexRadioDefault" class="custom-control-input">
+                            <label class="custom-control-label" for="flexRadioDefault2">Non Active</label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-1">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" [disabled]="activeEOBIList==true" id="flexRadioDefault3" name="flexRadioDefault" class="custom-control-input">
+                            <label class="custom-control-label" for="flexRadioDefault3">All</label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   </div>
+
+</div>
+</form>
+</fieldset>
+
+   <fieldset>
+    <form>
+     <div class="form-group border mt-3 w-100 p-2" panelContent>
+   <div class="row mt-3">
+    <div class="col-md-12">
+     <label class="form-label font-weight-bold h5" for="radio-group-1">Report Select</label>
+    </div>
+   </div>
+
+   <div class="row mt-3">
+    <div class="col-md-7">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <label for="customRadio2"></label>
+                     <div class="input-group-text">
+                      <div class="custom-control custom-radio">
+                       <input  type="radio" id="flexRadioDefault4" (change)="handleEOBIConM($event)" name="flexRadioDefault" class="custom-control-input" checked>
+                        <label class="custom-control-label" for="flexRadioDefault4">EOBI Contribution (Monthly)</label>
+                         </div>
+                          </div>
+                           </div>
+            </div>
+        </div>
+    
+    </div>
+
+    <div class="col-md-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <label for="customRadio2"></label>
+                     <div class="input-group-text">
+                      <div class="custom-control custom-radio">
+                       <input  type="radio" id="flexRadioDefault5" (change)="handleEmpAtAgeTimeOfJoin($event)" name="flexRadioDefault" class="custom-control-input" >
+                        <label class="custom-control-label" for="flexRadioDefault5">Employees Age at the Time of Joining</label>
+                         </div>
+                          </div>
+                           </div>
+            </div>
+        </div>
+  
+    </div>
+   </div>
+
+   <div class="row mt-3">
+    <div class="col-md-7">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <label for="customRadio2"></label>
+                     <div class="input-group-text">
+                      <div class="custom-control custom-radio">
+                       <input  type="radio" id="flexRadioDefault6" (change)="handleEOBIReport($event)" name="flexRadioDefault" class="custom-control-input" >
+                        <label class="custom-control-label" for="flexRadioDefault6">EOBI Report(EOBI Web Site)</label>
+                         </div>
+                          </div>
+                           </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <label for="customRadio2"></label>
+                     <div class="input-group-text">
+                      <div class="custom-control custom-radio">
+                       <input  type="radio" id="flexRadioDefault7" (change)="handleEmpHygieneCard($event)" name="flexRadioDefault" class="custom-control-input" >
+                        <label class="custom-control-label" for="flexRadioDefault7">Employees Hygiene Card</label>
+                         </div>
+                          </div>
+                           </div>
+            </div>
+        </div>
+  
+    </div>
+   </div>
+
+
+   <div class="row mt-3">
+    <div class="col-md-7">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <label for="customRadio2"></label>
+                     <div class="input-group-text">
+                      <div class="custom-control custom-radio">
+                       <input  type="radio" id="flexRadioDefault8" (change)="handleActiveEOBIList($event)" name="flexRadioDefault" class="custom-control-input" >
+                        <label class="custom-control-label" for="flexRadioDefault8">Active EOBI List</label>
+                         </div>
+                          </div>
+                           </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <label for="customRadio2"></label>
+                     <div class="input-group-text">
+                      <div class="custom-control custom-radio">
+                       <input  type="radio" (change)="handleSalarySlips($event)" id="flexRadioDefault9" name="flexRadioDefault" class="custom-control-input" >
+                        <label class="custom-control-label" for="flexRadioDefault9">Salary Slips</label>
+                         </div>
+                          </div>
+                           </div>
+            </div>
+        </div>
+
+    </div>
+   </div>
+  
+
+   <div class="row mt-3">
+    <div class="col-md-7">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <label for="customRadio2"></label>
+                     <div class="input-group-text">
+                      <div class="custom-control custom-radio">
+                       <input  type="radio" (change)="handleInActiveEobiList($event)" id="flexRadioDefault10" name="flexRadioDefault" class="custom-control-input" >
+                        <label class="custom-control-label" for="flexRadioDefault10">InActive EOBI List</label>
+                         </div>
+                          </div>
+                           </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <label for="customRadio2"></label>
+                     <div class="input-group-text">
+                      <div class="custom-control custom-radio">
+                       <input  type="radio" (change)="handleSalaryReceivingList($event)" id="flexRadioDefault11" name="flexRadioDefault" class="custom-control-input" >
+                        <label class="custom-control-label" for="flexRadioDefault11">Salary Receiving List</label>
+                         </div>
+                          </div>
+                           </div>
+            </div>
+        </div>
+    </div>
+   </div>
+
+   <div class="row mt-3">
+    <div class="col-md-7">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <label for="customRadio2"></label>
+                     <div class="input-group-text">
+                      <div class="custom-control custom-radio">
+                       <input  type="radio" (change)="handlePESSIContribM($event)"  id="flexRadioDefault12" name="flexRadioDefault" class="custom-control-input">
+                        <label class="custom-control-label" for="flexRadioDefault12">PESSI Contribution (Monthly)</label>
+                         </div>
+                          </div>
+                           </div>
+            </div>
+        </div>
+ 
+    </div>
+
+    <div class="col-md-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <label for="customRadio2"></label>
+                     <div class="input-group-text">
+                      <div class="custom-control custom-radio">
+                       <input  type="radio" (change)="handleEmpListForInsurance($event)" id="flexRadioDefault13" name="flexRadioDefault" class="custom-control-input" >
+                        <label class="custom-control-label" for="flexRadioDefault13">Employee List for Insurance</label>
+                         </div>
+                          </div>
+                           </div>
+            </div>
+        </div>
+
+    </div>
+   </div>
+
+
+   <div class="row mt-3">
+    <div class="col-md-7">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <label for="customRadio2"></label>
+                     <div class="input-group-text">
+                      <div class="custom-control custom-radio">
+                       <input  type="radio" (change)="handlePessiFormatM($event)" id="flexRadioDefault14" name="flexRadioDefault" class="custom-control-input" >
+                        <label class="custom-control-label" for="flexRadioDefault14">P.E.S.S.I Format (Monthly)</label>
+                         </div>
+                          </div>
+                           </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <label for="customRadio2"></label>
+                     <div class="input-group-text">
+                      <div class="custom-control custom-radio">
+                       <input type="radio" (change)="handleEmpListForInsuranceRem($event)" id="flexRadioDefault15" name="flexRadioDefault" class="custom-control-input" >
+                        <label class="custom-control-label" for="flexRadioDefault15">Employee List for Insurance Removal</label>
+                         </div>
+                          </div>
+                           </div>
+            </div>
+        </div>
+
+    </div>
+   </div>
+
+   <div class="row mt-3">
+    <div class="col-md-7">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <label for="customRadio2"></label>
+                     <div class="input-group-text">
+                      <div class="custom-control custom-radio">
+                       <input  type="radio" (change)="handleEobiFormatMonthly($event)" id="flexRadioDefault16" name="flexRadioDefault" class="custom-control-input">
+                        <label class="custom-control-label" for="flexRadioDefault16">EOBI Format Monthly</label>
+                         </div>
+                          </div>
+                           </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <label for="customRadio2"></label>
+                     <div class="input-group-text">
+                      <div class="custom-control custom-radio">
+                       <input  type="radio" (change)="handleAnnualLeavesDueForSelectMonth($event)" id="flexRadioDefault17" name="flexRadioDefault" class="custom-control-input" >
+                        <label class="custom-control-label" for="flexRadioDefault17">Annual Leaves Due For the Selected Month</label>
+                         </div>
+                          </div>
+                           </div>
+            </div>
+        </div>
+  
+    </div>
+   </div>
+
+   <div class="row mt-3">
+    <div class="col-md-7">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <label for="customRadio2"></label>
+                     <div class="input-group-text">
+                      <div class="custom-control custom-radio">
+                       <input  type="radio" (change)="handleActivePessiList($event)" id="flexRadioDefault18" name="flexRadioDefault" class="custom-control-input">
+                        <label class="custom-control-label" for="flexRadioDefault18">Active PESSI List</label>
+                         </div>
+                          </div>
+                           </div>
+            </div>
+        </div>
+   
+    </div>
+
+    <div class="col-md-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <label for="customRadio2"></label>
+                     <div class="input-group-text">
+                      <div class="custom-control custom-radio">
+                       <input  type="radio" (change)="handleUnionFundContrib($event)" id="flexRadioDefault19" name="flexRadioDefault" class="custom-control-input" >
+                        <label class="custom-control-label" for="flexRadioDefault19">Union Fund Contribution (Month)</label>
+                         </div>
+                          </div>
+                           </div>
+            </div>
+        </div>
+
+    </div>
+   </div>
+
+   <div class="row mt-3">
+    <div class="col-md-7">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <label for="customRadio2"></label>
+                     <div class="input-group-text">
+                      <div class="custom-control custom-radio">
+                       <input  type="radio" (change)="handleInActivePessiList($event)" id="flexRadioDefault20" name="flexRadioDefault" class="custom-control-input" >
+                        <label class="custom-control-label" for="flexRadioDefault20">InActive PESSI List</label>
+                         </div>
+                          </div>
+                           </div>
+            </div>
+        </div>
+   
+    </div>
+
+    <div class="col-md-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <label for="customRadio2"></label>
+                     <div class="input-group-text">
+                      <div class="custom-control custom-radio">
+                       <input  type="radio" (change)="handleInRejoinEmpList($event)" id="flexRadioDefault21" name="flexRadioDefault" class="custom-control-input" >
+                        <label class="custom-control-label" for="flexRadioDefault21">Rejoining Employee List</label>
+                         </div>
+                          </div>
+                           </div>
+            </div>
+        </div>
+   
+    </div>
+   </div>
+
+   <div class="row mt-3">
+    <div class="col-md-7">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <label for="customRadio2"></label>
+                     <div class="input-group-text">
+                      <div class="custom-control custom-radio">
+                       <input type="radio" (change)="handleEmpListHavPessi($event)" id="flexRadioDefault22" name="flexRadioDefault" class="custom-control-input" >
+                        <label class="custom-control-label" for="flexRadioDefault22">Employee List having PESSI Cards</label>
+                         </div>
+                          </div>
+                           </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <label for="customRadio2"></label>
+                     <div class="input-group-text">
+                      <div class="custom-control custom-radio">
+                       <input type="radio" (change)="handlePessiContribFormat($event)" id="flexRadioDefault23" name="flexRadioDefault" class="custom-control-input" >
+                        <label class="custom-control-label" for="flexRadioDefault23">Pessi Contribution Format</label>
+                         </div>
+                          </div>
+                           </div>
+            </div>
+        </div>
+
+    </div>
+   </div>
+
+   <div class="row mt-3">
+    <div class="col-md-7">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <label for="customRadio2"></label>
+                     <div class="input-group-text">
+                      <div class="custom-control custom-radio">
+                       <input  type="radio" (change)="handleEmpListMPessiCards($event)" id="flexRadioDefault24" name="flexRadioDefault" class="custom-control-input">
+                        <label class="custom-control-label" for="flexRadioDefault24">Employee List missing PESSI Cards</label>
+                         </div>
+                          </div>
+                           </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <label for="customRadio2"></label>
+                     <div class="input-group-text">
+                      <div class="custom-control custom-radio">
+                       <input  type="radio" (change)="handleEmpPessiSal($event)"  id="flexRadioDefault25" name="flexRadioDefault" class="custom-control-input" >
+                        <label class="custom-control-label" for="flexRadioDefault25">Employee Pessi Salary</label>
+                         </div>
+                          </div>
+                           </div>
+            </div>
+        </div>
+    </div>
+   </div>
+
+   <div class="row mt-3">
+    <div class="col-md-7">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <label for="customRadio2"></label>
+                     <div class="input-group-text">
+                      <div class="custom-control custom-radio">
+                       <input  type="radio" (change)="handleEmpListDiffJoinAndG($event)"  id="flexRadioDefault26" name="flexRadioDefault" class="custom-control-input">
+                        <label class="custom-control-label" for="flexRadioDefault26">Employee List having Different Joining And Graduity Date</label>
+                         </div>
+                          </div>
+                           </div>
+            </div>
+        </div>
+    </div>
+   </div>
+
+   <div class="row mt-3">
+    <div class="col-md-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <label for="customRadio2"></label>
+                     <div class="input-group-text">
+                      <div class="custom-control custom-radio">
+                       <input  type="radio" (change)="handleEmpSalM($event)" id="flexRadioDefault27" name="flexRadioDefault" class="custom-control-input">
+                        <label class="custom-control-label" for="flexRadioDefault27">Employee Pessi Salary Month</label>
+                         </div>
+                          </div>
+                           </div>
+            </div>
+        </div>
+    </div>
+   </div>
+
+</div>
+</form>
+</fieldset>
+
+<fieldset>
+    <form>
+     <div class="form-group border mt-3 w-100 p-2" panelContent>
+
+        <div *ngIf="selectionSO1">
+            <div class="row mt-5">
+                <div class="col-md-6">
+                 <label class="form-label" for="radio-group-1">Selection Option</label>
+                </div>
+               </div>
+               
+               <div class="row mt-3">
+                <div class="col-md-6">
+                 <div class="input-group">
+                  <label for="customRadio2"></label>
+                   <div class="input-group-text">
+                    <div class="custom-control custom-radio">
+                     <input  type="radio" id="flexRadioDefault37" [disabled]="EOBIReport==true || EmpHygieneCard==true || EmpHygieneCard==true" (change)="handleAllSO($event)" name="flexRadioDefault" class="custom-control-input" checked>
+                      <label class="custom-control-label" for="flexRadioDefault37">All</label>
+                       </div>
+                        </div>
+                         </div>
+                </div>
+               </div>
+            
+               <div class="row mt-3">
+                <div class="col-md-6">
+                 <div class="input-group">
+                  <label for="customRadio2"></label>
+                   <div class="input-group-text">
+                    <div class="custom-control custom-radio">
+                     <input  type="radio" id="flexRadioDefault38" [disabled]="EOBIReport==true" (change)="handleByCardRangeSO($event)" name="flexRadioDefault" class="custom-control-input">
+                      <label class="custom-control-label" for="flexRadioDefault38">By Card Range</label>
+                       </div>
+                        </div>
+                         </div>
+                </div>
+               </div>
+            
+               <div class="row mt-3">
+                <div class="col-md-6">
+                 <div class="input-group">
+                  <label for="customRadio2"></label>
+                   <div class="input-group-text">
+                    <div class="custom-control custom-radio">
+                     <input  type="radio" id="flexRadioDefault39" [disabled]="EOBIReport==true || EmpHygieneCard==true || EmpHygieneCard==true || salarySlips==true || salaryReceivingList==true" (change)="handleByBranchSO($event)" name="flexRadioDefault" class="custom-control-input">
+                      <label class="custom-control-label" for="flexRadioDefault39">By Branch</label>
+                       </div>
+                        </div>
+                         </div>
+                </div>
+               </div>
+        </div>
+
+</div>
+</form>
+
+</fieldset>
+
+
+
+<fieldset>
+    <form>
+     <div class="form-group p-2" panelContent>
+
+        <div *ngIf="EmpAtAgeTimeOfJoin">
+            <div class="row mt-5">
+                <div class="col-md-6">
+                 <label class="form-label" for="radio-group-1">Selection Option</label>
+                </div>
+               </div>
+    
+               <div class="row mt-3">
+                <div class="col-md-6">
+                 <div class="input-group">
+                  <label for="customRadio2"></label>
+                   <div class="input-group-text">
+                    <div class="custom-control custom-radio">
+                     <input  type="radio" id="flexRadioDefault40" (change)="handleAllSO2($event)" name="flexRadioDefault" class="custom-control-input" checked>
+                      <label class="custom-control-label" for="flexRadioDefault40">All</label>
+                       </div>
+                        </div>
+                         </div>
+                </div>
+               </div>
+    
+               <div class="row mt-3">
+                <div class="col-md-6">
+                 <div class="input-group">
+                  <label for="customRadio2"></label>
+                   <div class="input-group-text">
+                    <div class="custom-control custom-radio">
+                     <input  type="radio" id="flexRadioDefault41" (change)="handleByAgeRangeSO2($event)" name="flexRadioDefault" class="custom-control-input">
+                      <label class="custom-control-label" for="flexRadioDefault41">By Age Range</label>
+                       </div>
+                        </div>
+                         </div>
+                </div>
+               </div>
+        </div>
+
+     </div>
+     
+    </form>
+</fieldset>  
+
+  </div>
+
+  <div class="col-md-5">
+   
+    <fieldset>
+        <form>
+         <div class="form-group border w-100 p-2" panelContent>
+
+            <div class="row">
+                <div class="col-md-12">
+                 <label class="form-label font-weight-bold h5 w-100" for="radio-group-1">Option Selector</label>
+                </div>
+               </div>
+               
+               <div class="row mt-3">
+                <div class="col-md-6">
+                 <div class="input-group">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text">Financial Period:</span>
+            
+                         <select [disabled]="(EOBIConM==true && allSO==true) || (EOBIConM==true && byBranchSO==true) || (EOBIConM==true && ByCardRangeSO==true) || (EmpAtAgeTimeOfJoin==true && allSO2==true) || (EmpAtAgeTimeOfJoin==true && byAgeRangeSO2==true) || (EmpHygieneCard==true && ByCardRangeSO==true) || (EmpHygieneCard==true && allSO==true) || (activeEOBIList==true && allSO==true) || (activeEOBIList==true && ByCardRangeSO==true) || (activeEOBIList==true && byBranchSO==true)" class="form-control">
+                             <option>Khawaja Moosa</option>
+                             <option>Ali</option>                
+                         </select>
+                      
+                  </div>
+              </div>
+                </div>
+               </div>
+            
+               <div class="row mt-3">
+                <div class="col-md-6">
+                 <div class="input-group">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text">Select Month:</span>
+                      <input
+                      [disabled]="(EmpAtAgeTimeOfJoin==true && allSO2==true) || (EmpAtAgeTimeOfJoin==true && byAgeRangeSO2==true) || EOBIReport==true || (EmpHygieneCard==true && ByCardRangeSO==true) || (EmpHygieneCard==true && allSO==true) || (activeEOBIList==true && allSO==true) || (activeEOBIList==true && ByCardRangeSO==true) || (activeEOBIList==true && byBranchSO==true)"
+                   type="date"
+                   [(ngModel)]="dateValue"
+                   (focusin)="statusInitialize()"
+                   class="form-control"
+                 />
+                  </div>
+              </div>
+                </div>
+               </div>
+            
+               <div class="row mt-3">
+                <div class="col-md-5">
+                 <div class="input-group">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text">Form Age</span>
+                  </div>
+                  <input type="number" id="fromCard" [disabled]="(EOBIConM==true && allSO==true) || (EOBIConM==true && byBranchSO==true) || (EmpAtAgeTimeOfJoin==true && allSO2==true) || (EmpHygieneCard==true && allSO==true) || (activeEOBIList==true && allSO==true) || (activeEOBIList==true && byBranchSO==true)" [(ngModel)]='cardStartValue' name="fromCard" #fromCard class="form-control" placeholder="card no." aria-label="fromCard" aria-describedby="basic-addon1">
+              </div>
+                </div>
+             
+                <div class="col-md-5">
+                 <div class="input-group">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text">To Age</span>
+                  </div>
+                  <input type="number" [disabled]="(EOBIConM==true && allSO==true) || (EOBIConM==true && byBranchSO==true) || (EmpAtAgeTimeOfJoin==true && allSO2==true) || (EmpHygieneCard==true && allSO==true) || (activeEOBIList==true && allSO==true) || (activeEOBIList==true && byBranchSO==true)" [(ngModel)]='cardEndValue' name="ToCard"  id="toCard" #toCard class="form-control" placeholder="card no." aria-label="to card" aria-describedby="toCard">
+              </div>
+                </div>
+             
+               </div>
+            
+               <div class="row mt-3">
+                   <div class="col-md-12">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Branch:</span>
+            
+                               <select  [disabled]="(EOBIConM==true && allSO==true) || (EOBIConM==true && ByCardRangeSO==true) || (EmpAtAgeTimeOfJoin==true && allSO2==true) || (EmpAtAgeTimeOfJoin==true && byAgeRangeSO2==true) || EOBIReport==true || (EmpHygieneCard==true && ByCardRangeSO==true) || (EmpHygieneCard==true && allSO==true) || (activeEOBIList==true && allSO==true) || (activeEOBIList==true && ByCardRangeSO==true)" class="form-control">
+                                   <option></option>
+                                  
+                               </select>
+                            
+                        </div>
+                    </div>
+                   </div>
+               </div>
+             
+               <div class="row mt-3">
+                   <div class="col-md-6">
+                    <div class="form-group">
+            
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12">
+                                <label class="form-label bg-info text-center text-white mt-5 w-100 p-2 font-weight-bold h5" for="radio-group-1">Select Appropriate Option</label>
+                            </div>
+                        </div>
+         
+                        
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Department:</span>
+                                        <select [disabled]="allSAP==true || designSAP==true || sectionSAP==true" class="form-control">
+                                            <option></option>
+                                        </select>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                            <div class="input-group" style="margin-top:5px">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Section:</span>
+                                    <select  [disabled]="allSAP==true || deptSAP==true || designSAP==true" class="form-control">
+                                        <option></option>
+                                       
+                                    </select>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                       
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                            <div class="input-group" style="margin-top:5px">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Designation:</span>
+                                    <select [disabled]="allSAP==true || deptSAP==true || sectionSAP==true" class="form-control">
+                                        <option></option>
+                                       
+                                    </select>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     
+                    </div>
+                    
+                   </div>
+               </div>
+            
+               <div class="row mt-3">
+                   <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-group-text">
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" [disabled]="EOBIReport==true" id="flexRadioDefault33" (change)="handleAllSAP($event)" name="flexRadioDefault" class="custom-control-input" checked>
+                                                    <label class="custom-control-label" for="flexRadioDefault33">All</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="row mt-2">
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-group-text">
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" [disabled]="EOBIReport==true" id="flexRadioDefault34" (change)="handleDeptSAP($event)" name="flexRadioDefault" class="custom-control-input">
+                                                    <label class="custom-control-label" for="flexRadioDefault34">Department</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-md-10">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-group-text">
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" [disabled]="EOBIReport==true || EmpHygieneCard==true" id="flexRadioDefault35" (change)="handleDesignSAP($event)" name="flexRadioDefault"  class="custom-control-input">
+                                                    <label class="custom-control-label" for="flexRadioDefault35">Designation</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="row mt-2">
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                            <div class="input-group-text">
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" [disabled]="EOBIReport==true || EmpHygieneCard==true" id="flexRadioDefault36" (change)="handleSectionSAP($event)" name="flexRadioDefault"  class="custom-control-input">
+                                                    <label class="custom-control-label" for="flexRadioDefault36">Section</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                                               
+                    </div>
+                   </div>
+               </div>
+            
+
+        </div>
+    </form>
+</fieldset>
+    
+<div class="row mt-5">
+    <div class="col-md-4">
+         <div class="demo" style="display: grid">
+             <button type="button" (click)="showReport()"  class="btn btn-info">Show Report</button>
+         </div>
+    </div>
+</div>
+
+
+
+  </div>
+
+
+
+ </div>
+</div>
+
+
+<div *ngIf="showReportt" class="row">
+    <div class="col-md-12">
+        
+        <div *ngIf="EOBIConM" class="row">
+            <div class="col-md-12">
+                <smart-eobi-contrib-m-misc-reports></smart-eobi-contrib-m-misc-reports>
+            </div>
+        </div>
+
+        <div *ngIf="EmpAtAgeTimeOfJoin" class="row">
+            <div class="col-md-12">
+                <smart-emp-age-at-the-time-of-join-misc-reports></smart-emp-age-at-the-time-of-join-misc-reports>
+            </div>
+        </div>
+
+        <div *ngIf="EOBIReport" class="row">
+            <div class="col-md-12">
+                <smart-eobi-report-web-site-misc-reports></smart-eobi-report-web-site-misc-reports>
+            </div>
+        </div>
+
+        <div *ngIf="EmpHygieneCard" class="row">
+            <div class="col-md-12">
+                <smart-emp-hygiene-card-misc-reports></smart-emp-hygiene-card-misc-reports>
+            </div>
+        </div>
+
+        <div *ngIf="activeEOBIList" class="row">
+            <div class="col-md-12">
+                <smart-active-eobi-list-misc-reports></smart-active-eobi-list-misc-reports>
+            </div>
+        </div>
+
+        <div *ngIf="salarySlips" class="row">
+            <div class="col-md-12">
+                <smart-salary-slips-misc-reports></smart-salary-slips-misc-reports>
+            </div>
+        </div>
+
+        <div *ngIf="inActiveEobiList" class="row">
+            <div class="col-md-12">
+                <smart-in-active-eobi-list-misc-reports></smart-in-active-eobi-list-misc-reports>
+            </div>
+        </div>
+
+        <div *ngIf="salaryReceivingList" class="row">
+            <div class="col-md-12">
+                <smart-salary-receiving-list-misc-reports></smart-salary-receiving-list-misc-reports>
+            </div>
+        </div>
+        
+        <div *ngIf="PESSIContribM" class="row">
+            <div class="col-md-12">
+                <smart-pessi-contrib-m-misc-reports></smart-pessi-contrib-m-misc-reports>
+            </div>
+        </div>
+
+        <div *ngIf="EmpListForInsurance" class="row">
+            <div class="col-md-12">
+                <smart-emp-list-for-insurance-misc-reports></smart-emp-list-for-insurance-misc-reports>
+            </div>
+        </div>
+
+        <div *ngIf="PessiFormatM" class="row">
+            <div class="col-md-12">
+                <smart-pessi-contrib-m2-misc-reports></smart-pessi-contrib-m2-misc-reports>
+            </div>
+        </div>
+
+        <div *ngIf="EmpListForInsuranceRem" class="row">
+            <div class="col-md-12">
+                <smart-emp-list-for-insurance-removal-misc-reports></smart-emp-list-for-insurance-removal-misc-reports>
+            </div>
+        </div>
+
+        <div *ngIf="EobiFormatMonthly" class="row">
+            <div class="col-md-12">
+                <smart-eobi-format-m-misc-reports></smart-eobi-format-m-misc-reports>
+            </div>
+        </div>
+        
+        <div *ngIf="AnnualLDueForSelectMonth" class="row">
+            <div class="col-md-12">
+                <smart-annual-leaves-due-for-selected-m-misc-reports></smart-annual-leaves-due-for-selected-m-misc-reports>
+            </div>
+        </div>
+
+        <div *ngIf="ActivePessiList" class="row">
+            <div class="col-md-12">
+                <smart-active-pessi-list-misc-reports></smart-active-pessi-list-misc-reports>
+            </div>
+        </div>
+
+        <div *ngIf="UnionFundContrib" class="row">
+            <div class="col-md-12">
+                <smart-union-fund-contrib-m-misc-reports></smart-union-fund-contrib-m-misc-reports>
+            </div>
+        </div>
+
+        <div *ngIf="inActivePessiList" class="row">
+            <div class="col-md-12">
+                <smart-in-active-pessi-list-misc-reports></smart-in-active-pessi-list-misc-reports>
+            </div>
+        </div>
+        
+        <div *ngIf="inRejoinEmpList" class="row">
+            <div class="col-md-12">
+                <smart-rejoining-emp-list-misc-reports></smart-rejoining-emp-list-misc-reports>
+            </div>
+        </div>
+        
+        <div *ngIf="EmpListHavPessi" class="row">
+            <div class="col-md-12">
+                <smart-emp-list-having-pessi-cards-misc-reports></smart-emp-list-having-pessi-cards-misc-reports>
+            </div>
+        </div>
+    
+        <div *ngIf="PessiContribFormat" class="row">
+            <div class="col-md-12">
+                <smart-pessi-contrib-format-misc-reports></smart-pessi-contrib-format-misc-reports>
+            </div>
+        </div>
+
+        <div *ngIf="EmpListMPessiCards" class="row">
+            <div class="col-md-12">
+                <smart-emp-list-missing-pessi-cards-misc-reports></smart-emp-list-missing-pessi-cards-misc-reports>
+            </div>
+        </div>
+
+        <div *ngIf="EmpPessiSal" class="row">
+            <div class="col-md-12">
+                <smart-emp-pessi-salary-misc-reports></smart-emp-pessi-salary-misc-reports>
+            </div>
+        </div>        
+    
+        <div *ngIf="EmpListDiffJoinAndG" class="row">
+            <div class="col-md-12">
+                <smart-emp-list-having-diff-join></smart-emp-list-having-diff-join>
+            </div>
+        </div>
+
+        <div *ngIf="empSalM" class="row">
+            <div class="col-md-12">
+                <smart-emp-pessi-salary-m-misc-reports></smart-emp-pessi-salary-m-misc-reports>
+            </div>
+        </div>
+
+
+
+
+        
+    <div class="row mt-3">
+        
+        <div class='col-md-6'>
+            <div class="row">
+                <div class="col-md-6">
+                    <button class="btn btn-danger" (click)="EmpRecord()" style="background-color: maroon;" > <i class="fal fa-arrow-left"></i>  Click Here to Go Back to Employee Record</button>
+                </div>
+            </div>
+        </div>
+       
+        <div class="col-md-6 d-flex justify-content-end text-end">
+            <div class="row mt-3">
+                <div class="col-md-12">
+                    <button  panelToolbar (click)="makePDF()" class="btn btn-primary font-weight-bold"> <i class="fal fa-print"></i>   Make PDF</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</div>

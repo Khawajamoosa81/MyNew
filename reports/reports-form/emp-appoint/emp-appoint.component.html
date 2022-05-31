@@ -1,0 +1,282 @@
+  <body id="htmlData" >
+    <div *ngFor="let e of compInfo;index as i" class="mySlides">
+      <div class="container col-md-8 align-items-center h-100 w-100 mt-5 p-50 border"> 
+  
+  <div class="row">
+    <div class="col-md-2 mt-3">
+      <div>
+        <img src="https://upload.wikimedia.org/wikipedia/en/0/01/This_is_the_Forward_Sport_brand_logo.jpg" width="100px"/>
+        </div>
+    </div>
+    <div class="col-md-6 mt-3">
+      <div><span class="font-weight-bold d-block">Forward Sports (Pvt) Ltd.</span>
+        <span>Wazirabad Road,Adha Sahowala, Sialkot</span>
+      </div>
+    </div>
+   </div>
+  
+   
+     <div class="row">
+       <div class="col-md-12 mt-5 align-items-center bg-primary">
+         <p class="h2 align-items-center text-center color-white mt-2">Appointment Letter</p>
+       </div>
+      </div>
+      <div  class="row mt-4 mx-1">
+       <div class="col-md-10 text-center">
+         <span class="font-weight-bold">Employee Job Type:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{e.EmployeeType}}<br><hr class="col-md-5" style=" height: 1px;background-color: #ccc;border: none;">
+      </div> 
+      
+      </div>
+      <div  class="row mt-6 mx-1">
+       <div class="col-md-12">
+        <span>Mr. &nbsp;&nbsp;&nbsp;<b>{{e.Employee.name}}</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S/D/W/O<b>{{e.Employee.FatherName}}</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;is appointed in <b>{{e.Section.name}}</b>
+        Section &nbsp;&nbsp;&nbsp;<b>{{e.Section.name}}</b>&nbsp;&nbsp;as<b>&nbsp;&nbsp;{{e.Department.name}}</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;He/She is appointed with reference to his/her application n
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and subsequent interview  dated &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; with us. First three months  of this<br>
+        contact will be as probation period. After completing the probation period successfully, the contact will remain continue.
+        </span>
+      </div> 
+      </div>
+      <div class="row mt-4 mx-1">
+       <div class="col-md-6">
+        <fieldset class="border border-dark">
+         <legend class="text-center">Peronal Information</legend>
+         <div class="row">
+          <div class="col-md-5 mx-1">
+           <span>Card no:</span>
+          </div>
+          <div class="col-md-6">
+           <span class="font-weight-bold">{{e.Employee.EmpCardNo.name}}</span>
+          </div>
+         </div>
+         <div class="row">
+          <div class="col-md-5 mx-1">
+           <span>Name:</span>
+          </div>
+          <div class="col-md-6">
+           <span class="font-weight-bold">{{e.Employee.name}}</span>
+          </div>
+         </div>
+         <div class="row">
+          <div class="col-md-5 mx-1">
+           <span>Father/Husband Name :</span>
+          </div>
+          <div class="col-md-6">
+           <span class="font-weight-bold">{{e.Employee.FatherName}}</span>
+          </div>
+         </div>
+         <div class="row">
+          <div class="col-md-5 mx-1">
+           <span>CNIC:</span>
+          </div>
+          <div class="col-md-6">
+           <span class="font-weight-bold">{{e.Employee.CNICNO}}</span>
+          </div>
+         </div>
+         <div class="row">
+          <div class="col-md-5 mx-1">
+           <span>Date Of Birth:</span>
+          </div>
+          <div class="col-md-6">
+           <span class="font-weight-bold">{{e.Employee.DateOfBirth}}</span>
+          </div>
+         </div>
+         <div class="row">
+          <div class="col-md-5 mx-1">
+           <span>Gender:</span>
+          </div>
+          <div class="col-md-6">
+           <span class="font-weight-bold">{{e.Employee.Gender}}</span>
+          </div>
+         </div>
+         <div class="row">
+          <div class="col-md-5 mx-1">
+           <span>Religion:</span>
+          </div>
+          <div class="col-md-6">
+           <span class="font-weight-bold">{{e.Employee.Religion}}</span>
+          </div>
+         </div>
+         <div class="row">
+          <div class="col-md-5 mx-1">
+           <span>Martial Status:</span>
+          </div>
+          <div class="col-md-6">
+           <span class="font-weight-bold">{{e.Employee.MaritalStatus}}</span>
+          </div>
+         </div>
+         <div class="row">
+          <div class="col-md-5 mx-1">
+           <span>Qualification:</span>
+          </div>
+          <div class="col-md-6">
+           <span class="font-weight-bold">{{empQualification [i]?empQualification [i].QualificationTitle:0}}</span>
+          </div>
+         </div>
+         <div class="row">
+          <div class="col-md-5 mx-1">
+           <span>Contact No:</span>
+          </div>
+          <div class="col-md-6">
+           <span class="font-weight-bold">{{e.Employee.ContactNo}}</span>
+          </div>
+         </div>
+         <div class="row">
+          <div class="col-md-5 mx-1">
+           <span>City:</span>
+          </div>
+          <div class="col-md-6">
+           <span class="font-weight-bold">{{e.Employee.EmpCity.name}}</span>
+          </div>
+         </div>
+         <div class="row">
+          <div class="col-md-5 mx-1">
+           <span>Permamnent Address:</span>
+          </div>
+          <div class="col-md-6">
+           <span class="font-weight-bold">{{e.Employee.EmpPermanentAddress}}</span>
+          </div>
+         </div>
+         <div class="row">
+          <div class="col-md-5 mx-1">
+           <span>Current Address:</span>
+          </div>
+          <div class="col-md-6">
+           <span class="font-weight-bold">{{e.Employee.EmpCurrentAddress}}</span>
+          </div>
+         </div>
+        </fieldset>
+      </div> 
+      <div class="col-md-6">
+       <fieldset class="border border-dark">
+        <legend class="text-center">Official Information</legend>
+        <div class="row">
+         <div class="col-md-5 mx-1">
+          <span>Date Of joining:</span>
+         </div>
+         <div class="col-md-6">
+          <span class="font-weight-bold">{{e.DateOfJoning}}</span>
+         </div>
+        </div>
+        <div class="row">
+         <div class="col-md-5 mx-1">
+          <span>Date Of permanent:</span>
+         </div>
+         <div class="col-md-6">
+          <span class="font-weight-bold">{{e.DateOfPermanent}}</span>
+         </div>
+        </div>
+        <div class="row">
+         <div class="col-md-5 mx-1">
+          <span>Department:</span>
+         </div>
+         <div class="col-md-6">
+          <span class="font-weight-bold">{{e.Department.name}}</span>
+         </div>
+        </div>
+        <div class="row">
+         <div class="col-md-5 mx-1">
+          <span>Head Of Department:</span>
+         </div>
+         <div class="col-md-6">
+          <span class="font-weight-bold">{{e.Department.HODName.name}}</span>
+         </div>
+        </div>
+        <div class="row">
+         <div class="col-md-5 mx-1">
+          <span>Section:</span>
+         </div>
+         <div class="col-md-6">
+          <span class="font-weight-bold">{{e.Section.name}}</span>
+         </div>
+        </div>
+        <div class="row">
+         <div class="col-md-5 mx-1">
+          <span>Designation:</span>
+         </div>
+         <div class="col-md-6">
+          <span class="font-weight-bold">{{e.Designation.name}}</span>
+         </div>
+        </div>
+        <div class="row">
+         <div class="col-md-5 mx-1">
+          <span>Basic Salary:</span>
+         </div>
+         <div class="col-md-6">
+          <span class="font-weight-bold">{{salaryCombined [i]?salaryCombined [i].BasicSalary:0}}</span>
+         </div>
+        </div>
+        <div class="row">
+         <div class="col-md-5 mx-1">
+          <span>Special Allowance:</span>
+         </div>
+         <div class="col-md-6">
+          <span class="font-weight-bold">{{salaryCombined[i]?salaryCombined[i].SpecialAllowance:0}}</span>
+         </div>
+        </div>
+        <div class="row">
+         <div class="col-md-5 mx-1">
+          <span>Accomodation:</span>
+         </div>
+         <div class="col-md-6">
+          <span class="font-weight-bold">{{salaryCombined[i]?salaryCombined[i].AccomodationAllowance:0}}</span>
+         </div>
+        </div>
+        <div class="row">
+         <div class="col-md-5 mx-1">
+          <span>Grade:</span>
+         </div>
+         <div class="col-md-6">
+          <span class="font-weight-bold">{{e.GradeID.name}}</span>
+         </div>
+        </div>
+        <div class="row">
+         <div class="col-md-5 mx-1">
+          <span>Employement:</span>
+         </div>
+         <div class="col-md-6">
+          <span class="font-weight-bold">{{e.EmploymentType.name}}</span>
+         </div>
+        </div>
+        <div class="row">
+         <div class="col-md-5 mx-1">
+          <span>Shift:</span>
+         </div>
+         <div class="col-md-6">
+          <span class="font-weight-bold">{{e.Shift.name}}</span>
+         </div>
+        </div>
+        <div class="row">
+         <div class="col-md-5 mx-1">
+          <span>Branch:</span>
+         </div>
+         <div class="col-md-6">
+          <span class="font-weight-bold">{{e.Branch.BranchAddress}}</span>
+         </div>
+        </div>
+        <div class="row">
+         <div class="col-md-5 mx-1">
+          <span>Reference:</span>
+         </div>
+         <div class="col-md-6">
+          <span class="font-weight-bold">{{e.Reference}}</span>
+         </div>
+        </div>
+        <div class="row">
+         <div class="col-md-5 mx-1">
+          <span>Any Other Info:</span>
+         </div>
+         <div class="col-md-6">
+          <span class="font-weight-bold"><hr></span>
+         </div>
+        </div>
+       </fieldset>
+      </div>
+      </div>
+  
+  
+   </div>
+  </div>
+  
+  
+  </body>
+  

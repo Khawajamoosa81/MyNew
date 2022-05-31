@@ -1,0 +1,143 @@
+<body id="htmlData">
+  <div *ngFor="let e of compInfo" class="mySlides">
+    <div class="container col-md-10 align-items-center h-25 w-100 mt-3 p-50" style="border: 1px solid lightgray"> 
+  
+      <div class="row">
+        <div class="col-md-2 mt-3">
+          <div>
+            <img src="https://upload.wikimedia.org/wikipedia/en/0/01/This_is_the_Forward_Sport_brand_logo.jpg" width="100px"/>
+            </div>
+        </div>
+        <div class="col-md-6 mt-3">
+          <div><span class="font-weight-bold d-block">Forward Sports (Pvt) Ltd.</span>
+            <span>Wazirabad Road,Adha Sahowala, Sialkot</span>
+          </div>
+          
+        </div>
+      </div>
+      
+      <div>
+      
+      <div class="row">
+       <div class="col-md-12 mt-5 align-items-center bg-primary">
+         <p class="h2 align-items-center text-center color-white mt-2">Card Copy Log Reports</p>
+       </div>
+      </div>
+      
+      <div  class="row mt-3 mx-1">
+          <div class="col-md-3">
+            <span class="font-weight-bold">Card No:</span>
+          </div>
+          <div class="col-md-3">
+            <span>{{e.Employee.EmpCardNo.name}}</span>
+          </div>
+          <div class="col-md-3">
+            <span class="font-weight-bold">D.O.J:</span>
+          </div>
+          <div class="col-md-3">
+            <span>{{e.DateOfJoning}}</span>
+          </div>
+         </div>
+         <div  class="row mt-3 mx-1">
+          <div class="col-md-3">
+            <span class="font-weight-bold">Name:</span>
+          </div>
+          <div class="col-md-3">
+            <span>{{e.Employee.name}}</span>
+          </div>
+          <div class="col-md-3">
+            <span class="font-weight-bold">Department:</span>
+          </div>
+          <div class="col-md-3">
+            <span>{{e.Department.name}}</span>
+          </div>
+         </div>
+         
+         <div  class="row mt-3 mx-1">
+          <div class="col-md-3">
+            <span class="font-weight-bold">Father/Husband Name:</span>
+          </div>
+          <div class="col-md-3">
+            <span>{{e.Employee.FatherName}}</span>
+          </div>
+          <div class="col-md-3">
+            <span class="font-weight-bold">Section:</span>
+          </div>
+          <div class="col-md-3">
+            <span>{{e.Section.name}}</span>
+          </div>
+         </div>
+         
+         <div  class="row mt-3 mx-1">
+          <div class="col-md-3">
+            <span class="font-weight-bold">Gender:</span>
+          </div>
+          <div class="col-md-3">
+            <span>{{e.Employee.Gender}}</span>
+          </div>
+          <div class="col-md-3">
+            <span class="font-weight-bold">Designation:</span>
+          </div>
+          <div class="col-md-3">
+            <span>{{e.Designation.name}}</span>
+          </div>
+         </div>
+         
+         <div  class="row mt-3 mx-1">
+          <div class="col-md-3">
+            <span class="font-weight-bold">Current Card Copy:</span>
+          </div>
+          <div class="col-md-3">
+            <span>{{cardCopy1[i]?cardCopy1[i].card_type:0}}</span>
+          </div>
+          <div class="col-md-3">
+            <span class="font-weight-bold">Branch:</span>
+          </div>
+          <div class="col-md-3">
+            <span>{{e.Branch.name}}</span>
+          </div>
+         </div>
+         
+         <div  class="row mt-3 mx-1">
+          <div class="col-md-2">
+           <span class="font-weight-bold">Card Copy</span>
+          </div>
+          <div class="col-md-2">
+           <span class="font-weight-bold">Start Date</span>
+          </div>
+          <div class="col-md-2">
+           <span class="font-weight-bold">End Date</span>
+          </div>
+          <div class="col-md-2">
+           <span class="font-weight-bold">Issue Date</span>
+          </div>
+         </div>
+         
+         <div class="row">
+          <div class="col-md-8 mx-2">
+           <hr style="border:1px solid; length:1px">
+          </div>
+         </div>
+         
+         <div  class="row">
+          <div class="col-md-1 mx-3">
+           <span class="font-weight-bold"></span>
+          </div>
+          <div class="col-md-2">
+           <span class="font-weight-bold"></span>
+          </div>
+          <div class="col-md-2">
+           <span class="font-weight-bold"></span>
+          </div>
+          <div class="col-md-2">
+           <span class="font-weight-bold"></span>
+          </div>
+         </div>
+      </div>
+  
+      </div>
+    </div>
+  
+  
+</body>
+

@@ -1,0 +1,662 @@
+<body  id="htmlData">
+    
+<div *ngIf="stopReport" class="container-fluid p-2">
+    <div class="row">
+     
+     <div class="col-md-6">
+   
+      <fieldset>
+       <form>
+        <div class="form-group p-2 border w-100" panelContent>
+         <div class="row">
+          <div class="col-md-12">
+           <label class="form-label font-weight-bold h5" for="radio-group-1">Active/Non Active Employees</label>
+          </div>
+         </div>
+   
+         <div class="row">
+          <div class="col-md-2">
+           <div class="row mt-3">
+            <div class="col-md-12">
+             <div class="input-group">
+              <div class="input-group-text">
+                  <div class="custom-control custom-radio">
+                      <input type="radio" id="active" name="active" class="custom-control-input" checked>
+                      <label class="custom-control-label" for="active">Active</label>
+                  </div>
+                  
+              </div>
+          </div>
+            </div>
+           </div>
+          
+          </div>
+     
+          <div class="col-md-3">
+           <div class="row mt-3">
+            <div class="col-md-12">
+             <div class="input-group">
+              <div class="input-group-text">
+                  <div class="custom-control custom-radio">
+                      <input type="radio" id="nonActive" name="flexRadioDefault" class="custom-control-input">
+                      <label class="custom-control-label" for="nonActive">Non Active</label>
+                  </div>
+                  
+              </div>
+          </div>
+            </div>
+           </div>
+   
+          </div>
+     
+          <div class="col-md-1">
+           <div class="row mt-3">
+            <div class="col-md-12">
+             <div class="input-group">
+              <div class="input-group-text">
+                  <div class="custom-control custom-radio">
+                      <input type="radio" id="all" name="flexRadioDefault" class="custom-control-input">
+                      <label class="custom-control-label" for="all">All</label>
+                  </div>
+                  
+              </div>
+          </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         
+        </div>
+        </form>
+       </fieldset>
+   
+       
+       <fieldset>
+        <form>
+         <div class="form-group border mt-3 p-2" panelContent>
+         <div class="row">
+          <div class="col-md-12">
+           <label class="form-label font-weight-bold h5" for="radio-group-1">Select Appropriate Option</label>
+          </div>
+         </div>
+         
+         <div class="row">
+          
+          <div class="col-md-4">
+           <div class="row mt-3">
+            <div class="col-md-12">
+             <div class="input-group">
+              <div class="input-group-prepend">
+              <div class="input-group-text">
+                  <div class="custom-control custom-radio">
+                      <input type="radio" id="flexRadioDefault1" (change)="handleBonusSlips(event)"  name="flexRadioDefault" class="custom-control-input" checked>
+                      <label class="custom-control-label" for="flexRadioDefault1">Bonus Slips</label>
+                  </div>
+              </div>
+          </div>
+      </div>
+            </div>
+           </div>
+         
+          </div>
+   
+          <div class="col-md-4">
+           <div class="row mt-3">
+            <div class="col-md-12">
+             <div class="input-group">
+              <div class="input-group-prepend">
+              <div class="input-group-text">
+                  <div class="custom-control custom-checkbox">
+                      <input type="checkbox" id="flexRadioDefault2" (change)="handleBonusSlips($event)"  name="flexRadioDefault" class="custom-control-input">
+                      <label class="custom-control-label" for="flexRadioDefault2">Bonus Slips</label>
+                  </div>
+              </div>
+          </div>
+      </div>
+            </div>
+           </div>
+          
+          </div>
+   
+         </div>
+   
+         <div class="row mt-3">
+          <div class="col-md-4">
+           <div class="input-group">
+            <div class="input-group-prepend">
+            <div class="input-group-text">
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="flexRadioDefault3" (change)="handleBonusList($event)"  name="flexRadioDefault" class="custom-control-input" >
+                    <label class="custom-control-label" for="flexRadioDefault3">Bonus List</label>
+                </div>
+            </div>
+        </div>
+    </div>
+          </div>
+         </div>
+   
+         <div class="row mt-3">
+          <div class="col-md-4">
+           <div class="input-group">
+            <div class="input-group-prepend">
+            <div class="input-group-text">
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="flexRadioDefault4" (change)="handleBonusSummary($event)"  name="flexRadioDefault" class="custom-control-input">
+                    <label class="custom-control-label" for="flexRadioDefault4">Bonus Summary</label>
+                </div>
+            </div>
+        </div>
+    </div>
+          </div>
+         </div>
+   
+         <div class="row mt-3">
+          <div class="col-md-4">
+           <div class="input-group">
+            <div class="input-group-prepend">
+            <div class="input-group-text">
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="flexRadioDefault5" (change)="handleBankTransferLetter($event)" name="flexRadioDefault" class="custom-control-input">
+                    <label class="custom-control-label" for="flexRadioDefault5">Bank Transfer Letter</label>
+                </div>
+            </div>
+        </div>
+    </div>
+          </div>
+         </div>
+   
+   
+         <div class="row mt-3">
+          <div class="col-md-4">
+           <div class="input-group">
+            <div class="input-group-prepend">
+            <div class="input-group-text">
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="flexRadioDefault6" (change)="handleEMailReport($event)"  name="flexRadioDefault" class="custom-control-input">
+                    <label class="custom-control-label" for="flexRadioDefault6">E-Mail Report</label>
+                </div>
+            </div>
+        </div>
+    </div>
+          </div>
+         </div>
+   
+         <div class="row mt-3">
+          <div class="col-md-4">
+           <div class="input-group">
+            <div class="input-group-prepend">
+            <div class="input-group-text">
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="flexRadioDefault7" (change)="handlePAdvDed($event)" name="flexRadioDefault" class="custom-control-input" >
+                    <label class="custom-control-label" for="flexRadioDefault7">P Adv. Deduction</label>
+                </div>
+            </div>
+        </div>
+    </div>
+          </div>
+         </div>
+   
+         </div>
+        </form>
+       </fieldset>
+   
+       <fieldset>
+        <form>
+         <div class="form-group border mt-3 p-2" panelContent>
+          <div class="row mt-3">
+           <div class="col-md-12">
+            <label class="form-label font-weight-bold h5" for="radio-group-1">Select Appropriate Filter</label>
+           </div>
+          </div>
+    
+          <div class="row mt-3">
+           <div class="col-md-12">
+            <div class="input-group">
+             <div class="input-group-prepend">
+             <div class="input-group-text">
+                 <div class="custom-control custom-radio">
+                     <input type="radio" id="flexRadioDefault8" [disabled]="bankTransferLetter==true || pAdvDed==true" (change)="handleAllSAF($event)" name="flexRadioDefault" class="custom-control-input" checked>
+                     <label class="custom-control-label" for="flexRadioDefault8">All</label>
+                 </div>
+             </div>
+         </div>
+     </div>
+           </div>
+          </div>
+    
+          <div class="row mt-3">
+           <div class="col-md-12">
+            <div class="input-group">
+             <div class="input-group-prepend">
+             <div class="input-group-text">
+                 <div class="custom-control custom-radio">
+                     <input type="radio" id="flexRadioDefault9" [disabled]="bankTransferLetter==true || pAdvDed==true" (change)="handleByCardRangeSAF($event)" name="flexRadioDefault" class="custom-control-input">
+                     <label class="custom-control-label" for="flexRadioDefault9">By Card Range</label>
+                 </div>
+             </div>
+         </div>
+     </div>
+           </div>
+          </div>
+    
+          <div class="row mt-3">
+           <div class="col-md-12">
+            <div class="input-group">
+             <div class="input-group-prepend">
+             <div class="input-group-text">
+                 <div class="custom-control custom-radio">
+                     <input type="radio" id="flexRadioDefault10" [disabled]="bankTransferLetter==true || eMailReport==true || pAdvDed==true"  (change)="handleByBranchSAF($event)"  name="flexRadioDefault" class="custom-control-input">
+                     <label class="custom-control-label" for="flexRadioDefault10">By Branch</label>
+                 </div>
+             </div>
+         </div>
+     </div>
+           </div>
+          </div>
+          </div>
+         </form>
+       </fieldset>
+       
+     </div>
+   
+     <div class="col-md-6">
+      <fieldset>
+       <form>
+        <div class="form-group border w-100 p-2" panelContent>
+   
+         <div class="row">
+          <div class="col-md-12">
+           <label class="form-label font-weight-bold h5" for="radio-group-1">Select Financial Period And Bonus No.</label>
+          </div>
+         </div>
+   
+         <div class="row">
+          
+          <div class="col-md-6">
+           <div class="row mt-3">
+            <div class="col-md-12">
+             <div class="input-group">
+              <div class="input-group-prepend">
+                  <span class="input-group-text">Financial Period:</span>
+     
+                     <select class="form-control">
+                         <option>Jul2019-Jul2020</option>
+                         <option>Jul2021-Jul2022</option>
+                     </select>
+                  
+              </div>
+          </div>
+            </div>
+          
+           </div>
+     
+          </div>
+   
+          <div class="col-md-6">
+           <div class="row mt-3">
+            <div class="col-md-12">
+             <div class="input-group">
+              <div class="input-group-prepend">
+                  <span class="input-group-text">Bonus No:</span>
+     
+                     <select class="form-control">
+                         <option>1</option>
+                         <option>2</option>
+                     </select>
+                  
+              </div>
+          </div>
+            </div>
+       
+           </div>
+          
+          </div>
+   
+         </div>
+   
+        </div>
+       </form>
+      </fieldset>
+   
+      <fieldset>
+       <form>
+        <div class="form-group border mt-3 w-100 p-2" panelContent>
+   
+         <div class="row">
+          <div class="col-md-12">
+           <label class="form-label font-weight-bold h5" for="radio-group-1">Select Appropriate Option</label>
+          </div>
+         </div>
+   
+         <div class="row mt-3">
+          <div class="col-md-12">
+           <div class="input-group">
+            <div class="input-group-prepend">
+            <div class="input-group-text">
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="flexRadioDefault11"  name="flexRadioDefault" class="custom-control-input" checked>
+                    <label class="custom-control-label" for="flexRadioDefault11">All</label>
+                </div>
+            </div>
+        </div>
+    </div>
+          </div>
+         </div>
+   
+         <div class="row mt-3">
+          <div class="col-md-12">
+           <div class="input-group">
+            <div class="input-group-prepend">
+            <div class="input-group-text">
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="flexRadioDefault12" name="flexRadioDefault" class="custom-control-input">
+                    <label class="custom-control-label" for="flexRadioDefault12">Cash</label>
+                </div>
+            </div>
+        </div>
+    </div>
+          </div>
+         </div>
+   
+         <div class="row mt-3">
+          <div class="col-md-12">
+           <div class="input-group">
+            <div class="input-group-prepend">
+            <div class="input-group-text">
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="flexRadioDefault13" name="flexRadioDefault" class="custom-control-input">
+                    <label class="custom-control-label" for="flexRadioDefault13">Transfer</label>
+                </div>
+            </div>
+        </div>
+    </div>
+          </div>
+         </div>
+   
+         </div>
+        </form>
+       </fieldset>
+   
+       <fieldset>
+        <form>
+         <div class="form-group mt-3 p-2 border w-100" panelContent>
+         <div class="row">
+          <div class="col-md-12">
+           <label class="form-label font-weight-bold h5" for="radio-group-1">Option Selection</label>
+          </div>
+         </div>
+   
+         <div class="row">
+   
+          <div class="col-md-4">
+           <div class="row mt-3">
+            <div class="col-md-12">
+             <div class="input-group">
+              <div class="input-group-prepend">
+                  <span class="input-group-text">Form Card</span>
+              </div>
+              <input type="number" id="fromCard" [disabled]="(bonusSlips==true && allSAF==true) || (bonusSlips==true &&ByBranchSAF==true) || (bonusList==true && allSAF==true) || (bonusList==true && ByBranchSAF==true) || (bonusSummary==true && allSAF==true) || (bonusSummary==true && ByBranchSAF==true) || (bankTransferLetter==true && allSAF==true) || (bankTransferLetter==true && ByBranchSAF==true) || (eMailReport==true && allSAF==true) || (eMailReport==true && ByBranchSAF==true) || (pAdvDed==true && allSAF==true) || (pAdvDed==true && ByBranchSAF==true)" [(ngModel)]='cardStartValue' name="fromCard"  #fromCard class="form-control" placeholder="card no." aria-label="fromCard" aria-describedby="basic-addon1">
+          </div>
+            </div>
+           </div>
+         
+          </div>
+   
+          <div class="col-md-4">
+           <div class="row mt-3">
+            <div class="col-md-12">
+             <div class="input-group">
+              <div class="input-group-prepend">
+                  <span class="input-group-text">To Card</span>
+              </div>
+              <input type="number" [(ngModel)]='cardEndValue' [disabled]="(bonusSlips==true && allSAF==true) || (bonusSlips==true && ByBranchSAF==true) || (bonusList==true && allSAF==true) || (bonusList==true && ByBranchSAF==true) || (bonusSummary==true && allSAF==true) || (bonusSummary==true && ByBranchSAF==true) || (bankTransferLetter==true && allSAF==true) || (bankTransferLetter==true && ByBranchSAF==true) || (eMailReport==true && allSAF==true) || (eMailReport==true && ByBranchSAF==true) || (pAdvDed==true && allSAF==true) || (pAdvDed==true && ByBranchSAF==true)" name="ToCard"  id="toCard" #toCard class="form-control" placeholder="card no." aria-label="to card" aria-describedby="toCard">
+          </div>
+            </div>
+           </div>
+         
+          </div>
+   
+         </div>
+   
+         <div class="row mt-3">
+          <div class="col-md-12">
+           <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Branch:</span>
+   
+                   <select [disabled]="(bonusSlips==true && allSAF==true) || (bonusSlips==true && ByCardRangeSAF==true) || (bonusList==true && allSAF==true) || (bonusList==true && ByCardRangeSAF==true) || (bonusSummary==true && allSAF==true) || (bonusSummary==true && ByCardRangeSAF==true) || (bankTransferLetter==true && allSAF==true) || (bankTransferLetter==true && ByCardRangeSAF==true) || (eMailReport==true && allSAF==true) || (eMailReport==true && ByCardRangeSAF==true) || (pAdvDed==true && allSAF==true) || (pAdvDed==true && ByCardRangeSAF==true)" class="form-control">
+                       <option>Forward Sports (Sahowala)</option>
+                       <option>Forward Sports (Pakka Garha)</option>                   
+                   </select>
+                
+            </div>
+        </div>
+          </div>
+         </div>
+   
+         
+         <div class="row mt-3">
+          <div class="col-md-12">
+           <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Bank Name:</span>
+   
+                   <select [disabled]="(bonusSlips==true && allSAF==true) || (bonusSlips==true && ByCardRangeSAF==true) || (bonusSlips==true && ByBranchSAF==true) || (bonusList==true && allSAF==true) || (bonusList==true && ByCardRangeSAF==true) || (bonusList==true && ByBranchSAF==true) || (bonusSummary==true && allSAF==true) || (bonusSummary==true && ByCardRangeSAF==true) || (bonusSummary==true && ByBranchSAF==true) || (bankTransferLetter==true && allSAF==true) || (bankTransferLetter==true && ByCardRangeSAF==true) || (bankTransferLetter==true && ByBranchSAF==true) || (eMailReport==true && allSAF==true) || (eMailReport==true && ByCardRangeSAF==true) || (eMailReport==true && ByBranchSAF==true) || (pAdvDed==true && allSAF==true) || (pAdvDed==true && ByCardRangeSAF==true) || (pAdvDed==true && ByBranchSAF==true)" class="form-control">
+                       <option>Meezan Bank</option>
+                       <option>Habib Bank Limited</option>                   
+                   </select>
+                
+            </div>
+        </div>
+          </div>
+         </div>
+   
+         </div>
+         </form>
+        </fieldset>
+   
+        
+       <fieldset>
+        <form>
+         <div class="form-group border mt-3 w-100 p-2" panelContent>
+         
+          <div class="row mt-3">
+          <div class="col-md-12">
+           <label class="form-label font-weight-bold h5" for="radio-group-1">Select Department</label>
+          </div>
+         </div>
+   
+         <div class="row mt-2">
+          <div class="col-md-12">
+           <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Department:</span>
+                <select [disabled]="allSD==true || DesignSD==true || DesignSD==true || SectionSD==true" class="form-control">
+                    <option>IT</option>
+                    <option>AMB</option>
+                </select>
+               
+            </div>
+        </div>
+          </div>
+         </div>
+   
+         
+         <div class="row mt-2">
+          <div class="col-md-12">
+           <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Section:</span>
+                <select [disabled]="allSD==true || DeptSD==true || DesignSD==true || DesignSD==true" class="form-control">
+                    <option>System Engineer</option>
+                    <option>Chief Executive</option>
+                </select>
+               
+            </div>
+        </div>
+          </div>
+         </div>
+   
+          
+         <div class="row mt-2">
+          <div class="col-md-12">
+           <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Designation:</span>
+                <select [disabled]="allSD==true || DeptSD==true || SectionSD==true" class="form-control">
+                    <option>System Engineer</option>
+                    <option>Chief Executive</option>
+                </select>
+               
+            </div>
+        </div>
+          </div>
+         </div>
+   
+         <div class="row mt-3">
+             <div class="col-md-3">
+               <div class="input-group">
+                   <div class="input-group-prepend">
+                   <div class="input-group-text">
+                       <div class="custom-control custom-radio">
+                           <input type="radio" id="flexRadioDefault14" (change)="handleAllSD($event)"  name="flexRadioDefault" class="custom-control-input" checked>
+                           <label class="custom-control-label" for="flexRadioDefault14">All</label>
+                       </div>
+                   </div>
+               </div>
+           </div>
+             </div>
+              <div class="col-md-6">
+               <div class="input-group">
+                   <div class="input-group-prepend">
+                   <div class="input-group-text">
+                       <div class="custom-control custom-radio">
+                           <input type="radio" id="flexRadioDefault15" (change)="handleDeptSD($event)" name="flexRadioDefault" class="custom-control-input" >
+                           <label class="custom-control-label" for="flexRadioDefault15">Department</label>
+                       </div>
+                   </div>
+               </div>
+           </div>
+             </div>
+         </div>
+   
+         <div class="row mt-3">
+           <div class="col-md-3">
+             <div class="input-group">
+                 <div class="input-group-prepend">
+                 <div class="input-group-text">
+                     <div class="custom-control custom-radio">
+                         <input type="radio" id="flexRadioDefault16" (change)="handleDesignSD($event)"  name="flexRadioDefault" class="custom-control-input" >
+                         <label class="custom-control-label" for="flexRadioDefault16">Designation</label>
+                     </div>
+                 </div>
+             </div>
+         </div>
+           </div>
+            <div class="col-md-6">
+             <div class="input-group">
+                 <div class="input-group-prepend">
+                 <div class="input-group-text">
+                     <div class="custom-control custom-radio">
+                         <input type="radio" id="flexRadioDefault17" (change)="handleSectionSD($event)" name="flexRadioDefault" class="custom-control-input" >
+                         <label class="custom-control-label" for="flexRadioDefault17">Section</label>
+                     </div>
+                 </div>
+             </div>
+         </div>
+           </div>
+       </div>
+   
+        </div>
+        </form>
+         </fieldset>
+   
+         <div class="row mt-3">
+          <div class="col-md-4">
+           <div class="frame-wrap">
+            <div class="demo" style="display: grid">
+                <button style="padding:10px" type="button" (click)="showReport()"  class="btn btn-info">Show Report</button>
+            </div>
+        </div>
+          </div>
+         </div>
+   
+     </div>
+     
+    </div>
+   </div>
+   
+</body>
+   
+   
+   
+   <div *ngIf="showReportt" class="row">
+       <div class="col-md-12">
+    
+        <body id="htmlData">
+            
+           <div *ngIf="bonusSlips"  class="row">
+            <div class="col-md-12">
+                 <smart-bonus-slips-bonus-reports></smart-bonus-slips-bonus-reports>
+            </div>
+        </div>
+
+         
+        <div *ngIf="bonusList" class="row">
+            <div class="col-md-12">
+                <smart-bonus-list-bonus-reports></smart-bonus-list-bonus-reports>
+            </div>
+        </div>
+
+        <div *ngIf="bonusSummary" class="row">
+            <div class="col-md-12">
+                <smart-bonus-summary-bonus-reports></smart-bonus-summary-bonus-reports>
+            </div>
+        </div>
+
+         <div *ngIf="bankTransferLetter" class="row">
+            <div class="col-md-12">
+                <smart-bank-transfer-letter-bonus-reports></smart-bank-transfer-letter-bonus-reports>
+            </div>
+        </div>
+       
+        <div *ngIf="eMailReport" class="row">
+            <div class="col-md-12">
+                <smart-email-report-bonus-reports></smart-email-report-bonus-reports>
+            </div>
+        </div>
+
+        <div *ngIf="pAdvDed" class="row">
+            <div class="col-md-12">
+                <smart-padv-ded-bonus-reports></smart-padv-ded-bonus-reports>
+            </div>
+        </div>
+        </body>
+          
+   
+       <div class="row mt-5">
+           
+           <div class='col-md-6'>
+               <div class="row mt-3">
+                   <div class="col-md-6">
+                       <button class="btn btn-danger" (click)="EmpRecord()" style="background-color: maroon;" > <i class="fal fa-arrow-left"></i>  Click Here to Go Back to Employee Record</button>
+                   </div>
+               </div>
+           </div>
+          
+           <div class="col-md-6 d-flex justify-content-end text-end">
+               <div class="row mt-3">
+                   <div class="col-md-12">
+                       <button  panelToolbar (click)="makePDF()" class="btn btn-primary font-weight-bold"> <i class="fal fa-print"></i>   Make PDF</button>
+                   </div>
+               </div>
+           </div>
+   
+       </div>
+   
+   </div>
+   </div>
+   
+   
+   
+   

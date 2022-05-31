@@ -1,0 +1,145 @@
+<body  id="htmlData" >
+  <div  *ngFor="let e of compInfo; index as i"  class="mySlides">
+    <div class="container col-md-10 align-items-center border h-25 w-100 mt-5 p-50" > 
+
+    <div class="row">
+      <div class="col-md-2 mt-3">
+        <div>
+          <img src="https://upload.wikimedia.org/wikipedia/en/0/01/This_is_the_Forward_Sport_brand_logo.jpg" width="100px"/>
+          </div>
+      </div>
+      <div class="col-md-6 mt-3">
+        <div><span class="font-weight-bold d-block">Forward Sports (Pvt) Ltd.</span>
+          <span>Wazirabad Road,Adha Sahowala, Sialkot</span>
+        </div>
+        
+      </div>
+      
+    </div>
+  
+    
+    <div class="row">
+     <div class="col-md-12 mt-5 align-items-center bg-primary">
+       <p class="h2 align-items-center text-center color-white mt-2">Grade Log Reports</p>
+     </div>
+    </div>
+      <div class="row mt-2 mx-1">
+        <div class="col-md-3">
+          <span class="font-weight-bold">Card No:</span>
+        </div>
+        <div class="col-md-3">
+          <span>{{e.Employee.EmpCardNo.name}}</span>
+        </div>
+        <div class="col-md-3">
+          <span class="font-weight-bold">Department:</span>
+        </div>
+        <div class="col-md-3">
+          <span>{{e.Department.name}}</span>
+        </div>
+       </div>
+       
+       <div class="row mt-2 mx-1">
+        <div class="col-md-3">
+          <span class="font-weight-bold">Name:</span>
+        </div>
+        <div class="col-md-3">
+          <span>{{e.Employee.name}}</span>
+        </div>
+        <div class="col-md-3">
+          <span class="font-weight-bold">Section:</span>
+        </div>
+        <div class="col-md-3">
+          <span>{{e.Section.name}}</span>
+        </div>
+       </div>
+       
+       <div class="row mt-2 mx-1">
+        <div class="col-md-3">
+          <span class="font-weight-bold">D.O.J:</span>
+        </div>
+        <div class="col-md-3">
+          <span>{{e.DateOfJoning}}</span>
+        </div>
+        <div class="col-md-3">
+          <span class="font-weight-bold">Designation:</span>
+        </div>
+        <div class="col-md-3">
+          <span>{{e.Designation.name}}</span>
+        </div>
+       </div>
+       
+       <div class="row mt-3 mx-1">
+        <div class="col-md-3">
+          <span class="font-weight-bold">Grade:</span>
+        </div>
+        <div class="col-md-3">
+          <span>{{e.GradeID.name}}</span>
+        </div>
+        <div class="col-md-3">
+          <span class="font-weight-bold">Branch</span>
+        </div>
+        <div class="col-md-3">
+          <span>{{e.Branch.BranchAddress}}</span>
+        </div>
+       </div>
+       
+       <div class="row mt-3 mx-1 d-flex justify-content-end text-end">
+       
+        <div class="col-md-3">
+          <span class="font-weight-bold">Effective Date:</span>
+        </div>
+        <div class="col-md-3">
+          <span>{{e.JobTypeEffectiveDate}}</span>
+        </div>
+       </div>
+       
+       
+       <div  class="row mt-3 mx-1">
+        <div class="col-md-3">
+         <span class="font-weight-bold">Grade</span>
+        </div>
+        <div class="col-md-3">
+         <span class="font-weight-bold">From Date</span>
+        </div>
+        <div class="col-md-3">
+         <span class="font-weight-bold">End Date</span>
+        </div>
+       </div>
+       
+       <div class="row">
+        <div class="col-md-8 mx-3">
+         <hr style="border:1px solid; length:1px">
+        </div>
+       </div>
+       
+       <div  class="row">
+        <div class="col-md-3 mx-3">
+         <span class="font-weight-bold">{{e.GradeID.name}}</span>
+        </div>
+        <div class="col-md-3">
+         <span class="font-weight-bold">{{e.Employee.CreationDate}}</span>
+        </div>
+        <div class="col-md-3">
+         <span class="font-weight-bold">{{e.Employee.LastUpdateDate}}</span>
+        </div>
+       
+       </div>
+       
+       <div  class="row">
+        <div class="col-md-3 mx-3">
+         <span class="font-weight-bold">M2</span>
+        </div>
+        <div class="col-md-3">
+         <span class="font-weight-bold">17-12-2016</span>
+        </div>
+        <div class="col-md-3">
+         <span class="font-weight-bold">03-08-2019</span>
+        </div>
+       
+       </div>
+    </div>
+  </div>
+
+
+</body>
+  

@@ -1,0 +1,855 @@
+<div *ngIf="stopReport" class="container-fluid p-2">
+    <div class="row">
+    <div class="col-md-6">        
+   <fieldset>
+    <form>
+     <div class="form-group p-2 border w-100" panelContent>
+        
+        <div class="row">
+            <div class="col-md-12">
+             <label class="form-label font-weight-bold h5" for="radio-group-1">Report Selector</label>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="flexRadioDefault" (change)="handleEmpList($event)" name="flexRadioDefault" class="custom-control-input" checked>
+                            <label class="custom-control-label" for="flexRadioDefault">Employee List</label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" (change)="handleGrade($event)" id="flexRadioDefault1"  name="flexRadioDefault" class="custom-control-input">
+                            <label class="custom-control-label" for="flexRadioDefault1">Grade</label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" (change)="handleShift($event)" id="flexRadioDefault2"  name="flexRadioDefault" class="custom-control-input">
+                            <label class="custom-control-label" for="flexRadioDefault2">Shift</label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" (change)="handleJobType($event)" id="flexRadioDefault3" name="flexRadioDefault" class="custom-control-input">
+                            <label class="custom-control-label" for="flexRadioDefault3">Job Type</label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" (change)="handleBloodGroup($event)" id="flexRadioDefault4" name="flexRadioDefault" class="custom-control-input">
+                            <label class="custom-control-label" for="flexRadioDefault4">Blood Group</label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" (change)="handleMartialStatus($event)" id="flexRadioDefault5" name="flexRadioDefault" class="custom-control-input">
+                            <label class="custom-control-label" for="flexRadioDefault5">Martial Status</label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" (change)="handleGender($event)" id="flexRadioDefault6" name="flexRadioDefault" class="custom-control-input">
+                            <label class="custom-control-label" for="flexRadioDefault6">Gender</label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" (change)="handleReligion($event)" id="flexRadioDefault7" name="flexRadioDefault" class="custom-control-input">
+                            <label class="custom-control-label" for="flexRadioDefault7">Religion</label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" (change)="handleEmployment($event)" id="flexRadioDefault8"  name="flexRadioDefault" class="custom-control-input">
+                            <label class="custom-control-label" for="flexRadioDefault8">Employment</label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" (change)="handleEmpCategory($event)" id="flexRadioDefault9" name="flexRadioDefault" class="custom-control-input">
+                            <label class="custom-control-label" for="flexRadioDefault9">Employee Category</label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" (change)="handleQualification($event)" id="flexRadioDefault10" name="flexRadioDefault" class="custom-control-input">
+                            <label class="custom-control-label" for="flexRadioDefault10">Qualification</label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" (change)="handleSectionCode($event)" id="flexRadioDefault11" name="flexRadioDefault" class="custom-control-input">
+                            <label class="custom-control-label" for="flexRadioDefault11">Section Code</label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" (change)="handleMissingPicList($event)"  id="flexRadioDefault12" name="flexRadioDefault" class="custom-control-input">
+                            <label class="custom-control-label" for="flexRadioDefault12">Missing Pic List</label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" (change)="handleSeniorityList($event)" id="flexRadioDefault13" name="flexRadioDefault" class="custom-control-input">
+                            <label class="custom-control-label" for="flexRadioDefault13">Seniority List</label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" (change)="handlePerAppraisalSenior($event)" id="flexRadioDefault14" name="flexRadioDefault" class="custom-control-input">
+                            <label class="custom-control-label" for="flexRadioDefault14">Performance Appraisal From (Senior Manangement)</label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" (change)="handlePerAppraisalJunior($event)"  id="flexRadioDefault15" name="flexRadioDefault" class="custom-control-input">
+                            <label class="custom-control-label" for="flexRadioDefault15">Performance Appraisal From (Junior Management/Staff)</label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+     </div>
+    </form>
+</fieldset>
+
+<fieldset *ngIf="selectionOption">
+    <form>
+     <div class="form-group p-2 mt-3 border w-100" panelContent>
+
+        <div class="row">
+            <div class="col-md-12">
+             <label class="form-label font-weight-bold h5" for="radio-group-1">Selection Option</label>
+            </div>
+        </div>
+
+        
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" (change)="handleAllOS($event)" id="flexRadioDefault16" name="flexRadioDefault" class="custom-control-input" checked>
+                            <label class="custom-control-label" for="flexRadioDefault16">All</label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" (change)="handleByBranchOS($event)" id="flexRadioDefault17" name="flexRadioDefault" class="custom-control-input">
+                            <label class="custom-control-label" for="flexRadioDefault17">By Branch</label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+     </div>
+    </form>
+</fieldset>
+
+        </div>
+
+        <div class="col-md-6">
+            <fieldset>
+                <form>
+                 <div class="form-group border w-100 p-2" panelContent>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                         <label class="form-label font-weight-bold h5" for="radio-group-1">Option Selector</label>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Branch:</span>
+
+                                       <select [disabled]="(empList==true && AllOS==true) || (grade==true && AllOS==true) || (shift==true && AllOS==true) || (jobType==true && AllOS==true) || (bloodGroup==true && AllOS==true) || (martialStatus==true && AllOS==true) || (gender==true && AllOS==true) || (religion==true && AllOS==true) || (employment==true && AllOS==true) || (empCategory==true && AllOS==true) || (qualification==true && AllOS==true) || (secCode==true && AllOS==true) || (missingPicList==true && AllOS==true) || (seniorityList==true && AllOS==true) || (perAppraisalSenior==true && AllOS==true) || (perAppraisalJunior==true && AllOS==true)" class="form-control">
+                                           <option></option>
+                                          
+                                       </select>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Grade:</span>
+
+                                       <select [disabled]="(empList==true && AllOS==true) || (empList==true &&ByBranch==true) || (shift==true && AllOS==true) || (shift==true && ByBranch==true) || (jobType==true && AllOS==true) || (jobType==true && ByBranch==true) || (bloodGroup==true && AllOS==true) || (bloodGroup==true && ByBranch==true) || (martialStatus==true && AllOS==true) || (martialStatus==true && ByBranch==true) || (gender==true && AllOS==true) || (gender==true && ByBranch==true) || (religion==true && AllOS==true) || (religion==true && ByBranch==true) || (employment==true && AllOS==true) || (employment==true && ByBranch==true) || (empCategory==true && AllOS==true) || (empCategory==true && ByBranch==true) || (qualification==true && AllOS==true) || (secCode==true && ByBranch==true) || (secCode==true && AllOS==true) || (missingPicList==true && AllOS==true) || (missingPicList==true && ByBranch==true) || (seniorityList==true && AllOS==true) || (seniorityList==true && ByBranch==true) || (perAppraisalSenior==true && AllOS==true) || (perAppraisalSenior==true && ByBranch==true) || (perAppraisalJunior==true && AllOS==true) || (perAppraisalJunior==true && ByBranch==true)" class="form-control">
+                                           <option></option>
+                                          
+                                       </select>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Shift:</span>
+
+                                       <select [disabled]="(empList==true && AllOS==true) || (empList==true &&ByBranch==true) || (grade==true && AllOS==true) || (grade==true &&ByBranch==true) || (jobType==true && AllOS==true) || (jobType==true && ByBranch==true) || (bloodGroup==true && AllOS==true) || (bloodGroup==true && ByBranch==true) || (martialStatus==true && AllOS==true) || (martialStatus==true && ByBranch==true) || (gender==true && AllOS==true) || (gender==true && ByBranch==true) || (religion==true && AllOS==true) || (religion==true && ByBranch==true) || (employment==true && AllOS==true) || (employment==true && ByBranch==true) || (empCategory==true && AllOS==true) || (empCategory==true && ByBranch==true) || (qualification==true && AllOS==true) || (qualification==true && ByBranch==true) || (secCode==true && ByBranch==true) || (secCode==true && AllOS==true) || (missingPicList==true && AllOS==true) || (missingPicList==true && ByBranch==true) || (seniorityList==true && AllOS==true) || (seniorityList==true && ByBranch==true) || (perAppraisalSenior==true && AllOS==true) || (perAppraisalSenior==true && ByBranch==true) || (perAppraisalJunior==true && AllOS==true) || (perAppraisalJunior==true && ByBranch==true)" class="form-control">
+                                           <option></option>
+                                          
+                                       </select>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Job Type:</span>
+
+                                       <select [disabled]="(empList==true && AllOS==true) || (empList==true &&ByBranch==true) || (grade==true && AllOS==true) || (grade==true &&ByBranch==true) || (shift==true && AllOS==true) || (shift==true && ByBranch==true) || (bloodGroup==true && AllOS==true) || (bloodGroup==true && ByBranch==true) || (martialStatus==true && AllOS==true) || (martialStatus==true && ByBranch==true) || (gender==true && AllOS==true) || (gender==true && ByBranch==true) || (religion==true && AllOS==true) || (religion==true && ByBranch==true) || (employment==true && AllOS==true) || (employment==true && ByBranch==true) || (empCategory==true && AllOS==true) || (empCategory==true && ByBranch==true) || (qualification==true && AllOS==true) || (qualification==true && ByBranch==true) || (secCode==true && ByBranch==true) || (secCode==true && AllOS==true) || (missingPicList==true && AllOS==true) || (missingPicList==true && ByBranch==true) || (seniorityList==true && AllOS==true) || (seniorityList==true && ByBranch==true) || (perAppraisalSenior==true && AllOS==true) || (perAppraisalSenior==true && ByBranch==true) || (perAppraisalJunior==true && AllOS==true) || (perAppraisalJunior==true && ByBranch==true)" class="form-control">
+                                           <option></option>
+                                          
+                                       </select>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Blood Group:</span>
+
+                                       <select [disabled]="(empList==true && AllOS==true) || (empList==true &&ByBranch==true) || (grade==true && AllOS==true) || (grade==true &&ByBranch==true) || (shift==true && AllOS==true) || (shift==true && ByBranch==true) || (jobType==true && AllOS==true) || (jobType==true && ByBranch==true) || (martialStatus==true && AllOS==true) || (martialStatus==true && ByBranch==true) || (gender==true && AllOS==true) || (gender==true && ByBranch==true) || (religion==true && AllOS==true) || (religion==true && ByBranch==true) || (employment==true && AllOS==true) || (employment==true && ByBranch==true) || (empCategory==true && AllOS==true) || (empCategory==true && ByBranch==true) || (qualification==true && AllOS==true) || (qualification==true && ByBranch==true) || (secCode==true && ByBranch==true) || (secCode==true && AllOS==true) || (missingPicList==true && AllOS==true) || (missingPicList==true && ByBranch==true) || (seniorityList==true && AllOS==true) || (seniorityList==true && ByBranch==true) || (perAppraisalSenior==true && AllOS==true) || (perAppraisalSenior==true && ByBranch==true) || (perAppraisalJunior==true && AllOS==true) || (perAppraisalJunior==true && ByBranch==true)" class="form-control">
+                                           <option></option>
+                                          
+                                       </select>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Martial Status:</span>
+
+                                       <select [disabled]="(empList==true && AllOS==true) || (empList==true &&ByBranch==true) || (grade==true && AllOS==true) || (grade==true &&ByBranch==true) || (shift==true && AllOS==true) || (shift==true && ByBranch==true) || (jobType==true && AllOS==true) || (jobType==true && ByBranch==true) || (bloodGroup==true && AllOS==true) || (bloodGroup==true && ByBranch==true) || (gender==true && AllOS==true) || (gender==true && ByBranch==true) || (religion==true && AllOS==true) || (religion==true && ByBranch==true) || (employment==true && AllOS==true) || (employment==true && ByBranch==true) || (empCategory==true && AllOS==true) || (empCategory==true && ByBranch==true) || (qualification==true && AllOS==true) || (qualification==true && ByBranch==true) || (secCode==true && ByBranch==true) || (secCode==true && AllOS==true) || (missingPicList==true && AllOS==true) || (missingPicList==true && ByBranch==true) || (seniorityList==true && AllOS==true) || (seniorityList==true && ByBranch==true) || (perAppraisalSenior==true && AllOS==true) || (perAppraisalSenior==true && ByBranch==true) || (perAppraisalJunior==true && AllOS==true) || (perAppraisalJunior==true && ByBranch==true)" class="form-control">
+                                           <option></option>
+                                          
+                                       </select>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Gender:</span>
+
+                                       <select [disabled]="(empList==true && AllOS==true) || (empList==true &&ByBranch==true) || (grade==true && AllOS==true) || (grade==true &&ByBranch==true) || (shift==true && AllOS==true) || (shift==true && ByBranch==true) || (jobType==true && AllOS==true) || (jobType==true && ByBranch==true) || (bloodGroup==true && AllOS==true) || (bloodGroup==true && ByBranch==true) || (martialStatus==true && AllOS==true) || (martialStatus==true && ByBranch==true) || (religion==true && AllOS==true) || (religion==true && ByBranch==true) || (employment==true && AllOS==true) || (employment==true && ByBranch==true) || (empCategory==true && AllOS==true) || (empCategory==true && ByBranch==true) || (qualification==true && AllOS==true) || (qualification==true && ByBranch==true) || (secCode==true && ByBranch==true) || (secCode==true && AllOS==true) || (missingPicList==true && AllOS==true) || (missingPicList==true && ByBranch==true) || (seniorityList==true && AllOS==true) || (seniorityList==true && ByBranch==true) || (perAppraisalSenior==true && AllOS==true) || (perAppraisalSenior==true && ByBranch==true) || (perAppraisalJunior==true && AllOS==true) || (perAppraisalJunior==true && ByBranch==true)" class="form-control">
+                                           <option></option>
+                                          
+                                       </select>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Religion:</span>
+
+                                       <select [disabled]="(empList==true && AllOS==true) || (empList==true &&ByBranch==true) || (grade==true && AllOS==true) || (grade==true &&ByBranch==true) || (shift==true && AllOS==true) || (shift==true && ByBranch==true) || (jobType==true && AllOS==true) || (jobType==true && ByBranch==true) || (bloodGroup==true && AllOS==true) || (bloodGroup==true && ByBranch==true) || (martialStatus==true && AllOS==true) || (martialStatus==true && ByBranch==true) || (gender==true && AllOS==true) || (gender==true && ByBranch==true) || (employment==true && AllOS==true) || (employment==true && ByBranch==true) || (empCategory==true && AllOS==true) || (empCategory==true && ByBranch==true) || (qualification==true && AllOS==true) || (qualification==true && ByBranch==true) || (secCode==true && ByBranch==true) || (secCode==true && AllOS==true) || (missingPicList==true && AllOS==true) || (missingPicList==true && ByBranch==true) || (seniorityList==true && AllOS==true) || (seniorityList==true && ByBranch==true) || (perAppraisalSenior==true && AllOS==true) || (perAppraisalSenior==true && ByBranch==true) || (perAppraisalJunior==true && AllOS==true) || (perAppraisalJunior==true && ByBranch==true)" class="form-control">
+                                           <option></option>
+                                          
+                                       </select>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Employement:</span>
+
+                                       <select [disabled]="(empList==true && AllOS==true) || (empList==true &&ByBranch==true) || (grade==true && AllOS==true) || (grade==true &&ByBranch==true) || (shift==true && AllOS==true) || (shift==true && ByBranch==true) || (jobType==true && AllOS==true) || (jobType==true && ByBranch==true) || (bloodGroup==true && AllOS==true) || (bloodGroup==true && ByBranch==true) || (martialStatus==true && AllOS==true) || (martialStatus==true && ByBranch==true) || (gender==true && AllOS==true) || (gender==true && ByBranch==true) || (religion==true && AllOS==true) || (religion==true && ByBranch==true) || (empCategory==true && AllOS==true) || (empCategory==true && ByBranch==true) || (qualification==true && AllOS==true) || (qualification==true && ByBranch==true) || (secCode==true && ByBranch==true) || (secCode==true && AllOS==true) || (missingPicList==true && AllOS==true) || (missingPicList==true && ByBranch==true) || (seniorityList==true && AllOS==true) || (seniorityList==true && ByBranch==true) || (perAppraisalSenior==true && AllOS==true) || (perAppraisalSenior==true && ByBranch==true) || (perAppraisalJunior==true && AllOS==true) || (perAppraisalJunior==true && ByBranch==true)" class="form-control">
+                                           <option></option>
+                                          
+                                       </select>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Category:</span>
+
+                                       <select [disabled]="(empList==true && AllOS==true) || (empList==true &&ByBranch==true) || (grade==true && AllOS==true) || (grade==true &&ByBranch==true) || (shift==true && AllOS==true) || (shift==true && ByBranch==true) || (jobType==true && AllOS==true) || (jobType==true && ByBranch==true) || (bloodGroup==true && AllOS==true) || (bloodGroup==true && ByBranch==true) || (martialStatus==true && AllOS==true) || (martialStatus==true && ByBranch==true) || (gender==true && AllOS==true) || (gender==true && ByBranch==true) || (religion==true && AllOS==true) || (religion==true && ByBranch==true) || (employment==true && AllOS==true) || (employment==true && ByBranch==true) || (qualification==true && AllOS==true) || (qualification==true && ByBranch==true) || (secCode==true && ByBranch==true) || (secCode==true && AllOS==true) || (missingPicList==true && AllOS==true) || (missingPicList==true && ByBranch==true) || (seniorityList==true && AllOS==true) || (seniorityList==true && ByBranch==true) || (perAppraisalSenior==true && AllOS==true) || (perAppraisalSenior==true && ByBranch==true) || (perAppraisalJunior==true && AllOS==true) || (perAppraisalJunior==true && ByBranch==true)" class="form-control">
+                                           <option></option>
+                                          
+                                       </select>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Qualification:</span>
+
+                                       <select [disabled]="(empList==true && AllOS==true) || (empList==true &&ByBranch==true) || (grade==true && AllOS==true) || (grade==true &&ByBranch==true) || (shift==true && AllOS==true) || (shift==true && ByBranch==true) || (jobType==true && AllOS==true) || (jobType==true && ByBranch==true) || (bloodGroup==true && AllOS==true) || (bloodGroup==true && ByBranch==true) || (martialStatus==true && AllOS==true) || (martialStatus==true && ByBranch==true) || (gender==true && AllOS==true) || (gender==true && ByBranch==true) || (religion==true && AllOS==true) || (religion==true && ByBranch==true) || (employment==true && AllOS==true) || (employment==true && ByBranch==true) || (empCategory==true && AllOS==true) || (empCategory==true && ByBranch==true) || (secCode==true && ByBranch==true) || (secCode==true && AllOS==true) || (missingPicList==true && AllOS==true) || (missingPicList==true && ByBranch==true) || (seniorityList==true && AllOS==true) || (seniorityList==true && ByBranch==true) || (perAppraisalSenior==true && AllOS==true) || (perAppraisalSenior==true && ByBranch==true) || (perAppraisalJunior==true && AllOS==true) || (perAppraisalJunior==true && ByBranch==true)" class="form-control">
+                                           <option></option>
+                                          
+                                       </select>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Section Code:</span>
+
+                                       <select [disabled]="(empList==true && AllOS==true) || (empList==true &&ByBranch==true) || (grade==true && AllOS==true) || (grade==true &&ByBranch==true) || (shift==true && AllOS==true) || (shift==true && ByBranch==true) || (jobType==true && AllOS==true) || (jobType==true && ByBranch==true) || (bloodGroup==true && AllOS==true) || (bloodGroup==true && ByBranch==true) || (martialStatus==true && AllOS==true) || (martialStatus==true && ByBranch==true) || (gender==true && AllOS==true) || (gender==true && ByBranch==true) || (religion==true && AllOS==true) || (religion==true && ByBranch==true) || (employment==true && AllOS==true) || (employment==true && ByBranch==true) || (empCategory==true && AllOS==true) || (empCategory==true && ByBranch==true) || (qualification==true && AllOS==true) || (qualification==true && ByBranch==true) || (missingPicList==true && AllOS==true) || (missingPicList==true && ByBranch==true) || (seniorityList==true && AllOS==true) || (seniorityList==true && ByBranch==true) || (perAppraisalSenior==true && AllOS==true) || (perAppraisalSenior==true && ByBranch==true) || (perAppraisalJunior==true && AllOS==true) || (perAppraisalJunior==true && ByBranch==true)" class="form-control">
+                                           <option></option>
+                                          
+                                       </select>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                 </div>
+                </form>
+            </fieldset>
+
+            <fieldset>
+                <form>
+                 <div class="form-group p-2 mt-3 border w-100" panelContent>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                         <label class="form-label bg-info text-center text-white font-weight-bold w-75 h5 p-2" for="radio-group-1">Select Appropriate Option</label> 
+                        </div>
+                       </div>
+
+                       <div class="row mt-3 ">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Department:</span>
+
+                                       <select [disabled]="allSAP==true || DesignSAP==true || sectionSAP==true" class="form-control">
+                                           <option></option>
+                                          
+                                       </select>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Section:</span>
+
+                                       <select [disabled]="allSAP==true || deptSAP==true || DesignSAP==true" class="form-control">
+                                           <option></option>
+                                          
+                                       </select>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Designation:</span>
+
+                                       <select [disabled]="allSAP==true || deptSAP==true || sectionSAP==true" class="form-control">
+                                           <option></option>
+                                          
+                                       </select>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="row mt-3">
+                        <div class="col-md-5">
+                            <div class="input-group">
+                                <div class="input-group-text">
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" (change)="handleAllSAO($event)" id="flexRadioDefault18" name="flexRadioDefault" class="custom-control-input" checked>
+                                        <label class="custom-control-label" for="flexRadioDefault18">All</label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="input-group">
+                                <div class="input-group-text">
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" (change)="handleDepSAP($event)" id="flexRadioDefault19" name="flexRadioDefault" class="custom-control-input">
+                                        <label class="custom-control-label" for="flexRadioDefault19">Department</label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-5">
+                            <div class="input-group">
+                                <div class="input-group-text">
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" (change)="handleDesignationSAP($event)" id="flexRadioDefault20" name="flexRadioDefault" class="custom-control-input">
+                                        <label class="custom-control-label" for="flexRadioDefault20">Designation</label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="input-group">
+                                <div class="input-group-text">
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" (change)="handleSectionSAP($event)" id="flexRadioDefault21" name="flexRadioDefault" class="custom-control-input">
+                                        <label class="custom-control-label" for="flexRadioDefault21">Section</label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+
+                 </div>
+                </form>
+            </fieldset>
+
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <div class="frame-wrap">
+                        <div class="demo" style="display: grid">
+                            <button style="padding:15px" type="button" (click)="showReport()" class="btn btn-info">Show Report</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <fieldset *ngIf="selectionOption2">
+                <form>
+                 <div class="form-group p-2" panelContent>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="form-label" for="radio-group-1">Selection Option</label>
+                        </div>
+                    </div>
+        
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <div class="input-group-text">
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" (change)="handleCardRangeOS2($event)" id="flexRadioDefault22" name="flexRadioDefault" class="custom-control-input" checked>
+                                        <label class="custom-control-label" for="flexRadioDefault22">By Card Range</label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <div class="input-group-text">
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="flexRadioDefault22" name="flexRadioDefault" class="custom-control-input">
+                                        <label class="custom-control-label" for="flexRadioDefault22">By Grade Range</label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+            </fieldset>
+
+            <fieldset *ngIf="selectionOption2">
+                <form>
+                 <div class="form-group p-2" panelContent>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="form-label" for="radio-group-1">Card Selection</label>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-10">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Start Card:</span>
+                                </div>
+                                <input type="number" id="fromCard" [(ngModel)]='cardStartValue' name="fromCard" #fromCard class="form-control" placeholder="card no." aria-label="fromCard" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-10">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">End Card:</span>
+                                </div>
+                                <input type="number" id="fromCard" [(ngModel)]='cardStartValue' name="fromCard" #fromCard class="form-control" placeholder="card no." aria-label="fromCard" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-10">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">From Grade:</span>
+
+                                       <select class="form-control">
+                                           <option></option>
+                                          
+                                       </select>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-10">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">To Grade:</span>
+
+                                       <select class="form-control">
+                                           <option></option>
+                                          
+                                       </select>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+            </fieldset> 
+        </div>
+    </div>
+
+
+</div>
+
+<div *ngIf="showReportt" class="row">
+    <div class="col-md-12">
+        
+        <div *ngIf="empList" class="row">
+            <div class="col-md-12">
+                <smart-emp-list-deptt-wise></smart-emp-list-deptt-wise>
+            </div>
+        </div>
+
+        <div *ngIf="grade" class="row">
+            <div class="col-md-12">
+                <smart-grade-deptt-wise></smart-grade-deptt-wise>
+            </div>
+        </div>
+
+        <div *ngIf="shift" class="row">
+            <div class="col-md-12">
+                <smart-shift-deptt-wise></smart-shift-deptt-wise>
+            </div>
+        </div>
+
+        <div *ngIf="jobType" class="row">
+            <div class="col-md-12">
+                <smart-job-type-deptt-wise></smart-job-type-deptt-wise>
+            </div>
+        </div>
+
+        <div *ngIf="bloodGroup" class="row">
+            <div class="col-md-12">
+                <smart-blood-group-deptt-wise></smart-blood-group-deptt-wise>
+            </div>
+        </div>
+
+        <div *ngIf="martialStatus" class="row">
+            <div class="col-md-12">
+                <smart-martial-status-deptt-wise></smart-martial-status-deptt-wise>
+            </div>
+        </div>
+
+        <div *ngIf="gender" class="row">
+            <div class="col-md-12">
+                <smart-gender-deptt-wise></smart-gender-deptt-wise>
+            </div>
+        </div>
+
+        <div *ngIf="religion" class="row">
+            <div class="col-md-12">
+                <smart-religion-deptt-wise></smart-religion-deptt-wise>
+            </div>
+        </div>
+
+        <div *ngIf="employment" class="row">
+            <div class="col-md-12">
+                <smart-employment-deptt-wise></smart-employment-deptt-wise>
+            </div>
+        </div>
+
+        <div *ngIf="empCategory" class="row">
+            <div class="col-md-12">
+                <smart-emp-category-deptt-wise></smart-emp-category-deptt-wise>
+            </div>
+        </div>
+
+        <div *ngIf="qualification" class="row">
+            <div class="col-md-12">
+                <smart-qualification-deptt-wise></smart-qualification-deptt-wise>
+            </div>
+        </div>
+
+        <div *ngIf='secCode' class="row">
+            <div class="col-md-12">
+                <smart-sec-code-deptt-wise></smart-sec-code-deptt-wise>
+            </div>
+        </div>
+
+        <div *ngIf="missingPicList" class="row">
+            <div class="col-md-12">
+                <smart-miss-pic-list-deptt-wise></smart-miss-pic-list-deptt-wise>
+            </div>
+        </div>
+        
+        <div *ngIf="seniorityList" class="row">
+            <div class="col-md-12">
+                <smart-seniority-list-deptt-wise></smart-seniority-list-deptt-wise>
+            </div>
+        </div>
+
+        <div *ngIf="perAppraisalSenior" class="row">
+            <div class="col-md-12">
+                <smart-perf-app-form-sm-deptt-wise></smart-perf-app-form-sm-deptt-wise>
+            </div>
+        </div>
+
+        <div *ngIf="perAppraisalJunior" class="row">
+            <div class="col-md-12">
+                <smart-perf-app-form-jm-deptt-wise></smart-perf-app-form-jm-deptt-wise>
+            </div>
+        </div>
+
+    <div class="row mt-3">
+        
+        <div class='col-md-6'>
+            <div class="row">
+                <div class="col-md-6">
+                    <button class="btn btn-danger" (click)="EmpRecord()" style="background-color: maroon" > <i class="fal fa-arrow-left"></i>  Click Here to Go Back to Employee Record</button>
+                </div>
+            </div>
+        </div>
+       
+        <div class="col-md-6 d-flex justify-content-end text-end">
+            <div class="row mt-3">
+                <div class="col-md-12">
+                    <button  panelToolbar (click)="makePDF()" class="btn btn-primary font-weight-bold"> <i class="fal fa-print"></i>   Make PDF</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</div>

@@ -1,0 +1,92 @@
+<body id="htmlData" > 
+  <div *ngFor="let e of compInfo; index as i" class="mySlides">
+    <div class="container col-md-10 align-items-center h-25 w-100 mt-3 p-50" style="border:1px solid gray" > 
+      
+ <div class="row">
+  <div class="col-md-2 mt-3">
+    <div>
+      <img src="https://upload.wikimedia.org/wikipedia/en/0/01/This_is_the_Forward_Sport_brand_logo.jpg" width="100px"/>
+      </div>
+  </div>
+  <div class="col-md-6 mt-3">
+    <div><span class="font-weight-bold d-block">Forward Sports (Pvt) Ltd.</span>
+      <span>Wazirabad Road,Adha Sahowala, Sialkot</span>
+    </div>
+    
+  </div>
+</div>
+
+<div class="row">
+ <div class="col-md-12 mt-5 align-items-center bg-primary">
+   <p class="h2 align-items-center text-center color-white mt-2">Character Certificate</p>
+ </div>
+</div>
+
+<div class="row mt-3">
+ <div class="col-md-12">
+  <span>This is that Certify that</span>
+ </div>
+</div>
+<div class="row mt-3">
+ <div class="col-md-6">
+  <span>Mr.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>{{e.Employee.name}}</b></span>
+ </div>
+ <div class="col-md-6">
+  <span>S/O.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>{{e.Employee.FatherName}}</b></span>
+ </div>
+</div>
+<div class="row mt-3">
+ <div class="col-md-6">
+  <span>Card No.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{e.Employee.EmpCardNo.name}}</span>
+ </div>
+ <div class="col-md-6">
+  <span>Joining Date.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>{{e.DateOfJoning}}</b></span>
+ </div>
+</div>
+<div class="row mt-3">
+ <div class="col-md-12">
+  <span>Resident of.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jarrosan P.O Khas Teh Pasrur Distt Sialkot</span>
+ </div>
+</div>
+<div class="row mt-3">
+ <div class="col-md-6">
+  <span>Union Council:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+ </div>
+ <div class="col-md-6">
+  <span>UC No.:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>06/01/2015</b></span>
+ </div>
+</div>
+
+<div class="row mt-3">
+ <div class="col-md-6">
+  <span>Having CNIC:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+ </div>
+ <div class="col-md-6">
+  <span>Issued From:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>{{e.Employee.CNICNO}}</b></span>
+ </div>
+</div>
+
+<div class="row mt-6">
+ <div class="col-md-12">
+  <span>Has an exemplary character and nothing involve in adverse activities</span>
+ </div>
+</div>
+
+<div class="row mt-6">
+ <div class="col-md-12">
+  <span><strong class="text-end d-flex justify-content-end mr-5">Signin & Stamp</strong></span>
+ </div>
+</div>
+
+<div class="row mt-6">
+ <div class="col-md-12">
+  <span class="text-end d-flex justify-content-end mr-5"><b>Date:</b> </span>
+ </div>
+</div>
+
+</div>
+  </div>
+
+
+</body>
+  

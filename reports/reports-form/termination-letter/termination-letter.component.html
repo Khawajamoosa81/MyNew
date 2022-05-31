@@ -1,0 +1,332 @@
+
+  <body  id="htmlData">
+    <div *ngFor="let e of compInfo; index as i" class="mySlides">
+      <div class="container col-md-10 align-items-center h-25 w-100 mt-5 p-50" style="border: 1px solid lightgray"> 
+  
+   <div class="row">
+    <div class="col-md-3 mt-3">
+      <div>
+        <img src="https://upload.wikimedia.org/wikipedia/en/0/01/This_is_the_Forward_Sport_brand_logo.jpg" width="100px"/>
+        </div>
+    </div>
+    <div class="col-md-6 mt-3">
+      <div><span class="font-weight-bold d-block">Forward Sports (Pvt) Ltd.</span>
+        <span>Wazirabad Road,Adha Sahowala, Sialkot</span>
+      </div>
+      
+    </div>
+  </div>
+  
+  
+    <div class="row">
+      <div class="col-md-12 mt-5 align-items-center bg-primary">
+        <p class="h2 align-items-center text-center text-white mt-2" style="text-decoration:underline">Employee's Dues Statement At The End Of Job</p>
+      </div>
+     </div>
+     
+     <div class="row mt-3">
+      <div class="col-md-12">
+       <h4>Service Details:</h4>
+      </div>
+     </div>
+     
+     <div class="container" style="border:1px solid; border-style:dotted">
+       <div  class="row mt-3 mx-1">
+         <div class="col-md-2">
+          <span class="font-weight-bold">Card No:</span>
+         </div>
+         <div class="col-md-2">
+          <span class="font-weight-bold">{{e.Employee.EmpCardNo.name}}</span>
+         </div>
+         <div class="col-md-2">
+          <span class="font-weight-bold">Department</span>
+         </div>
+         <div class="col-md-2">
+          <span>{{e.Department.name}}</span>
+         </div>
+        </div>
+        
+        <div  class="row mt-3 mx-1">
+         <div class="col-md-2">
+          <span class="font-weight-bold"> Name:</span>
+         </div>
+         <div class="col-md-2">
+          <span>{{e.Employee.name}}</span>
+         </div>
+         <div class="col-md-2">
+          <span class="font-weight-bold">Section:</span>
+         </div>
+         <div class="col-md-2">
+          <span>{{e.Section.name}}</span>
+         </div>
+        </div>
+        
+        <div  class="row mt-3 mx-1">
+         <div class="col-md-2">
+          <span class="font-weight-bold">Father/Husband Name:</span>
+         </div>
+         <div class="col-md-2">
+          <span>{{e.Employee.FatherName}}</span>
+         </div>
+         <div class="col-md-2">
+          <span class="font-weight-bold">Designation:</span>
+         </div>
+         <div class="col-md-2">
+          <span>{{e.Designation.name}}</span>
+         </div>
+        </div>
+        
+        <div  class="row mt-3 mx-1">
+         <div class="col-md-2">
+          <span class="font-weight-bold">CNIC:</span>
+         </div>
+         <div class="col-md-2">
+          <span>{{e.Employee.CNICNO}}</span>
+         </div>
+         <div class="col-md-2">
+          <span class="font-weight-bold">Date Of Joining:</span>
+         </div>
+         <div class="col-md-2">
+          <span>{{e.DateOfJoning}}</span>
+         </div>
+        </div>
+        
+        <div  class="row mt-3 mx-1">
+         <div class="col-md-2">
+          <span class="font-weight-bold">Gross Salary:</span>
+         </div>
+         <div class="col-md-2">
+          <span>g3598</span>
+         </div>
+         <div class="col-md-2">
+          <span class="font-weight-bold">Date Of Leaving:</span>
+         </div>
+         <div class="col-md-2">
+          <span>{{e.LeaveDate}}</span>
+         </div>
+        </div>
+        
+        <div  class="row mt-3 mx-1">
+         <div class="col-md-2 d-flex text-end">
+          <span class="font-weight-bold">Leaving Reason:</span>
+         </div>
+         <div class="col-md-2">
+          <span>Resign, Personal Reason</span>
+         </div>
+        </div>
+     </div>
+     
+     
+     <div  class="row mt-3">
+      <div class="col-md-12">
+       <h4>Payment Details:</h4>
+      </div>
+     </div>
+     
+     <div class="container" style="border:1px solid; border-style:dotted">
+     
+     <div class="row" style="text-decoration:underline dotted">
+       <div class="col-md-8" >
+         <span>Current Month's Due Salary Plus Allowance:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.0 days for <b>January 2021</b></span>
+       </div>
+       <div class="col-md-4" >
+         <span><b>274,154</b></span>
+       </div>
+     </div>
+     
+     <div class="row" style="text-decoration:underline dotted">
+       <div class="col-md-8">
+         <span>Previous Dues (If Any)</span>
+       </div>
+       <div class="col-md-4">
+         <span><b>0</b></span>
+       </div>
+     </div>
+     
+     
+     <div class="row" style="text-decoration:underline dotted">
+       <div class="col-md-8">
+         <span>Meal Allowance:</span>
+       </div>
+       <div class="col-md-4">
+         <span><b>0</b></span>
+       </div>
+     </div>
+     
+     <div class="row" style="text-decoration:underline dotted">
+       <div class="col-md-8">
+         <span>Over Time Current Month (0.0 Hrs)</span>
+       </div>
+       <div class="col-md-4">
+         <span><b>0</b></span>
+       </div>
+     </div>
+     
+     
+     <div class="row" style="text-decoration:underline dotted">
+       <div class="col-md-8">
+         <span>Gratuity Payable: (If any)</span>
+       </div>
+       <div class="col-md-4">
+         <span><b>5,981,538</b></span>
+       </div>
+     </div>
+     
+     <div class="row" style="text-decoration:underline dotted">
+       <div class="col-md-8">
+         <span>Bonuses:</span>
+       </div>
+       <div class="col-md-4">
+         <span><b>371,047</b></span>
+       </div>
+     </div>
+     
+     <div class="row" style="text-decoration:underline dotted">
+       <div class="col-md-8">
+         <span>Notice Amount:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Do Nothing</b></span>
+       </div>
+       <div class="col-md-4">
+         <span><b>0</b></span>
+       </div>
+     </div>
+     
+     
+     <div class="row" style="text-decoration:underline dotted">
+       <div class="col-md-8">
+         <span>Leaves Amount:</span>
+       </div>
+       <div class="col-md-4">
+         <span><b>0</b></span>
+       </div>
+     </div>
+     
+     <div class="row" style="text-decoration:underline dotted">
+       <div class="col-md-8">
+         <span>Any Other Allowance:</span>
+       </div>
+       <div class="col-md-4">
+         <span><b>0</b></span>
+       </div>
+     </div>
+     
+     
+     <div class="row" style="text-decoration:underline dotted">
+       <div class="col-md-8">
+         <h4 class="d-flex text-end justify-content-end"><strong>Total Payments: Rs.</strong></h4>
+       </div>
+       <div class="col-md-4">
+         <h4><strong>6,626,739</strong></h4>
+       </div>
+     </div>
+     
+     <div class="row" style="text-decoration:underline dotted">
+       <div class="col-md-12">
+         <hr style="border:1px solid; border-style:line">
+       </div>
+     </div>
+     
+     <div class="row" style="text-decoration:underline dotted">
+       <div class="col-md-8">
+         <span>Previous Permanent Advance:</span>
+       </div>
+       <div class="col-md-4">
+         <span><b>0</b></span>
+       </div>
+     </div>
+     
+     <div class="row" style="text-decoration:underline dotted">
+       <div class="col-md-8">
+         <span>Previous Temporary Advance:</span>
+       </div>
+       <div class="col-md-4">
+         <span><b>0</b></span>
+       </div>
+     </div>
+     
+     <div class="row" style="text-decoration:underline dotted">
+       <div class="col-md-8">
+         <span>Current Permanent Advance:</span>
+       </div>
+       <div class="col-md-4">
+         <span><b>8,900,000</b></span>
+       </div>
+     </div>
+     
+     <div class="row" style="text-decoration:underline dotted">
+       <div class="col-md-8">
+         <span>Current Temporary Advance:</span>
+       </div>
+       <div class="col-md-4">
+         <span><b>150,000</b></span>
+       </div>
+     </div>
+     
+     <div class="row" style="text-decoration:underline dotted">
+       <div class="col-md-8">
+         <span>Canteen Deduction:</span>
+       </div>
+       <div class="col-md-4">
+         <span><b>0</b></span>
+       </div>
+     </div>
+     
+     <div class="row" style="text-decoration:underline dotted">
+       <div class="col-md-8">
+         <span>Excessive Leaves Deduction:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.0 Leaves Deduction</span>
+       </div>
+       <div class="col-md-4">
+         <span><b>0</b></span>
+       </div>
+     </div>
+     
+     <div class="row" style="text-decoration:underline dotted">
+       <div class="col-md-8">
+         <span>Matti Ullah Sheikh Fair Shop Ded.</span>
+       </div>
+       <div class="col-md-4">
+         <span><b>0</b></span>
+       </div>
+     </div>
+     
+     <div class="row" style="text-decoration:underline dotted">
+       <div class="col-md-8">
+         <span>RFD Advance Deduction</span>
+       </div>
+       <div class="col-md-4">
+         <span><b>0</b></span>
+       </div>
+     </div>
+     
+     <div class="row" style="text-decoration:underline dotted">
+       <div class="col-md-8">
+         <span>Excessive Bonus Deduction</span>
+       </div>
+       <div class="col-md-4">
+         <span><b>0</b></span>
+       </div>
+     </div>
+     
+     <div class="row">
+       <div class="col-md-8">
+         <h4 class="d-flex text-end justify-content-end"><strong>Total Deduction:&nbsp;Rs.</strong></h4>
+       </div>
+       <div class="col-md-4">
+         <h4><strong>9,050,000</strong></h4>
+       </div>
+     </div>
+     </div>
+     <div class="row mt-3" style="border:1px solid">
+       <div class="col-md-8">
+         <h4 class="d-flex text-end justify-content-end"><strong>Final Payments:&nbsp;Rs.</strong></h4>
+       </div>
+       <div class="col-md-4">
+         <h4><strong style="color:red">-2,423,261</strong></h4>
+       </div>
+     </div>
+  
+     </div>
+    </div>
+  
+  
+  </body>
+  
